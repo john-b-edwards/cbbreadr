@@ -11,7 +11,7 @@ Low level loader for reading in college basketball data in bulk.
 You can install the development version of cbbreadr like so:
 
 ```r
-devtools::install_github("https://github.com/john-b-edwards/cbbd-data")
+devtools::install_github("https://github.com/john-b-edwards/cbbreadr")
 ```
 
 ## Examples
