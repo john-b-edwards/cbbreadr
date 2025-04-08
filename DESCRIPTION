@@ -1,0 +1,11 @@
+Package: cbbreadr
+Title: Quickly Access College Basketball Data
+Version: 0.2.0
+Authors@R: 
+    person("John", "Edwards", , "edwards1860@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-8533-7504"))
+Description: cbbreadr allows users to quickly and efficiently pull in men's college basketball data from the collegebasketballdata.com API.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
