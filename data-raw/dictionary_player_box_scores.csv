@@ -43,7 +43,7 @@ effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value 
 true_shooting_pct,numeric,"An adjusted statistic that reflects a player's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
 assists_turnover_ratio,numeric,The number of assists a player records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a player's passing.
 free_throw_rate,numeric,The number of free throws a player attempted divded by the number of field goals a player attempted. This metric is commonly used to evaluate a player's ability to draw personal fouls.
-offensive_rebound_pct,numeric,"An estimate of the rate at which a player secured offensive reboulds, measured as OREB / the total number of balls that could have been rebounded in the game. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
+offensive_rebound_pct,numeric,"An estimate of the rate at which a player secured offensive reboulds, measured as OREB / the total number of balls that a player could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
 field_goals_made,integer,The number of shots from the floor a player made.
 field_goals_attempted,integer,The number of shots from the floor a player attempted.
 field_goals_pct,numeric,The number of field goals made divided by the number of field goals attempted.
