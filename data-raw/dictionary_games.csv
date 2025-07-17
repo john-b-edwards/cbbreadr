@@ -1,6 +1,6 @@
 field,data_type,description
 id,integer,A unique identifier for each game.
-source_id,character,The unique identifier for each conference from the data source CBBD scrapes from.
+source_id,character,The unique identifier for each game from the data source CBBD scrapes from.
 season_label,character,"A string identifying the two years that one college basketball season spans, e.g. ""20242025""."
 season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
 season_type,character,"A string identifying whether the tracked game is a ""regular"" season game or a ""postseason"" game."
@@ -8,7 +8,7 @@ tournament,character,"If the game takes place as a part of a tournament, this id
 start_date,character,"The start date and time, given in ISO 8601 format in the GMT time zone."
 start_time_tbd,logical,A boolean indicating whether the game time has not yet been scheduled.
 neutral_site,logical,A boolean indicating that the game took place in a neutral site.
-conference_game,logical,A boolean indicating that the game took place between opponents of the same conference during conference place.
+conference_game,logical,A boolean indicating that the game took place between opponents of the same conference during conference play.
 game_type,character,"A string indicating whether the game took place as a normal, regular season game (""STD""), or whether the game took place as a part of a tournament (""TRNMNT""). Tournament games include both regular season and postseason tournaments. For earlier years, this column will sometimes represent the round of the March Madness tournament that a game took place in (""RD64"", ""RD32"", ""RD16"", ""QTR"", ""SEMI"", ""FINAL"")."
 status,character,"A string indicating whether a game is ""scheduled"" or has gone ""final"". Because of the pre-caching work that drives cbbreadr, this column may not always be up to date, but is generally accurate 24 hours away in either direction from the start of the game."
 game_notes,character,"Miscellaneous notes about the game, such as the tournament the game is played under."
