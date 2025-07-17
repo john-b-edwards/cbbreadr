@@ -1,0 +1,6 @@
+field,data_type,description
+id,integer,A unique identifier for each conference.
+source_id,character,The unique identifier for each conference from the data source CBBD scrapes from.
+name,character,The full name of the conference.
+abbreviation,character,The abbreviation for the conference.
+short_name,character,The short name for the conference.
