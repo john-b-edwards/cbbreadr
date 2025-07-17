@@ -1,0 +1,19 @@
+field,data_type,description
+game_id,integer,A unique identifier for each game.
+season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
+season_label,character,"A string identifying the two years that one college basketball season spans, e.g. ""20242025""."
+season_type,character,"A string identifying whether the tracked game is a ""regular"" season game or a ""postseason"" game."
+start_date,character,"The start date and time, given in ISO 8601 format in the GMT time zone."
+start_time_tbd,logical,A boolean indicating whether the game time has not yet been scheduled.
+home_team_id,integer,A unique identifier for the home team.
+home_team,character,The name of the home team.
+home_conference,character,The name of the home team's conference.
+away_team_id,integer,A unique identifier for the away team.
+away_team,character,The name of the away team.
+away_conference,character,The name of the away team's conference.
+neutral_site,logical,A boolean indicating that the game took place in a neutral site.
+conference_game,logical,A boolean indicating that the game took place between opponents of the same conference during conference place.
+game_type,character,game_type
+notes,character,"Miscellaneous notes about the game, such as the tournament the game is played under."
+broadcasts_broadcast_type,character,"The media format that the broadcast is available in. Includes ""TV"", ""Streaming"", ""Radio"", ""PPV"", and ""Mobile""."
+broadcasts_broadcast_name,character,The name of the broadcasting entity carrying the game.
