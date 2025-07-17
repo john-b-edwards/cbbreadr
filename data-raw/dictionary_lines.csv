@@ -1,0 +1,20 @@
+field,data_type,description
+game_id,integer,A unique identifier for each game.
+season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
+season_type,character,"A string identifying whether the tracked game is a ""regular"" season game or a ""postseason"" game."
+start_date,character,"The start date and time, given in ISO 8601 format in the GMT time zone."
+home_team_id,integer,A unique identifier for the home team.
+home_team,character,The name of the home team.
+home_conference,character,The name of the home team's conference.
+home_score,integer,The number of points the home team scored in the game.
+away_team_id,integer,A unique identifier for the away team.
+away_team,character,The name of the away team.
+away_conference,character,The name of the away team's conference.
+away_score,integer,The number of points the away team scored in the game.
+provider,character,The sportsbook providing the lines for this record.
+spread,numeric,"The spread of the game, representing the number of points by which the home team is favored. E.g. -1.5 would indicate that the home team is favored by 1.5 points."
+over_under,numeric,"The over/under of the game, representing the total number of points the provider expects to be scored in the game such that there are approximately even odds that the score is over or under that total. An over/under of 138.5 indicates that the provider expects the two teams to combine for 138.5 points, such that it is roughly equally likely that the two teams actually combine for 138 or fewer points and 139 or more points."
+home_moneyline,integer,"The odds that the home team wins the game, formatted as American odds. For more information on the American odds format, see here: https://en.wikipedia.org/wiki/Fixed-odds_betting#Moneyline_odds"
+away_moneyline,integer,"The odds that the away team wins the game, formatted as American odds. For more information on the American odds format, see here: https://en.wikipedia.org/wiki/Fixed-odds_betting#Moneyline_odds"
+spread_open,numeric,"The spread of the game at the time that betting opened on the game. This number may be different than the over_under column, as betting, injuries, and other factors can influence the final spread value."
+over_under_open,numeric,"The over/under of the game at the time that betting opened on the game. This number may be different than the over_under column, as betting, injuries, and other factors can influence the final over/under value."
