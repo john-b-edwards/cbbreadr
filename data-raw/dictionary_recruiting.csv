@@ -1,0 +1,23 @@
+field,data_type,description
+id,integer,A unique identifier for each recruit. This is distinct from a player's athlete_id.
+source_id,character,The unique identifier for each player from the data source CBBD scrapes from.
+position,character,The player's position.
+school_id,integer,A unique identifier for the high school the player plays/played for as a high schooler.
+school,character,The name of the high school the player plays/played for as a high schooler.
+hometown_city,character,The player's hometown city.
+hometown_state,character,The player's hometown state.
+hometown_country,character,"The player's hometown country, if not located within the United States."
+hometown_latitude,numeric,The latitude of the player's hometown city.
+hometown_longitude,numeric,The longitude of the player's hometown city.
+hometown_countyFips,character,"The FIPS County Code for the player's hometown. For more information, see here: https://en.wikipedia.org/wiki/FIPS_county_code"
+committed_to_id,integer,The team_id of the college the player was/is committed to.
+committed_to_name,character,The name of the college the player was/is committed to.
+committed_to_conference,character,The conference of the college the player was/is committed to.
+athlete_id,integer,"If available, the athlete_id for the player."
+year,integer,The year of the recruiting class that the player belongs to.
+name,character,The player's name.
+height_inches,numeric,The player's height in inches.
+weight_pounds,integer,The player's weight in pounds.
+stars,integer,"From 247, a star rating assigned to the player as a recruit, ranging from one-to-five stars."
+rating,numeric,"From 247, a rating of the player as a recruit, ranging from 1 to 0."
+ranking,integer,"From 247, the ranking of the player as a recruit within their recruiting class."
