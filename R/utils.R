@@ -21,10 +21,11 @@ RELEASE_URL <- "https://github.com/john-b-edwards/cbbd-data/releases/download"
 #'
 #' @export
 most_recent_season <- function(date = Sys.Date()) {
-  if (as.integer(format(Sys.Date(), "%m")) < 10) {
-    return(as.integer(format(Sys.Date(), "%Y")))
+  date <- as.Date(date)
+  if (as.integer(format(date, "%m")) < 10) {
+    return(as.integer(format(date, "%Y")))
   } else {
-    return(as.integer(format(Sys.Date(), "%Y")) + 1)
+    return(as.integer(format(date, "%Y")) + 1)
   }
 }
 
