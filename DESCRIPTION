@@ -15,7 +15,8 @@ Imports:
 Depends: 
     R (>= 2.10)
 LazyData: true
-URL: https://john-b-edwards.github.io/cbbreadr/
+URL: https://github.com/john-b-edwards/cbbreadr,
+    https://john-b-edwards.github.io/cbbreadr/
 Suggests: 
     knitr,
     rmarkdown
