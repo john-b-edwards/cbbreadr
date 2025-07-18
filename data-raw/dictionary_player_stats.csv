@@ -8,15 +8,15 @@ athlete_id,integer,A unique identifier for each player.
 athlete_source_id,character,The unique identifier for each player from the data source CBBD scrapes from.
 name,character,The name of the player.
 position,character,The player's position.
-games,integer,The number of games a player appeared in during a season.
-starts,integer,The numer of games a player started during a season.
-minutes,integer,The total number of minutes a player played during a season.
-points,integer,The total number of points a player scored during a season.
-turnovers,integer,The total number of turnovers a player recorded during a season.
-fouls,integer,The total number of fouls a player recorded during a season.
-assists,integer,The total number of assists a player recorded during a season.
-steals,integer,The total number of steals a player recorded during a season.
-blocks,integer,The total number of blocks a player recorded during a season.
+games,integer,The number of games a player appeared in.
+starts,integer,The numer of games a player started.
+minutes,integer,The total number of minutes a player played.
+points,integer,The total number of points a player scored.
+turnovers,integer,The total number of turnovers a player recorded.
+fouls,integer,The total number of fouls a player recorded.
+assists,integer,The total number of assists a player recorded.
+steals,integer,The total number of steals a player recorded.
+blocks,integer,The total number of blocks a player recorded.
 offensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
 defensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player suppresses from their opponent on defense. For more details, see here: https://en.wikipedia.org/wiki/Defensive_rating"
 net_rating,numeric,"Offensive rating minus defensive rating, reflecting an estimates of how many points per 100 possession a player contributes on offense and defense."

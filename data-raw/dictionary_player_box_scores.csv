@@ -27,13 +27,13 @@ name,character,The name of the player.
 position,character,The player's position.
 starter,logical,A boolean indicating whether the player started the game or not.
 ejected,logical,A boolean indicating whether the player was ejected from the game or not.
-minutes,integer,How many minutes the player played in the game.
-points,integer,How many points the player scored in the game.
-turnovers,integer,How many turnovers the player committed in the game.
-fouls,integer,How many fouls the player committed in the game.
-assists,integer,How many assists the player recorded in the game.
-steals,integer,How many steals the player recorded in the game.
-blocks,integer,How many blocks the player recorded in the game.
+minutes,integer,How many minutes the player played.
+points,integer,How many points the player scored.
+turnovers,integer,How many turnovers the player committed.
+fouls,integer,How many fouls the player committed.
+assists,integer,How many assists the player recorded.
+steals,integer,How many steals the player recorded.
+blocks,integer,How many blocks the player recorded.
 game_score,numeric,"The Hollinger game score for the player, a measure of how impressive a player's individual performance was in a game. Developed by John Hollinger, you can see more details here: https://en.wikipedia.org/wiki/John_Hollinger#Hollinger_game_score"
 offensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
 defensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player suppresses from their opponent on defense. For more details, see here: https://en.wikipedia.org/wiki/Defensive_rating"
