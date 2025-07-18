@@ -1,0 +1,48 @@
+field,data_type,description
+season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
+season_label,character,"A string identifying the two years that one college basketball season spans, e.g. ""20242025""."
+team_id,integer,A unique identifier for the team the player plays for.
+team,character,The name of the team the player plays for.
+conference,character,The name of the conference of the player's team.
+athlete_id,integer,A unique identifier for each player.
+athlete_source_id,character,The unique identifier for each player from the data source CBBD scrapes from.
+name,character,The name of the player.
+position,character,The player's position.
+games,integer,The number of games a player appeared in.
+starts,integer,The numer of games a player started.
+minutes,integer,The total number of minutes a player played.
+points,integer,The total number of points a player scored.
+turnovers,integer,The total number of turnovers a player recorded.
+fouls,integer,The total number of fouls a player recorded.
+assists,integer,The total number of assists a player recorded.
+steals,integer,The total number of steals a player recorded.
+blocks,integer,The total number of blocks a player recorded.
+offensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
+defensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player suppresses from their opponent on defense. For more details, see here: https://en.wikipedia.org/wiki/Defensive_rating"
+net_rating,numeric,"Offensive rating minus defensive rating, reflecting an estimates of how many points per 100 possession a player contributes on offense and defense."
+porpag,numeric,"A measure of the points a player provides over a ""replacement level"" player on a per game basis. For more details, see here: https://spartansweblog.wordpress.com/2009/01/19/put-this-acronym-in-your-pipe-and-smoke-it/"
+usage,numeric,"An estimate of the percentage of plays that involved a player while the player was on the floor. For more details, see here: https://www.nbastuffer.com/analytics101/usage-rate/"
+assists_turnover_ratio,numeric,The number of assists a player records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a player's passing.
+offensive_rebound_pct,numeric,"An estimate of the rate at which a player secured offensive reboulds, measured as OREB / the total number of balls that a player could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
+free_throw_rate,numeric,The number of free throws a player attempted divded by the number of field goals a player attempted. This metric is commonly used to evaluate a player's ability to draw personal fouls.
+effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value of three-pointers relative to all other baskets by weighing three points more, representing a player's shooting efficiency. For more details, see here: https://en.wikipedia.org/wiki/Effective_field_goal_percentage"
+true_shooting_pct,numeric,"An adjusted statistic that reflects a player's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
+field_goals_made,integer,The number of shots from the floor a player made.
+field_goals_attempted,integer,The number of shots from the floor a player attempted.
+field_goals_pct,numeric,The number of field goals made divided by the number of field goals attempted.
+two_point_field_goals_made,integer,The number of two-point shots a player made.
+two_point_field_goals_attempted,integer,The number of two-point shots a player attempted.
+two_point_field_goals_pct,numeric,The number of two-point shots a player made divded by the number of two-point shots they attempted.
+three_point_field_goals_made,integer,The number of three-point shots a player made.
+three_point_field_goals_attempted,integer,The number of three-point shots a player attempted.
+three_point_field_goals_pct,numeric,The number of three-point shots a player made divided by the number of three-point shots they attempted.
+free_throws_made,integer,The number of free throw shots a player made.
+free_throws_attempted,integer,The number of free throw shots a player attempted.
+free_throws_pct,numeric,The number of free throw shots a player made divded by the number of free throw shots they attempted.
+rebounds_offensive,integer,The number of offensive rebounds a player recorded.
+rebounds_defensive,integer,The number of defensive rebounds a player recorded.
+rebounds_total,integer,"The total number of rebounds a player recorded, offensive and defensive."
+win_shares_offensive,numeric,"A measure of how many wins a player contributed to their team on offense. This is a fairly complex calculation, for more details, see here: https://www.basketball-reference.com/about/ws.html"
+win_shares_defensive,numeric,"A measure of how many wins a player contributed to their team on defense. This is a fairly complex calculation, for more details, see here: https://www.basketball-reference.com/about/ws.html"
+win_shares_total,numeric,"A measure of how many wins a player contributed to their team on both offense and defense. This is a fairly complex calculation, for more details, see here: https://www.basketball-reference.com/about/ws.html"
+win_shares_total_per40,numeric,"A measure of how many total wins a player accumulated, divided by the number of minutes they played, multiplied by 40. This is a measure of how many wins per game a player is worth by win shares."

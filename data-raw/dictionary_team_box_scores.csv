@@ -1,0 +1,107 @@
+field,data_type,description
+game_id,integer,A unique identifier for each game.
+season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
+season_label,character,"A string identifying the two years that one college basketball season spans, e.g. ""20242025""."
+season_type,character,"A string identifying whether the tracked game is a ""regular"" season game or a ""postseason"" game."
+tournament,character,"If the game takes place as a part of a tournament, this identifies the tournament."
+start_date,character,"The start date and time, given in ISO 8601 format in the GMT time zone."
+start_time_tbd,logical,A boolean indicating whether the game time has not yet been scheduled.
+team_id,integer,A unique identifier for each team.
+team,character,The name of the team.
+conference,character,The conference the team plays in.
+team_seed,integer,"If reported, the seed of the team in the tournament that the game takes in."
+opponent_id,integer,A unique identifier for the opponent team.
+opponent,character,The name of the opponent team.
+opponent_conference,character,The name of the conference of the opponent team.
+opponent_seed,integer,"If reported, the seed of the opponent team in the tournament that the game takes in."
+neutral_site,logical,A boolean indicating that the game took place in a neutral site.
+is_home,logical,A boolean indicating that the team is playing at their home court.
+conference_game,logical,A boolean indicating that the game took place between opponents of the same conference during conference play.
+game_type,character,"A string indicating whether the game took place as a normal, regular season game (""STD""), or whether the game took place as a part of a tournament (""TRNMNT""). Tournament games include both regular season and postseason tournaments. For earlier years, this column will sometimes represent the round of the March Madness tournament that a game took place in (""RD64"", ""RD32"", ""RD16"", ""QTR"", ""SEMI"", ""FINAL"")."
+notes,character,"Miscellaneous notes about the game, such as the tournament the game is played under."
+game_minutes,integer,"The attendance of the game. In some circumstances, attendance is not reported for a game--this is reported as attendance = 0."
+pace,numeric,"The number of possessions in the game divided by the number of minutes in the game, multiplied by 40 minutes."
+team_stats_possessions,integer,The number of possessions recorded by the team.
+team_stats_assists,integer,The number of assists recorded by the team.
+team_stats_steals,integer,The number of steals recorded by the team.
+team_stats_blocks,integer,The number of blocks recorded by the team.
+team_stats_true_shooting,numeric,"An adjusted statistic that reflects a team's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
+team_stats_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a team generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
+team_stats_game_score,numeric,"The Hollinger game score for the team. Developed by John Hollinger, you can see more details here: https://en.wikipedia.org/wiki/John_Hollinger#Hollinger_game_score"
+team_stats_points_total,integer,The number of points the  team scored.
+team_stats_points_by_period_1,integer,The number of points the  team scored in the first period.
+team_stats_points_by_period_2,integer,The number of points the  team scored in the second period.
+team_stats_points_by_period_3,integer,"The number of points the  team scored in the first overtime period. If the game did not go to overtime, this value is NULL."
+team_stats_points_by_period_4,integer,"The number of points the  team scored in the second overtime period. If the game did not go to 2 OT, this value is NULL."
+team_stats_points_by_period_5,integer,"The number of points the  team scored in the third overtime period. If the game did not go to 3OT, this value is NULL."
+team_stats_points_by_period_6,integer,"The number of points the  team scored in the fourth overtime period. If the game did not go to 4OT, this value is NULL."
+team_stats_points_largest_lead,integer,The largest lead the team had at any point in the game.
+team_stats_points_fast_break,integer,The number of points the team recorded on fast breaks.
+team_stats_points_in_paint,integer,The number of points the team recorded scoring in the paint.
+team_stats_points_off_turnovers,integer,The number of points the team recorded off turnovers by the opposing team.
+team_stats_two_point_field_goals_made,integer,The number of two-point shots a team made.
+team_stats_two_point_field_goals_attempted,integer,The number of two-point shots a team attempted.
+team_stats_two_point_field_goals_pct,numeric,The number of two-point shots a team made divded by the number of two-point shots they attempted.
+team_stats_three_point_field_goals_made,integer,The number of three-point shots a team made.
+team_stats_three_point_field_goals_attempted,integer,The number of three-point shots a team attempted.
+team_stats_three_point_field_goals_pct,numeric,The number of three-point shots a team made divided by the number of three-point shots they attempted.
+team_stats_free_throws_made,integer,The number of free throw shots a team made.
+team_stats_free_throws_attempted,integer,The number of free throw shots a team attempted.
+team_stats_free_throws_pct,numeric,The number of free throw shots a team made divded by the number of free throw shots they attempted.
+team_stats_field_goals_made,integer,The number of shots from the floor a team made.
+team_stats_field_goals_attempted,integer,The number of shots from the floor a team attempted.
+team_stats_field_goals_pct,numeric,The number of field goals made divided by the number of field goals attempted.
+team_stats_turnovers_total,integer,How many turnovers the team committed.
+team_stats_turnovers_team_total,integer,How many team turnovers the team committed. This includes turnovers like dead-ball turnovers.
+team_stats_rebounds_offensive,integer,The number of offensive rebounds a team recorded.
+team_stats_rebounds_defensive,integer,The number of defensive rebounds a team recorded.
+team_stats_rebounds_total,integer,"The total number of rebounds a team recorded, offensive and defensive."
+team_stats_fouls_total,integer,How many fouls the team committed.
+team_stats_fouls_technical,integer,How many technical fouls the team committed.
+team_stats_fouls_flagrant,integer,How many flagrant fouls the team committed.
+team_stats_four_factors_effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value of three-pointers relative to all other baskets by weighing three points more, representing a team's shooting efficiency. For more details, see here: https://en.wikipedia.org/wiki/Effective_field_goal_percentage"
+team_stats_four_factors_free_throw_rate,numeric,The number of free throws a team attempted divded by the number of field goals a team attempted. This metric is commonly used to evaluate a team's ability to draw personal fouls.
+team_stats_four_factors_turnover_ratio,numeric,The number of assists a team records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a team's passing.
+team_stats_four_factors_offensive_rebound_pct,numeric,"An estimate of the rate at which a team secured offensive reboulds, measured as OREB / the total number of balls that a team could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
+opponent_stats_possessions,integer,The number of possessions recorded by the opposing team.
+opponent_stats_assists,integer,The number of assists recorded by the opposing team.
+opponent_stats_steals,integer,The number of steals recorded by the opposing team.
+opponent_stats_blocks,integer,The number of blocks recorded by the opposing team.
+opponent_stats_true_shooting,numeric,"An adjusted statistic that reflects a opposing team's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
+opponent_stats_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a opposing team generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
+opponent_stats_game_score,numeric,"The Hollinger game score for the opposing team. Developed by John Hollinger, you can see more details here: https://en.wikipedia.org/wiki/John_Hollinger#Hollinger_game_score"
+opponent_stats_points_total,integer,The number of points the  opposing team scored.
+opponent_stats_points_by_period_1,integer,The number of points the  opposing team scored in the first period.
+opponent_stats_points_by_period_2,integer,The number of points the  opposing team scored in the second period.
+opponent_stats_points_by_period_3,integer,"The number of points the  opposing team scored in the first overtime period. If the game did not go to overtime, this value is NULL."
+opponent_stats_points_by_period_4,integer,"The number of points the  opposing team scored in the second overtime period. If the game did not go to 2 OT, this value is NULL."
+opponent_stats_points_by_period_5,integer,"The number of points the  opposing team scored in the third overtime period. If the game did not go to 3OT, this value is NULL."
+opponent_stats_points_by_period_6,integer,"The number of points the  opposing team scored in the fourth overtime period. If the game did not go to 4OT, this value is NULL."
+opponent_stats_points_largest_lead,integer,The largest lead the opposing team had at any point in the game.
+opponent_stats_points_fast_break,integer,The number of points the opposing team recorded on fast breaks.
+opponent_stats_points_in_paint,integer,The number of points the opposing team recorded scoring in the paint.
+opponent_stats_points_off_turnovers,integer,The number of points the opposing team recorded off turnovers by the opposing opposing team.
+opponent_stats_two_point_field_goals_made,integer,The number of two-point shots a opposing team made.
+opponent_stats_two_point_field_goals_attempted,integer,The number of two-point shots a opposing team attempted.
+opponent_stats_two_point_field_goals_pct,numeric,The number of two-point shots a opposing team made divded by the number of two-point shots they attempted.
+opponent_stats_three_point_field_goals_made,integer,The number of three-point shots a opposing team made.
+opponent_stats_three_point_field_goals_attempted,integer,The number of three-point shots a opposing team attempted.
+opponent_stats_three_point_field_goals_pct,numeric,The number of three-point shots a opposing team made divided by the number of three-point shots they attempted.
+opponent_stats_free_throws_made,integer,The number of free throw shots a opposing team made.
+opponent_stats_free_throws_attempted,integer,The number of free throw shots a opposing team attempted.
+opponent_stats_free_throws_pct,numeric,The number of free throw shots a opposing team made divded by the number of free throw shots they attempted.
+opponent_stats_field_goals_made,integer,The number of shots from the floor a opposing team made.
+opponent_stats_field_goals_attempted,integer,The number of shots from the floor a opposing team attempted.
+opponent_stats_field_goals_pct,numeric,The number of field goals made divided by the number of field goals attempted.
+opponent_stats_turnovers_total,integer,How many turnovers the opposing team committed.
+opponent_stats_turnovers_team_total,integer,How many opposing team turnovers the opposing team committed. This includes turnovers like dead-ball turnovers.
+opponent_stats_rebounds_offensive,integer,The number of offensive rebounds a opposing team recorded.
+opponent_stats_rebounds_defensive,integer,The number of defensive rebounds a opposing team recorded.
+opponent_stats_rebounds_total,integer,"The total number of rebounds a opposing team recorded, offensive and defensive."
+opponent_stats_fouls_total,integer,How many fouls the opposing team committed.
+opponent_stats_fouls_technical,integer,How many technical fouls the opposing team committed.
+opponent_stats_fouls_flagrant,integer,How many flagrant fouls the opposing team committed.
+opponent_stats_four_factors_effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value of three-pointers relative to all other baskets by weighing three points more, representing a opposing team's shooting efficiency. For more details, see here: https://en.wikipedia.org/wiki/Effective_field_goal_percentage"
+opponent_stats_four_factors_free_throw_rate,numeric,The number of free throws a opposing team attempted divded by the number of field goals a opposing team attempted. This metric is commonly used to evaluate a opposing team's ability to draw personal fouls.
+opponent_stats_four_factors_turnover_ratio,numeric,The number of assists a opposing team records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a opposing team's passing.
+opponent_stats_four_factors_offensive_rebound_pct,numeric,"An estimate of the rate at which a opposing team secured offensive reboulds, measured as OREB / the total number of balls that a opposing team could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
