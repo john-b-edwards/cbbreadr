@@ -1,8 +1,22 @@
 pandoc: 3.1.11
 pkgdown: 2.1.3
 pkgdown_sha: ~
-articles: {}
-last_built: 2025-07-18T02:21Z
+articles:
+  dictionary_conferences: dictionary_conferences.html
+  dictionary_games: dictionary_games.html
+  dictionary_lines: dictionary_lines.html
+  dictionary_media: dictionary_media.html
+  dictionary_player_box_scores: dictionary_player_box_scores.html
+  dictionary_player_stats: dictionary_player_stats.html
+  dictionary_plays: dictionary_plays.html
+  dictionary_rankings: dictionary_rankings.html
+  dictionary_recruiting: dictionary_recruiting.html
+  dictionary_rosters: dictionary_rosters.html
+  dictionary_team_box_scores: dictionary_team_box_scores.html
+  dictionary_team_stats: dictionary_team_stats.html
+  dictionary_teams: dictionary_teams.html
+  dictionary_venues: dictionary_venues.html
+last_built: 2025-07-18T05:40Z
 urls:
   reference: https://john-b-edwards.github.io/cbbreadr/reference
   article: https://john-b-edwards.github.io/cbbreadr/articles
