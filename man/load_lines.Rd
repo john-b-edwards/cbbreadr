@@ -7,7 +7,7 @@
 load_lines(seasons = most_recent_season())
 }
 \arguments{
-\item{seasons}{an integer of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
+\item{seasons}{an integer or vector of integers of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
 }
 \value{
 a dataframe of betting information for all games for the specified season(s).
@@ -24,4 +24,10 @@ load_lines(2024)
 load_lines(TRUE)
 }
 
+#' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_lines.html> for a web version of the data dictionary
+}
+\seealso{
+\code{\link{dictionary_lines}} for the data dictionary as bundled within the package
+
+Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
 }

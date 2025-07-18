@@ -7,7 +7,7 @@
 load_teams(seasons = most_recent_season())
 }
 \arguments{
-\item{seasons}{an integer of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
+\item{seasons}{an integer or vector of integers of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
 }
 \value{
 a dataframe of all college basketball teams tracked by collegebasketballdata.com for a given season(s).
@@ -24,4 +24,11 @@ load_team(2024)
 load_teams(TRUE)
 }
 
+}
+\seealso{
+\url{https://john-b-edwards.github.io/cbbreadr/articles/dictionary_teams.html} for a web version of the data dictionary
+
+\code{\link{dictionary_teams}} for the data dictionary as bundled within the package
+
+Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
 }

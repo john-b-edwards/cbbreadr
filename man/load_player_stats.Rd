@@ -7,13 +7,15 @@
 load_player_stats(seasons = most_recent_season())
 }
 \arguments{
-\item{seasons}{an integer of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
+\item{seasons}{an integer or vector of integers of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
 }
 \value{
 a dataframe of player statistics for college basketball players
 }
 \description{
-Pull in statistics aggregated by player for a given season.
+Pull in statistics aggregated by player for specified season(s)
+
+This data includes both traditional box score stats (such as points, OREB, AST) as well as more advanced stats (such as USG\%, ORTG). For more information on each stat, see the data dictionary \code{dictionary_player_stats}.
 }
 \examples{
 \donttest{
@@ -24,4 +26,11 @@ load_player_stats(2024)
 load_player_stats(TRUE)
 }
 
+}
+\seealso{
+\url{https://john-b-edwards.github.io/cbbreadr/articles/dictionary_player_stats.html} for a web version of the data dictionary
+
+\code{\link{dictionary_player_stats}} for the data dictionary as bundled within the package
+
+Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
 }
