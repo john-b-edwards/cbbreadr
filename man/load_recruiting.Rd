@@ -16,4 +16,12 @@ Loads information about college basketball recruiting
 \donttest{
 load_recruiting()
 }
+
+}
+\seealso{
+\url{https://john-b-edwards.github.io/cbbreadr/articles/dictionary_recruiting.html} for a web version of the data dictionary
+
+\code{\link{dictionary_recruiting}} for the data dictionary as bundled within the package
+
+Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
 }

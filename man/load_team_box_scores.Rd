@@ -2,18 +2,20 @@
 % Please edit documentation in R/load_team_box_scores.R
 \name{load_team_box_scores}
 \alias{load_team_box_scores}
-\title{Load cbb teams box score stats}
+\title{Load cbb team box score stats}
 \usage{
 load_team_box_scores(seasons = most_recent_season())
 }
 \arguments{
-\item{seasons}{an integer of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
+\item{seasons}{an integer or vector of integers of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
 }
 \value{
 a dataframe of team box scores.
 }
 \description{
-Pull in statistics aggregated by team and game for a given season.
+Pull in statistics aggregated by team and game for specified season(s)
+
+This data includes both traditional box score stats (such as points, OREB, AST) as well as more advanced stats (such as ORTG, OREB\%). For more information on each stat, see the data dictionary \code{dictionary_player_box_scores}.
 }
 \examples{
 \donttest{
@@ -24,4 +26,11 @@ load_team_box_scores(2024)
 load_team_box_scores(TRUE)
 }
 
+}
+\seealso{
+\url{https://john-b-edwards.github.io/cbbreadr/articles/dictionary_team_box_scores.html} for a web version of the data dictionary
+
+\code{\link{dictionary_team_box_scores}} for the data dictionary as bundled within the package
+
+Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
 }

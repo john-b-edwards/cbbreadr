@@ -11,9 +11,19 @@ a dataframe of information about college basketball rankings and polls
 }
 \description{
 Loads information about college basketball rankings, polls, etc.
+
+At present, only the AP Top 25 and Coaches Polls are available from this function. Ranking, first place votes, and over points are available for each week of the season dating back to 1949.
 }
 \examples{
 \donttest{
 load_rankings()
 }
+
+}
+\seealso{
+\url{https://john-b-edwards.github.io/cbbreadr/articles/dictionary_rankings.html} for a web version of the data dictionary
+
+\code{\link{dictionary_rankings}} for the data dictionary as bundled within the package
+
+Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
 }

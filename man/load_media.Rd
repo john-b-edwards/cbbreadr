@@ -7,7 +7,7 @@
 load_media(seasons = most_recent_season())
 }
 \arguments{
-\item{seasons}{an integer of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
+\item{seasons}{an integer or vector of integers of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
 }
 \value{
 a dataframe of broadcast information for all games for the specified season(s).
@@ -24,4 +24,11 @@ load_media(2024)
 load_media(TRUE)
 }
 
+}
+\seealso{
+\url{https://john-b-edwards.github.io/cbbreadr/articles/dictionary_media.html} for a web version of the data dictionary
+
+\code{\link{dictionary_media}} for the data dictionary as bundled within the package
+
+Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
 }

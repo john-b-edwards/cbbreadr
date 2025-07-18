@@ -7,13 +7,13 @@
 load_rosters(seasons = most_recent_season())
 }
 \arguments{
-\item{seasons}{an integer of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
+\item{seasons}{an integer or vector of integers of seasons to fetch data for. Defaults to the most recent season. Pass in \code{TRUE} to fetch all seasons.}
 }
 \value{
 a dataframe of rosters for college basketball teams in the specified season(s).
 }
 \description{
-Pull in rosters for college basketball teams for a given season
+Pull in rosters for college basketball teams for specified season(s)
 }
 \examples{
 \donttest{
@@ -24,4 +24,11 @@ load_rosters(2024)
 load_rosters(TRUE)
 }
 
+}
+\seealso{
+\url{https://john-b-edwards.github.io/cbbreadr/articles/dictionary_rosters.html} for a web version of the data dictionary
+
+\code{\link{dictionary_rosters}} for the data dictionary as bundled within the package
+
+Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
 }
