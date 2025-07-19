@@ -19,6 +19,7 @@ devtools::install_github("https://github.com/john-b-edwards/cbbreadr")
 Most functions take in a `seasons` argument for seasons to query. Data is typically available between 2003 and the present season, but an error is thrown if data is not available for a specified season. Calling functions as-is will load data from the most recent (or current) college basketball season.
 
 ```r
+library(cbbreadr)
 # with no argument, returns most recent season
 load_games()
 # specify a single season
@@ -39,3 +40,9 @@ Some functions load resources that do not to be specified by year, and thus do n
 # does not take any arguments
 load_conferences()
 ```
+
+## Acknowledgements
+
+This package is only possible thanks to the [CollegeBasketballData.com](https://collegebasketballdata.com/) API. The API is maintained by Bill Radjewski, who is kind enough to make this data available for free. 
+
+The API does have premium tiers but maintaining this package requires only the premium tier, so no money is needed for upkeep for the package. If you would like to support this package, rather than send any money my way, I encourage you to instead donate or subscribe to [Bill's Patreon](https://www.patreon.com/c/collegefootballdata/posts) so that he can continue developing and maintaining this wonderful project.
