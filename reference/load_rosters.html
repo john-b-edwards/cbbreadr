@@ -81,283 +81,322 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">load_rosters</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        team_id team_source_id                team conference season players_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;         &lt;char&gt;              &lt;char&gt;     &lt;char&gt;  &lt;int&gt;      &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:     161            113       Massachusetts       A-10   2025       2882</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:     161            113       Massachusetts       A-10   2025       2883</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:     161            113       Massachusetts       A-10   2025       2884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:     161            113       Massachusetts       A-10   2025       2885</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:     161            113       Massachusetts       A-10   2025       2886</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        team_id team_source_id                team conference_short_name season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;         &lt;char&gt;              &lt;char&gt;                &lt;char&gt;  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:     161            113       Massachusetts                  A-10   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:     161            113       Massachusetts                  A-10   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:     161            113       Massachusetts                  A-10   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:     161            113       Massachusetts                  A-10   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:     161            113       Massachusetts                  A-10   2025</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9316</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9317</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9318</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_source_id           players_name players_first_name</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;                 &lt;char&gt;             &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:           5176382       Malek Abdelgowad              Malek</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:           5105982          Daniel Rivera             Daniel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:           5105551 Daniel Hankins-Sanford             Daniel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:           5174611           Jaylen Curry             Jaylen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:           4683733        Rahsool Diggins            Rahsool</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:           4907749     Tarek Abdel-Kireem              Tarek</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:           4907748           Abeal Ayalew              Abeal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:           4907745            Matt Kohler               Matt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:           4907744            Devyn Jones              Devyn</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:           4907742          Jayden Priddy             Jayden</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_last_name players_jersey players_position players_height</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;         &lt;char&gt;           &lt;char&gt;          &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:        Abdelgowad             25          Forward             82</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:            Rivera              5          Forward             78</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:   Hankins-Sanford              1          Forward             80</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:             Curry              0            Guard             72</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:           Diggins              7            Guard             74</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:      Abdel-Kireem           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:            Ayalew           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:            Kohler           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:             Jones           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:            Priddy           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_weight players_hometown_1_city players_hometown_1_state</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 &lt;int&gt;                  &lt;char&gt;                   &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:            220                   Cairo                    Egypt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:            215                San Juan              Puerto Rico</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:            236               Charlotte                       NC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:            168               Charlotte                       NC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:            190            Philadelphia                       PA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_hometown_1_country players_hometown_1_latitude</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;lgcl&gt;                       &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                         NA                    35.22721</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                         NA                    35.22721</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                         NA                    39.95272</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_hometown_1_longitude players_hometown_1_county_fips</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                               &lt;num&gt;                         &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                    -80.84308                          37119</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                    -80.84308                          37119</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                    -75.16353                          42101</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_date_of_birth players_start_season players_end_season</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       &lt;char&gt;                &lt;int&gt;              &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                  &lt;NA&gt;                 2025               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                  &lt;NA&gt;                 2025               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                  &lt;NA&gt;                 2024               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                  &lt;NA&gt;                 2024               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                  &lt;NA&gt;                 2023               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:                  &lt;NA&gt;                 2023               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:                  &lt;NA&gt;                 2023               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_id athlete_source_id           athlete_name athlete_first_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             &lt;int&gt;            &lt;char&gt;                 &lt;char&gt;             &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:       2882           5176382       Malek Abdelgowad              Malek</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:       2883           5105982          Daniel Rivera             Daniel</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:       2884           5105551 Daniel Hankins-Sanford             Daniel</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:       2885           5174611           Jaylen Curry             Jaylen</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:       2886           4683733        Rahsool Diggins            Rahsool</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:       9314           4907749     Tarek Abdel-Kireem              Tarek</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:       9315           4907748           Abeal Ayalew              Abeal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:       9316           4907745            Matt Kohler               Matt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:       9317           4907744            Devyn Jones              Devyn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:       9318           4907742          Jayden Priddy             Jayden</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_last_name athlete_jersey_number athlete_position</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;                &lt;char&gt;           &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:        Abdelgowad                    25          Forward</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:            Rivera                     5          Forward</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:   Hankins-Sanford                     1          Forward</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:             Curry                     0            Guard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:           Diggins                     7            Guard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:      Abdel-Kireem                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:            Ayalew                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:            Kohler                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:             Jones                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:            Priddy                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_height_inches athlete_weight_pounds athlete_hometown_city</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;                 &lt;int&gt;                &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                    82                   220                 Cairo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                    78                   215              San Juan</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                    80                   236             Charlotte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                    72                   168             Charlotte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                    74                   190          Philadelphia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_hometown_state athlete_hometown_country</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;char&gt;                   &lt;lgcl&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                  Egypt                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:            Puerto Rico                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                     NC                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                     NC                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                     PA                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_hometown_latitude athlete_hometown_longitude</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;num&gt;                      &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                  35.22721                  -80.84308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                  35.22721                  -80.84308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                  39.95272                  -75.16353</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_hometown_county_fips athlete_date_of_birth athlete_start_season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;char&gt;                &lt;char&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                         &lt;NA&gt;                  &lt;NA&gt;                 2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                         &lt;NA&gt;                  &lt;NA&gt;                 2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                        37119                  &lt;NA&gt;                 2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                        37119                  &lt;NA&gt;                 2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                        42101                  &lt;NA&gt;                 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:                         &lt;NA&gt;                  &lt;NA&gt;                 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:                         &lt;NA&gt;                  &lt;NA&gt;                 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_end_season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                     &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15233:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15234:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15235:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15236:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15237:               2025</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">load_rosters</span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        team_id team_source_id                team conference season players_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;         &lt;char&gt;              &lt;char&gt;     &lt;char&gt;  &lt;int&gt;      &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:     161            113       Massachusetts       A-10   2024       2631</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:     161            113       Massachusetts       A-10   2024       2884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:     161            113       Massachusetts       A-10   2024       2885</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:     161            113       Massachusetts       A-10   2024       2886</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:     161            113       Massachusetts       A-10   2024       2889</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        team_id team_source_id                team conference_short_name season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;         &lt;char&gt;              &lt;char&gt;                &lt;char&gt;  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:     161            113       Massachusetts                  A-10   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:     161            113       Massachusetts                  A-10   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:     161            113       Massachusetts                  A-10   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:     161            113       Massachusetts                  A-10   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:     161            113       Massachusetts                  A-10   2024</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2024       9314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2024       9315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2024       9316</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2024       9317</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2024       9318</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_source_id           players_name players_first_name</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;                 &lt;char&gt;             &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:           5174612       Robert Davis Jr.             Robert</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:           5105551 Daniel Hankins-Sanford             Daniel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:           5174611           Jaylen Curry             Jaylen</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:           4683733        Rahsool Diggins            Rahsool</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:           5174615         Tarique Foster            Tarique</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:           4907749     Tarek Abdel-Kireem              Tarek</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:           4907748           Abeal Ayalew              Abeal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:           4907745            Matt Kohler               Matt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:           4907744            Devyn Jones              Devyn</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:           4907742          Jayden Priddy             Jayden</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_last_name players_jersey players_position players_height</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;         &lt;char&gt;           &lt;char&gt;          &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:         Davis Jr.              4            Guard             78</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:   Hankins-Sanford              1          Forward             80</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:             Curry              0            Guard             72</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:           Diggins              7            Guard             74</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:            Foster             12          Forward             80</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:      Abdel-Kireem           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:            Ayalew           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:            Kohler           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:             Jones           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:            Priddy           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_weight players_hometown_1_city players_hometown_1_state</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 &lt;int&gt;                  &lt;char&gt;                   &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:            185                 Detroit                       MI</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:            236               Charlotte                       NC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:            168               Charlotte                       NC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:            190            Philadelphia                       PA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:            185                   Bronx                       NY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_hometown_1_country players_hometown_1_latitude</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;lgcl&gt;                       &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                         NA                    42.33155</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                         NA                    35.22721</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                         NA                    35.22721</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                         NA                    39.95272</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                         NA                    40.84665</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_hometown_1_longitude players_hometown_1_county_fips</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                               &lt;num&gt;                         &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                    -83.04664                          26163</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                    -80.84308                          37119</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                    -80.84308                          37119</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                    -75.16353                          42101</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                    -73.87859                          36005</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        players_date_of_birth players_start_season players_end_season</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       &lt;char&gt;                &lt;int&gt;              &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                  &lt;NA&gt;                 2024               2024</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                  &lt;NA&gt;                 2024               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                  &lt;NA&gt;                 2024               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                  &lt;NA&gt;                 2023               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                  &lt;NA&gt;                 2024               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:                  &lt;NA&gt;                 2023               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:                  &lt;NA&gt;                 2023               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_id athlete_source_id           athlete_name athlete_first_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             &lt;int&gt;            &lt;char&gt;                 &lt;char&gt;             &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:       2631           5174612       Robert Davis Jr.             Robert</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:       2884           5105551 Daniel Hankins-Sanford             Daniel</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:       2885           5174611           Jaylen Curry             Jaylen</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:       2886           4683733        Rahsool Diggins            Rahsool</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:       2889           5174615         Tarique Foster            Tarique</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:       9314           4907749     Tarek Abdel-Kireem              Tarek</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:       9315           4907748           Abeal Ayalew              Abeal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:       9316           4907745            Matt Kohler               Matt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:       9317           4907744            Devyn Jones              Devyn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:       9318           4907742          Jayden Priddy             Jayden</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_last_name athlete_jersey_number athlete_position</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;                &lt;char&gt;           &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:         Davis Jr.                     4            Guard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:   Hankins-Sanford                     1          Forward</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:             Curry                     0            Guard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:           Diggins                     7            Guard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:            Foster                    12          Forward</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:      Abdel-Kireem                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:            Ayalew                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:            Kohler                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:             Jones                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:            Priddy                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_height_inches athlete_weight_pounds athlete_hometown_city</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;                 &lt;int&gt;                &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                    78                   185               Detroit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                    80                   236             Charlotte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                    72                   168             Charlotte</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                    74                   190          Philadelphia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                    80                   185                 Bronx</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:                    NA                    NA                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_hometown_state athlete_hometown_country</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;char&gt;                   &lt;lgcl&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                     MI                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                     NC                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                     NC                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                     PA                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                     NY                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_hometown_latitude athlete_hometown_longitude</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;num&gt;                      &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                  42.33155                  -83.04664</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                  35.22721                  -80.84308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                  35.22721                  -80.84308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                  39.95272                  -75.16353</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                  40.84665                  -73.87859</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_hometown_county_fips athlete_date_of_birth athlete_start_season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;char&gt;                &lt;char&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:                        26163                  &lt;NA&gt;                 2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:                        37119                  &lt;NA&gt;                 2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:                        37119                  &lt;NA&gt;                 2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:                        42101                  &lt;NA&gt;                 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:                        36005                  &lt;NA&gt;                 2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                                                                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:                         &lt;NA&gt;                  &lt;NA&gt;                 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:                         &lt;NA&gt;                  &lt;NA&gt;                 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        athlete_end_season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                     &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     1:               2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     2:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     3:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     4:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     5:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ---                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14126:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14127:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14128:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14129:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14130:               2025</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">load_rosters</span><span class="op">(</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         team_id team_source_id                team conference season players_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;int&gt;         &lt;char&gt;              &lt;char&gt;     &lt;char&gt;  &lt;int&gt;      &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:     161            113       Massachusetts       A-10   2003      88819</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:     161            113       Massachusetts       A-10   2003      91926</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:     161            113       Massachusetts       A-10   2003      91929</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:     161            113       Massachusetts       A-10   2003      92301</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:     161            113       Massachusetts       A-10   2003      92303</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         team_id team_source_id                team conference_short_name season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;int&gt;         &lt;char&gt;              &lt;char&gt;                &lt;char&gt;  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:     161            113       Massachusetts                  A-10   2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:     161            113       Massachusetts                  A-10   2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:     161            113       Massachusetts                  A-10   2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:     161            113       Massachusetts                  A-10   2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:     161            113       Massachusetts                  A-10   2003</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9316</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9317</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:     616           2985 Concordia-Ann Arbor       &lt;NA&gt;   2025       9318</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         players_source_id       players_name players_first_name</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;char&gt;             &lt;char&gt;             &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:             11811      Jeff Viggiano               Jeff</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:              5264   Anthony Anderson            Anthony</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:              5262     Brennan Martin            Brennan</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:             11809           Gabe Lee               Gabe</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:              5265     Paco Kotaridis               Paco</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:           4907749 Tarek Abdel-Kireem              Tarek</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:           4907748       Abeal Ayalew              Abeal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:           4907745        Matt Kohler               Matt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:           4907744        Devyn Jones              Devyn</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:           4907742      Jayden Priddy             Jayden</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         players_last_name players_jersey players_position players_height</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;char&gt;         &lt;char&gt;           &lt;char&gt;          &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:          Viggiano            22           Forward             78</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:          Anderson            12             Guard             71</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:            Martin           &lt;NA&gt;          Forward             78</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:               Lee            2             Center             81</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:         Kotaridis            14             Guard             73</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:      Abdel-Kireem           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:            Ayalew           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:            Kohler           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:             Jones           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:            Priddy           &lt;NA&gt;          Athlete             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         players_weight players_hometown_1_city players_hometown_1_state</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;int&gt;                  &lt;char&gt;                   &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:            215                Suffield                       CT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:            170                    Lynn                       MA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:            190  Rancho Santa Margarita                       CA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:            210                 Camilla                       GA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:            190                  Athens                   Greece</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:             NA                    &lt;NA&gt;                     &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         players_hometown_1_country players_hometown_1_latitude</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                             &lt;lgcl&gt;                       &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                         NA                    41.98169</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                         NA                    42.46676</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                         NA                    33.64088</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                         NA                    31.23129</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:                         NA                          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         players_hometown_1_longitude players_hometown_1_county_fips</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                &lt;num&gt;                         &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                    -72.65066                          09003</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                    -70.94949                          25009</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                   -117.60293                          06059</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                    -84.21037                          13205</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:                           NA                           &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         players_date_of_birth players_start_season players_end_season</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;char&gt;                &lt;int&gt;              &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:            2003-09-17                 2003               2006</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                  &lt;NA&gt;                 2003               2005</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                  &lt;NA&gt;                 2003               2005</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:            2003-09-17                 2003               2004</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                  &lt;NA&gt;                 2003               2004</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:                  &lt;NA&gt;                 2023               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:                  &lt;NA&gt;                 2022               2025</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:                  &lt;NA&gt;                 2023               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:     616           2985 Concordia-Ann Arbor                  &lt;NA&gt;   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_id athlete_source_id       athlete_name athlete_first_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;int&gt;            &lt;char&gt;             &lt;char&gt;             &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:      88819             11811      Jeff Viggiano               Jeff</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:      91926              5264   Anthony Anderson            Anthony</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:      91929              5262     Brennan Martin            Brennan</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:      92301             11809           Gabe Lee               Gabe</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:      92303              5265     Paco Kotaridis               Paco</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:       9314           4907749 Tarek Abdel-Kireem              Tarek</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:       9315           4907748       Abeal Ayalew              Abeal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:       9316           4907745        Matt Kohler               Matt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:       9317           4907744        Devyn Jones              Devyn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:       9318           4907742      Jayden Priddy             Jayden</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_last_name athlete_jersey_number athlete_position</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;char&gt;                &lt;char&gt;           &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:          Viggiano                   22           Forward</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:          Anderson                   12             Guard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:            Martin                  &lt;NA&gt;          Forward</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:               Lee                   2             Center</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:         Kotaridis                   14             Guard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:      Abdel-Kireem                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:            Ayalew                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:            Kohler                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:             Jones                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:            Priddy                  &lt;NA&gt;          Athlete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_height_inches athlete_weight_pounds  athlete_hometown_city</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;int&gt;                 &lt;int&gt;                 &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                    78                   215               Suffield</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                    71                   170                   Lynn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                    78                   190 Rancho Santa Margarita</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                    81                   210                Camilla</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                    73                   190                 Athens</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:                    NA                    NA                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:                    NA                    NA                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:                    NA                    NA                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:                    NA                    NA                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:                    NA                    NA                   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_hometown_state athlete_hometown_country</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;char&gt;                   &lt;lgcl&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                     CT                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                     MA                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                     CA                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                     GA                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                 Greece                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:                   &lt;NA&gt;                       NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_hometown_latitude athlete_hometown_longitude</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                             &lt;num&gt;                      &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                  41.98169                  -72.65066</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                  42.46676                  -70.94949</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                  33.64088                 -117.60293</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                  31.23129                  -84.21037</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:                        NA                         NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_hometown_county_fips athlete_date_of_birth athlete_start_season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                               &lt;char&gt;                &lt;char&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                        09003            2003-09-17                 2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                        25009                  &lt;NA&gt;                 2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                        06059                  &lt;NA&gt;                 2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                        13205            2003-09-17                 2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                         &lt;NA&gt;                  &lt;NA&gt;                 2003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:                         &lt;NA&gt;                  &lt;NA&gt;                 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:                         &lt;NA&gt;                  &lt;NA&gt;                 2022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:                         &lt;NA&gt;                  &lt;NA&gt;                 2023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_end_season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:               2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:               2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:               2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:               2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:               2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217184:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217185:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217186:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217187:               2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217188:               2025</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>

@@ -87,25 +87,25 @@ This will return both games in the past and scheduled games. If a game is schedu
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">load_games</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           id source_id season_label season season_type tournament</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;    &lt;char&gt;       &lt;char&gt;  &lt;int&gt;      &lt;char&gt;     &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:     24 401727499     20242025   2025     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:     26 401725796     20242025   2025     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:     25 401726400     20242025   2025     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:     27 401715872     20242025   2025     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:     28 401726395     20242025   2025     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6296: 209747 401758633     20242025   2025  postseason       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6297: 209731 401746081     20242025   2025  postseason       NCAA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6298: 209732 401746080     20242025   2025  postseason       NCAA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6299: 209749 401758636     20242025   2025  postseason       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6300: 209751 401746082     20242025   2025  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       game_id game_source_id season_label season season_type tournament</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;int&gt;         &lt;char&gt;       &lt;char&gt;  &lt;int&gt;      &lt;char&gt;     &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:      24      401727499     20242025   2025     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:      27      401715872     20242025   2025     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:      25      401726400     20242025   2025     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:      26      401725796     20242025   2025     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:      28      401726395     20242025   2025     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:  209747      401758633     20242025   2025  postseason       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:  209731      401746081     20242025   2025  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:  209732      401746080     20242025   2025  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:  209749      401758636     20242025   2025  postseason       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:  209751      401746082     20242025   2025  postseason       NCAA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     start_date start_time_tbd neutral_site conference_game</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;char&gt;         &lt;lgcl&gt;       &lt;lgcl&gt;          &lt;lgcl&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1: 2024-11-04T11:00:00.000Z          FALSE        FALSE           FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2: 2024-11-04T12:00:00.000Z          FALSE        FALSE           FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2: 2024-11-04T12:00:00.000Z          FALSE         TRUE           FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    3: 2024-11-04T12:00:00.000Z          FALSE        FALSE           FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4: 2024-11-04T12:00:00.000Z          FALSE         TRUE           FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4: 2024-11-04T12:00:00.000Z          FALSE        FALSE           FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    5: 2024-11-04T12:30:00.000Z          FALSE        FALSE           FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6296: 2025-04-05T20:00:00.000Z          FALSE         TRUE           FALSE</span>
@@ -116,9 +116,9 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span>       game_type status                                            game_notes</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;char&gt; &lt;char&gt;                                                &lt;char&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1:       STD  final                                                  &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:       STD  final                                                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:    TRNMNT  final                                  Field of 68 Showcase</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    3:       STD  final                                                  &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:    TRNMNT  final                                  Field of 68 Showcase</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:       STD  final                                                  &lt;NA&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    5:       STD  final                                                  &lt;NA&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                       </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6296:    TRNMNT  final                 College Basketball Crown - Semifinals</span>
@@ -126,12 +126,12 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6298:    TRNMNT  final            Men's Basketball Championship - Final Four</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6299:    TRNMNT  final            College Basketball Crown Championship Game</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6300:    TRNMNT  final Men's Basketball Championship - National Championship</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       attendance home_team_id          home_team home_conference_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       attendance home_team_id     home_team_name home_conference_id</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;int&gt;        &lt;int&gt;             &lt;char&gt;              &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1:       3716          115    IU Indianapolis                 14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:       1001          324       UT Arlington                 30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:          0          273  Southern Illinois                 19</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    3:       7501          171   Middle Tennessee                 13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:          0          273  Southern Illinois                 19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:       1001          324       UT Arlington                 30</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    5:       2055          128 Jacksonville State                 13</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                              </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6296:       2972          338          Villanova                  7</span>
@@ -139,25 +139,25 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6298:      68252           72               Duke                  2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6299:       3314          312                UCF                  6</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6300:      66602          113            Houston                  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       home_conference home_seed home_points home_period_points_1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:         Horizon        NA         100                   48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:             WAC        NA          90                   48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:            CUSA        NA          97                   51</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:             MVC        NA          80                   42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:            CUSA        NA         112                   55</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:        Big East        NA          98                   44</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:             SEC        NA          73                   46</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:             ACC        NA          67                   34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:          Big 12        NA          66                   35</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:          Big 12        NA          63                   31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       home_conference_short_name home_seed home_points home_period_points_1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                    Horizon        NA         100                   48</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                        MVC        NA          80                   42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                       CUSA        NA          97                   51</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                        WAC        NA          90                   48</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                       CUSA        NA         112                   55</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:                   Big East        NA          98                   44</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:                        SEC        NA          73                   46</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                        ACC        NA          67                   34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                     Big 12        NA          66                   35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                     Big 12        NA          63                   31</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       home_period_points_2 home_period_points_3 home_period_points_4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   52                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   42                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   38                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   46                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   38                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   42                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   57                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6296:                   44                   10                   NA</span>
@@ -165,46 +165,7 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                   33                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                   31                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                   32                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       home_period_points_5 home_period_points_6 home_winner away_team_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;      &lt;lgcl&gt;        &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA                   NA        TRUE          492</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA                   NA        TRUE          494</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   NA                   NA        TRUE          493</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   NA                   NA       FALSE           46</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   NA                   NA        TRUE          495</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:                   NA                   NA       FALSE          312</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:                   NA                   NA       FALSE           87</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                   NA                   NA       FALSE          113</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                   NA                   NA       FALSE          188</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                   NA                   NA       FALSE           87</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         away_team away_conference_id away_conference away_seed away_points</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;char&gt;              &lt;int&gt;          &lt;char&gt;     &lt;int&gt;       &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1: IU Columbus                 NA            &lt;NA&gt;        NA          44</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:  UNT Dallas                 NA            &lt;NA&gt;        NA          55</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:  Oglethorpe                 NA            &lt;NA&gt;        NA          51</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:  Charleston                 12             CAA        NA          90</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:    LaGrange                 NA            &lt;NA&gt;        NA          48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:         UCF                  6          Big 12        NA         104</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:     Florida                 24             SEC        NA          79</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:     Houston                  6          Big 12        NA          70</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:    Nebraska                 10         Big Ten        NA          77</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:     Florida                 24             SEC        NA          65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_1 away_period_points_2 away_period_points_3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   21                   23                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   25                   30                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   22                   29                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   45                   45                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   20                   28                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:                   48                   40                   16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:                   38                   41                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                   28                   42                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                   35                   42                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                   28                   37                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_4 away_period_points_5 away_period_points_6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       home_period_points_5 home_period_points_6 home_period_points_7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA                   NA                   NA</span>
@@ -217,47 +178,99 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       away_winner excitement venue_id                 venue         city  state</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;lgcl&gt;      &lt;num&gt;    &lt;int&gt;                &lt;char&gt;       &lt;char&gt; &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:       FALSE        0.6       19      Corteva Coliseum Indianapolis     IN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:       FALSE        1.5       21   College Park Center    Arlington     TX</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:       FALSE        0.6       20         Murphy Center Murfreesboro     TN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:        TRUE        7.2       22      Sanford Pentagon  Sioux Falls     SD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:       FALSE        1.0       23 Pete Mathews Coliseum Jacksonville     AL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:        TRUE       12.3       13        T-Mobile Arena    Las Vegas     NV</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:        TRUE        8.6      629             Alamodome  San Antonio     TX</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:        TRUE        6.2      629             Alamodome  San Antonio     TX</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:        TRUE        7.0       13        T-Mobile Arena    Las Vegas     NV</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:        TRUE        7.7      629             Alamodome  San Antonio     TX</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       home_period_points_7 away_period_points_7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       home_winner away_team_id away_team_name away_conference_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;lgcl&gt;        &lt;int&gt;         &lt;char&gt;              &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:        TRUE          492    IU Columbus                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:       FALSE           46     Charleston                 12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:        TRUE          493     Oglethorpe                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:        TRUE          494     UNT Dallas                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:        TRUE          495       LaGrange                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:       FALSE          312            UCF                  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:       FALSE           87        Florida                 24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:       FALSE          113        Houston                  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:       FALSE          188       Nebraska                 10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:       FALSE           87        Florida                 24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       away_conference_short_name away_seed away_points away_period_points_1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                       &lt;NA&gt;        NA          44                   21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                        CAA        NA          90                   45</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                       &lt;NA&gt;        NA          51                   22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                       &lt;NA&gt;        NA          55                   25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                       &lt;NA&gt;        NA          48                   20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:                     Big 12        NA         104                   48</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:                        SEC        NA          79                   38</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                     Big 12        NA          70                   28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                    Big Ten        NA          77                   35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                        SEC        NA          65                   28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_2 away_period_points_3 away_period_points_4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   23                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   45                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   29                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   30                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   28                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:                   40                   16                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:                   41                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                   42                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                   42                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                   37                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_5 away_period_points_6 away_period_points_7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       away_winner excitement venue_id                 venue   venue_city</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;lgcl&gt;      &lt;num&gt;    &lt;int&gt;                &lt;char&gt;       &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:       FALSE        0.6       19      Corteva Coliseum Indianapolis</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:        TRUE        7.2       22      Sanford Pentagon  Sioux Falls</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:       FALSE        0.6       20         Murphy Center Murfreesboro</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:       FALSE        1.5       21   College Park Center    Arlington</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:       FALSE        1.0       23 Pete Mathews Coliseum Jacksonville</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:        TRUE       12.3       13        T-Mobile Arena    Las Vegas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:        TRUE        8.6      629             Alamodome  San Antonio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:        TRUE        6.2      629             Alamodome  San Antonio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:        TRUE        7.0       13        T-Mobile Arena    Las Vegas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:        TRUE        7.7      629             Alamodome  San Antonio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       venue_state</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:          IN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:          SD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:          TN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:          TX</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:          AL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6296:          NV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6297:          TX</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6298:          TX</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6299:          NV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6300:          TX</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">load_games</span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          id source_id season_label season season_type tournament</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;int&gt;    &lt;char&gt;       &lt;char&gt;  &lt;int&gt;      &lt;char&gt;     &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:  5901 401594209     20232024   2024     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:  5902 401610539     20232024   2024     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:  5903 401591565     20232024   2024     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:  5904 401604410     20232024   2024     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:  5905 401598014     20232024   2024     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6245: 12124 401641122     20232024   2024  postseason        NIT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6246: 12125 401641124     20232024   2024  postseason        NIT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6247: 12126 401638643     20232024   2024  postseason       NCAA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6248: 12127 401638644     20232024   2024  postseason       NCAA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6249: 12128 401638645     20232024   2024  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       game_id game_source_id season_label season season_type tournament</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;int&gt;         &lt;char&gt;       &lt;char&gt;  &lt;int&gt;      &lt;char&gt;     &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:    5901      401594209     20232024   2024     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:    5902      401610539     20232024   2024     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:    5903      401591565     20232024   2024     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:    5904      401604410     20232024   2024     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:    5905      401598014     20232024   2024     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:   12124      401641122     20232024   2024  postseason        NIT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:   12125      401641124     20232024   2024  postseason        NIT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:   12126      401638643     20232024   2024  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:   12127      401638644     20232024   2024  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:   12128      401638645     20232024   2024  postseason       NCAA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     start_date start_time_tbd neutral_site conference_game</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;char&gt;         &lt;lgcl&gt;       &lt;lgcl&gt;          &lt;lgcl&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1: 2023-11-06T11:00:00.000Z          FALSE        FALSE           FALSE</span>
@@ -284,7 +297,7 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6247:    TRNMNT  final            Men's Basketball Championship - Final Four</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6248:    TRNMNT  final            Men's Basketball Championship - Final Four</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6249:    TRNMNT  final Men's Basketball Championship - National Championship</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       attendance home_team_id         home_team home_conference_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       attendance home_team_id    home_team_name home_conference_id</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;int&gt;        &lt;int&gt;            &lt;char&gt;              &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1:       4867          115   IU Indianapolis                 14</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    2:       2147          110           Hofstra                 12</span>
@@ -297,19 +310,19 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6247:          0          236            Purdue                 10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6248:      74720          314             UConn                  7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6249:      74423          314             UConn                  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       home_conference home_seed home_points home_period_points_1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:         Horizon        NA          70                   33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:             CAA        NA         101                   44</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:        Sun Belt        NA          92                   38</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:       Southland        NA          96                   54</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:            SWAC        NA          89                   43</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:        Big East        NA          84                   42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:        Big East        NA          79                   39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:         Big Ten         1          63                   35</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:        Big East         1          86                   44</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:        Big East         1          75                   36</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       home_conference_short_name home_seed home_points home_period_points_1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                    Horizon        NA          70                   33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                        CAA        NA         101                   44</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   Sun Belt        NA          92                   38</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                  Southland        NA          96                   54</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                       SWAC        NA          89                   43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                   Big East        NA          84                   42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                   Big East        NA          79                   39</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                    Big Ten         1          63                   35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   Big East         1          86                   44</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   Big East         1          75                   36</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       home_period_points_2 home_period_points_3 home_period_points_4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   37                   NA                   NA</span>
@@ -323,72 +336,7 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                   28                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   42                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   39                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       home_period_points_5 home_winner away_team_id                  away_team</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;      &lt;lgcl&gt;        &lt;int&gt;                     &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA        TRUE          831                   Spalding</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA        TRUE          677 Saint Joseph's Long Island</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   NA        TRUE          797            Fort Lauderdale</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   NA        TRUE          832             North American</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   NA        TRUE          614           Kansas Christian</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                   NA        TRUE           98                    Georgia</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                   NA        TRUE          122              Indiana State</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                   NA        TRUE          185                   NC State</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   NA        TRUE            5                    Alabama</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   NA        TRUE          236                     Purdue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       away_conference_id away_conference away_seed away_points</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;int&gt;          &lt;char&gt;     &lt;int&gt;       &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                 NA            &lt;NA&gt;        NA          63</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                 NA            &lt;NA&gt;        NA          48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                 NA            &lt;NA&gt;        NA          47</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                 NA            &lt;NA&gt;        NA          68</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                 NA            &lt;NA&gt;        NA          66</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                 24             SEC        NA          67</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                 19             MVC        NA          77</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                  2             ACC        11          50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                 24             SEC         4          72</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                 10         Big Ten         1          60</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_1 away_period_points_2 away_period_points_3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   25                   38                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   19                   29                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   18                   29                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   22                   46                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   33                   33                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                   25                   42                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                   39                   38                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                   29                   21                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   40                   32                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   30                   30                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_4 away_period_points_5 away_winner excitement venue_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;      &lt;lgcl&gt;      &lt;num&gt;    &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA                   NA       FALSE        2.7       19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA                   NA       FALSE        1.3       27</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   NA                   NA       FALSE        1.2       65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   NA                   NA       FALSE        0.9      154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   NA                   NA       FALSE        2.2       56</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                   NA                   NA       FALSE        1.3       40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                   NA                   NA       FALSE        7.2       40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                   NA                   NA       FALSE        2.3      485</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   NA                   NA       FALSE        4.5      485</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   NA                   NA       FALSE        3.0      485</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                             venue         city  state</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                            &lt;char&gt;       &lt;char&gt; &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                            Corteva Coliseum Indianapolis     IN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2: David S. Mack Sports and Exhibition Complex    Hempstead     NY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                                Trojan Arena         Troy     AL</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                 William R. Johnson Coliseum  Nacogdoches     TX</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                      William Nicks Building Prairie View     TX</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                           Hinkle Fieldhouse Indianapolis     IN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                           Hinkle Fieldhouse Indianapolis     IN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                          State Farm Stadium     Glendale     AZ</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                          State Farm Stadium     Glendale     AZ</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                          State Farm Stadium     Glendale     AZ</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       home_period_points_6 away_period_points_6 home_period_points_7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       home_period_points_5 home_period_points_6 home_period_points_7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA                   NA                   NA</span>
@@ -401,34 +349,99 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       home_winner away_team_id             away_team_name away_conference_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;lgcl&gt;        &lt;int&gt;                     &lt;char&gt;              &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:        TRUE          831                   Spalding                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:        TRUE          677 Saint Joseph's Long Island                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:        TRUE          797            Fort Lauderdale                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:        TRUE          832             North American                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:        TRUE          614           Kansas Christian                 NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:        TRUE           98                    Georgia                 24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:        TRUE          122              Indiana State                 19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:        TRUE          185                   NC State                  2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:        TRUE            5                    Alabama                 24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:        TRUE          236                     Purdue                 10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       away_conference_short_name away_seed away_points away_period_points_1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                       &lt;NA&gt;        NA          63                   25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                       &lt;NA&gt;        NA          48                   19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                       &lt;NA&gt;        NA          47                   18</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                       &lt;NA&gt;        NA          68                   22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                       &lt;NA&gt;        NA          66                   33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                        SEC        NA          67                   25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                        MVC        NA          77                   39</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                        ACC        11          50                   29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                        SEC         4          72                   40</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                    Big Ten         1          60                   30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_2 away_period_points_3 away_period_points_4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   38                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   29                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   29                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   46                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   33                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                   42                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                   38                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                   21                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   32                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   30                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       away_period_points_5 away_period_points_6 away_period_points_7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       away_winner excitement venue_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;lgcl&gt;      &lt;num&gt;    &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:       FALSE        2.7       19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:       FALSE        1.3       27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:       FALSE        1.2       65</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:       FALSE        0.9      154</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:       FALSE        2.2       56</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:       FALSE        1.3       40</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:       FALSE        7.2       40</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:       FALSE        2.3      485</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:       FALSE        4.5      485</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:       FALSE        3.0      485</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                             venue   venue_city venue_state</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                            &lt;char&gt;       &lt;char&gt;      &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                            Corteva Coliseum Indianapolis          IN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2: David S. Mack Sports and Exhibition Complex    Hempstead          NY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                                Trojan Arena         Troy          AL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                 William R. Johnson Coliseum  Nacogdoches          TX</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                      William Nicks Building Prairie View          TX</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6245:                           Hinkle Fieldhouse Indianapolis          IN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6246:                           Hinkle Fieldhouse Indianapolis          IN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6247:                          State Farm Stadium     Glendale          AZ</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6248:                          State Farm Stadium     Glendale          AZ</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6249:                          State Farm Stadium     Glendale          AZ</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">load_games</span><span class="op">(</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             id source_id season_label season season_type tournament</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;    &lt;char&gt;       &lt;char&gt;  &lt;int&gt;      &lt;char&gt;     &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1: 127127 223180183     20022003   2003     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2: 127126 223180201     20022003   2003     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3: 127129 223190222     20022003   2003     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4: 127130 223192459     20022003   2003     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5: 127131 223190275     20022003   2003     regular       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132536: 209747 401758633     20242025   2025  postseason       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132537: 209731 401746081     20242025   2025  postseason       NCAA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132538: 209732 401746080     20242025   2025  postseason       NCAA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132539: 209749 401758636     20242025   2025  postseason       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132540: 209751 401746082     20242025   2025  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         game_id game_source_id season_label season season_type tournament</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;int&gt;         &lt;char&gt;       &lt;char&gt;  &lt;int&gt;      &lt;char&gt;     &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:  127127      223180183     20022003   2003     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:  127126      223180201     20022003   2003     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:  127129      223190222     20022003   2003     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:  127130      223192459     20022003   2003     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:  127131      223190275     20022003   2003     regular       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:  209747      401758633     20242025   2025  postseason       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:  209731      401746081     20242025   2025  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:  209732      401746080     20242025   2025  postseason       NCAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:  209749      401758636     20242025   2025  postseason       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:  209751      401746082     20242025   2025  postseason       NCAA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                       start_date start_time_tbd neutral_site conference_game</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;         &lt;lgcl&gt;       &lt;lgcl&gt;          &lt;lgcl&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      1: 2002-11-14T19:00:00.000Z          FALSE        FALSE           FALSE</span>
@@ -455,7 +468,7 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132538:    TRNMNT  final            Men's Basketball Championship - Final Four</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132539:    TRNMNT  final            College Basketball Crown Championship Game</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132540:    TRNMNT  final Men's Basketball Championship - National Championship</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         attendance home_team_id         home_team home_conference_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         attendance home_team_id    home_team_name home_conference_id</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;int&gt;        &lt;int&gt;            &lt;char&gt;              &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      1:          0          286          Syracuse                  7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      2:       8826          217          Oklahoma                  6</span>
@@ -468,19 +481,19 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132538:      68252           72              Duke                  2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132539:       3314          312               UCF                  6</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132540:      66602          113           Houston                  6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         home_conference home_seed home_points home_period_points_1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:        Big East        NA          63                   34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:          Big 12        NA          62                   25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:        Big East        NA          61                   23</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:             MAC        NA          56                   31</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:         Big Ten        NA          81                   34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:        Big East        NA          98                   44</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:             SEC        NA          73                   46</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:             ACC        NA          67                   34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:          Big 12        NA          66                   35</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:          Big 12        NA          63                   31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         home_conference_short_name home_seed home_points home_period_points_1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                             &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   Big East        NA          63                   34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                     Big 12        NA          62                   25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                   Big East        NA          61                   23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                        MAC        NA          56                   31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                    Big Ten        NA          81                   34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:                   Big East        NA          98                   44</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:                        SEC        NA          73                   46</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                        ACC        NA          67                   34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                     Big 12        NA          66                   35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                     Big 12        NA          63                   31</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         home_period_points_2 home_period_points_3 home_period_points_4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   29                   NA                   NA</span>
@@ -494,85 +507,7 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                   33                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                   31                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                   32                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         home_period_points_5 home_period_points_6 home_winner away_team_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;                &lt;int&gt;      &lt;lgcl&gt;        &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   NA                   NA       FALSE          163</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                   NA                   NA       FALSE            5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                   NA                   NA       FALSE          157</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                   NA                   NA        TRUE          354</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                   NA                   NA        TRUE           80</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:                   NA                   NA       FALSE          312</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:                   NA                   NA       FALSE           87</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                   NA                   NA       FALSE          113</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                   NA                   NA       FALSE          188</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                   NA                   NA       FALSE           87</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  away_team away_conference_id away_conference away_seed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                     &lt;char&gt;              &lt;int&gt;          &lt;char&gt;     &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:            Memphis                 13            CUSA        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:            Alabama                 24             SEC        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:          Marquette                 13            CUSA        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:           Winthrop                  9       Big South        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5: Eastern Washington                  8         Big Sky        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:                UCF                  6          Big 12        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:            Florida                 24             SEC        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:            Houston                  6          Big 12        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:           Nebraska                 10         Big Ten        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:            Florida                 24             SEC        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         away_points away_period_points_1 away_period_points_2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:          70                   43                   27</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:          68                   33                   35</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:          73                   37                   36</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:          50                   30                   20</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:          55                   25                   30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:         104                   48                   40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:          79                   38                   41</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:          70                   28                   42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:          77                   35                   42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:          65                   28                   37</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         away_period_points_3 away_period_points_4 away_period_points_5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:                   16                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                   NA                   NA                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         away_period_points_6 away_winner excitement venue_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;      &lt;lgcl&gt;      &lt;num&gt;    &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   NA        TRUE         NA      371</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                   NA        TRUE         NA      371</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                   NA        TRUE         NA      371</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                   NA       FALSE         NA      142</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                   NA       FALSE         NA      142</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:                   NA        TRUE       12.3       13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:                   NA        TRUE        8.6      629</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                   NA        TRUE        6.2      629</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                   NA        TRUE        7.0       13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                   NA        TRUE        7.7      629</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                         venue        city  state home_period_points_7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;char&gt;      &lt;char&gt; &lt;char&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1: Madison Square Garden    New York     NY                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2: Madison Square Garden    New York     NY                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3: Madison Square Garden    New York     NY                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:           Kohl Center     Madison     WI                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:           Kohl Center     Madison     WI                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:        T-Mobile Arena   Las Vegas     NV                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:             Alamodome San Antonio     TX                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:             Alamodome San Antonio     TX                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:        T-Mobile Arena   Las Vegas     NV                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:             Alamodome San Antonio     TX                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         away_period_points_7 home_period_points_8 away_period_points_8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         home_period_points_5 home_period_points_6 home_period_points_7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      2:                   NA                   NA                   NA</span>
@@ -585,6 +520,84 @@ This will return both games in the past and scheduled games. If a game is schedu
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                   NA                   NA                   NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         home_winner away_team_id     away_team_name away_conference_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;lgcl&gt;        &lt;int&gt;             &lt;char&gt;              &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:       FALSE          163            Memphis                 13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:       FALSE            5            Alabama                 24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:       FALSE          157          Marquette                 13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:        TRUE          354           Winthrop                  9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:        TRUE           80 Eastern Washington                  8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:       FALSE          312                UCF                  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:       FALSE           87            Florida                 24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:       FALSE          113            Houston                  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:       FALSE          188           Nebraska                 10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:       FALSE           87            Florida                 24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         away_conference_short_name away_seed away_points away_period_points_1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                             &lt;char&gt;     &lt;int&gt;       &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                       CUSA        NA          70                   43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                        SEC        NA          68                   33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                       CUSA        NA          73                   37</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                  Big South        NA          50                   30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                    Big Sky        NA          55                   25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:                     Big 12        NA         104                   48</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:                        SEC        NA          79                   38</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                     Big 12        NA          70                   28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                    Big Ten        NA          77                   35</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                        SEC        NA          65                   28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         away_period_points_2 away_period_points_3 away_period_points_4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   27                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                   35                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                   36                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                   20                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                   30                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:                   40                   16                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:                   41                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                   42                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                   42                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                   37                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         away_period_points_5 away_period_points_6 away_period_points_7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;int&gt;                &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:                   NA                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         away_winner excitement venue_id                 venue  venue_city</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;lgcl&gt;      &lt;num&gt;    &lt;int&gt;                &lt;char&gt;      &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:        TRUE         NA      371 Madison Square Garden    New York</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:        TRUE         NA      371 Madison Square Garden    New York</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:        TRUE         NA      371 Madison Square Garden    New York</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:       FALSE         NA      142           Kohl Center     Madison</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:       FALSE         NA      142           Kohl Center     Madison</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:        TRUE       12.3       13        T-Mobile Arena   Las Vegas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:        TRUE        8.6      629             Alamodome San Antonio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:        TRUE        6.2      629             Alamodome San Antonio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:        TRUE        7.0       13        T-Mobile Arena   Las Vegas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:        TRUE        7.7      629             Alamodome San Antonio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         venue_state home_period_points_8 away_period_points_8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;char&gt;                &lt;int&gt;                &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:          NY                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:          NY                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:          NY                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:          WI                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:          WI                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132536:          NV                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132537:          TX                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132538:          TX                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132539:          NV                   NA                   NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132540:          TX                   NA                   NA</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>

@@ -83,7 +83,8 @@
 </h2>
 <p>Most functions take in a <code>seasons</code> argument for seasons to query. Data is typically available between 2003 and the present season, but an error is thrown if data is not available for a specified season. Calling functions as-is will load data from the most recent (or current) college basketball season.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># with no argument, returns most recent season</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/john-b-edwards/cbbreadr" class="external-link">cbbreadr</a></span><span class="op">)</span></span>
+<span><span class="co"># with no argument, returns most recent season</span></span>
 <span><span class="fu"><a href="reference/load_games.html">load_games</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co"># specify a single season</span></span>
 <span><span class="fu"><a href="reference/load_games.html">load_games</a></span><span class="op">(</span><span class="fl">2023</span><span class="op">)</span></span>
@@ -97,6 +98,12 @@
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># does not take any arguments</span></span>
 <span><span class="fu"><a href="reference/load_conferences.html">load_conferences</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="acknowledgements">Acknowledgements<a class="anchor" aria-label="anchor" href="#acknowledgements"></a>
+</h2>
+<p>This package is only possible thanks to the <a href="https://collegebasketballdata.com/" class="external-link">CollegeBasketballData.com</a> API. The API is maintained by Bill Radjewski, who is kind enough to make this data available for free.</p>
+<p>The API does have premium tiers but maintaining this package requires only the premium tier, so no money is needed for upkeep for the package. If you would like to support this package, rather than send any money my way, I encourage you to instead donate or subscribe to <a href="https://www.patreon.com/c/collegefootballdata/posts" class="external-link">Bill’s Patreon</a> so that he can continue developing and maintaining this wonderful project.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">

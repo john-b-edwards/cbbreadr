@@ -73,80 +73,80 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">load_conferences</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        id source_id                               name  abbreviation</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;int&gt;    &lt;char&gt;                             &lt;char&gt;        &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1:     1         3             Atlantic 10 Conference          A-10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  2:     2         2          Atlantic Coast Conference           ACC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  3:     3        46                    ASUN Conference          ASUN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  4:     4         1            America East Conference      Am. East</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  5:     5        62       American Athletic Conference      American</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  6:     6         8                  Big 12 Conference        Big 12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  7:     7         4                Big East Conference      Big East</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  8:     8         5                 Big Sky Conference       Big Sky</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  9:     9         6               Big South Conference     Big South</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10:    10         7                 Big Ten Conference       Big Ten</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11:    11         9                Big West Conference      Big West</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12:    12        10       Coastal Athletic Association           CAA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13:    13        11                     Conference USA          CUSA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14:    14        45                     Horizon League       Horizon</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15:    15        12                         Ivy League           Ivy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16:    16        13 Metro Atlantic Athletic Conference          MAAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17:    17        14            Mid-American Conference           MAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18:    18        16    Mid-Eastern Athletic Conference          MEAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19:    19        18         Missouri Valley Conference           MVC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20:    20        44           Mountain West Conference Mountain West</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21:    21        19               Northeast Conference           NEC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22:    22        20             Ohio Valley Conference           OVC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23:    23        22                     Patriot League       Patriot</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24:    24        23            Southeastern Conference           SEC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25:    25        26   Southwestern Athletic Conference          SWAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26:    26        24                Southern Conference         SoCon</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27:    27        25               Southland Conference     Southland</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28:    28        49                      Summit League        Summit</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29:    29        27                Sun Belt Conference      Sun Belt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30:    30        30        Western Athletic Conference           WAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31:    31        29              West Coast Conference           WCC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32:    32        43            Division I Independents        Indep.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33:    33        21                  Pac-12 Conference        Pac-12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34:    34        57                         Great West    Great West</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        id source_id                               name  abbreviation</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        short_name</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1:          A-10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  2:           ACC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  3:          ASUN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  4:      Am. East</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  5:      American</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  6:        Big 12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  7:      Big East</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  8:       Big Sky</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  9:     Big South</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10:       Big Ten</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11:      Big West</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12:           CAA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13:          CUSA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14:       Horizon</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15:           Ivy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16:          MAAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17:           MAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18:          MEAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19:           MVC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20: Mountain West</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21:           NEC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22:           OVC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23:       Patriot</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24:           SEC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25:          SWAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26:         SoCon</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27:     Southland</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28:        Summit</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29:      Sun Belt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30:           WAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31:           WCC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32:        Indep.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33:        Pac-12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34:    Great West</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        short_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     conference_id conference_source_id                    conference_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             &lt;int&gt;               &lt;char&gt;                             &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1:             1                    3             Atlantic 10 Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  2:             2                    2          Atlantic Coast Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  3:             3                   46                    ASUN Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  4:             4                    1            America East Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  5:             5                   62       American Athletic Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  6:             6                    8                  Big 12 Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  7:             7                    4                Big East Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  8:             8                    5                 Big Sky Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  9:             9                    6               Big South Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10:            10                    7                 Big Ten Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11:            11                    9                Big West Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12:            12                   10       Coastal Athletic Association</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13:            13                   11                     Conference USA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14:            14                   45                     Horizon League</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15:            15                   12                         Ivy League</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16:            16                   13 Metro Atlantic Athletic Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17:            17                   14            Mid-American Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18:            18                   16    Mid-Eastern Athletic Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19:            19                   18         Missouri Valley Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20:            20                   44           Mountain West Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21:            21                   19               Northeast Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22:            22                   20             Ohio Valley Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23:            23                   22                     Patriot League</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24:            24                   23            Southeastern Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25:            25                   26   Southwestern Athletic Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26:            26                   24                Southern Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27:            27                   25               Southland Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28:            28                   49                      Summit League</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29:            29                   27                Sun Belt Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30:            30                   30        Western Athletic Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31:            31                   29              West Coast Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32:            32                   43            Division I Independents</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33:            33                   21                  Pac-12 Conference</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34:            34                   57                         Great West</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     conference_id conference_source_id                    conference_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     conference_abbreviation conference_short_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;char&gt;                &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1:                    A-10                  A-10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  2:                     ACC                   ACC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  3:                    ASUN                  ASUN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  4:                Am. East              Am. East</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  5:                American              American</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  6:                  Big 12                Big 12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  7:                Big East              Big East</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  8:                 Big Sky               Big Sky</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  9:               Big South             Big South</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10:                 Big Ten               Big Ten</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11:                Big West              Big West</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12:                     CAA                   CAA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13:                    CUSA                  CUSA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14:                 Horizon               Horizon</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15:                     Ivy                   Ivy</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16:                    MAAC                  MAAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17:                     MAC                   MAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18:                    MEAC                  MEAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19:                     MVC                   MVC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20:           Mountain West         Mountain West</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21:                     NEC                   NEC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22:                     OVC                   OVC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23:                 Patriot               Patriot</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24:                     SEC                   SEC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25:                    SWAC                  SWAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26:                   SoCon                 SoCon</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27:               Southland             Southland</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28:                  Summit                Summit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29:                Sun Belt              Sun Belt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30:                     WAC                   WAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31:                     WCC                   WCC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32:                  Indep.                Indep.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33:                  Pac-12                Pac-12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34:              Great West            Great West</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     conference_abbreviation conference_short_name</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>

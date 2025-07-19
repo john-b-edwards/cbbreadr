@@ -84,426 +84,452 @@ This data includes both traditional box score stats (such as points, OREB, AST) 
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">load_player_stats</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       season season_label team_id                 team conference athlete_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;       &lt;char&gt;   &lt;int&gt;               &lt;char&gt;     &lt;char&gt;      &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:   2025     20242025       1    Abilene Christian        WAC       6045</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:   2025     20242025       1    Abilene Christian        WAC       6046</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:   2025     20242025       1    Abilene Christian        WAC       6047</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:   2025     20242025       1    Abilene Christian        WAC       6048</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:   2025     20242025       1    Abilene Christian        WAC       6049</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       season season_label team_id            team_name conference_short_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;       &lt;char&gt;   &lt;int&gt;               &lt;char&gt;                &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:   2025     20242025       1    Abilene Christian                   WAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:   2025     20242025       1    Abilene Christian                   WAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:   2025     20242025       1    Abilene Christian                   WAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:   2025     20242025       1    Abilene Christian                   WAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:   2025     20242025       1    Abilene Christian                   WAC</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15168</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15169</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15170</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15171</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15172</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       athlete_source_id               name position games starts minutes points</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;char&gt;             &lt;char&gt;   &lt;char&gt; &lt;int&gt;  &lt;int&gt;   &lt;int&gt;  &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:           4896505   Leonardo Bettiol        F    32     31     828    419</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:           5177704       Nasir DeGruy        G    32      9     579    117</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:           5106274     Quion Williams        G    30     30     888    411</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:           4897572     Joseph Venzant        G     8      6     157     13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:           4701572 Hunter Jack Madden        G    32     29     883    285</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:           5264286     Emanuel Hylton      ATH     1      1      34     15</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:           5264285  Jayden Rowe-Perry      ATH     1      1      29      8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:           5264300       Mateo Cataid      ATH     1      0       3      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:           5264299        James Quinn      ATH     1      0      23      4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:           5264294       Felix Mcghee      ATH     1      0      34     10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       turnovers fouls assists steals blocks offensive_rating defensive_rating</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;int&gt; &lt;int&gt;   &lt;int&gt;  &lt;int&gt;  &lt;int&gt;            &lt;num&gt;            &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:        61   111      37     33     13            107.3            103.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:        49    59      42     42      3             76.6            100.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:        77    69      75     35     22            102.0            103.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:         8    17       4      7      1             70.1            110.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:        65    45      68     41      4             98.1            104.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:         4     1       1      1      0             59.1            127.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:         4     4       0      2      0             46.8            121.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:         1     1       1      0      0               NA            130.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:         3     2       3      0      0             75.2            129.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:         5     1       0      2      0             78.0            124.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       net_rating porpag usage assists_turnover_ratio offensive_rebound_pct</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;num&gt;  &lt;num&gt; &lt;num&gt;                  &lt;num&gt;                 &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:        4.3    2.1  26.0                   0.61                  38.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:      -23.8   -0.5  16.3                   0.86                  15.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:       -1.1    1.7  26.2                   0.97                  32.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:      -40.8   -0.4   7.1                   0.50                  12.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:       -6.5    0.9  19.5                   1.05                  25.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:      -68.2   -5.4  33.6                   0.25                  20.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:      -74.4   -5.5  28.1                   0.00                  16.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:         NA     NA  14.8                   1.00                    NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:      -54.5   -0.5  11.3                   1.00                  25.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:      -46.2   -0.8  14.8                   0.00                   0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       free_throw_rate effective_field_goal_pct true_shooting_pct</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 &lt;num&gt;                    &lt;num&gt;             &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:            40.9                     52.6               0.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:            21.3                     38.2               0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:            35.7                     49.2               0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:           120.0                     40.0               0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:            27.7                     44.6               0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:            20.0                     32.5               0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:           100.0                     15.0               0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:              NA                       NA                NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:           100.0                     75.0               0.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:            60.0                     70.0               0.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       field_goals_made field_goals_attempted field_goals_pct</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;int&gt;                 &lt;int&gt;           &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:              164                   313            52.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:               46                   127            36.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:              155                   333            46.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                4                    10            40.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:               85                   249            34.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                5                    20            25.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                1                    10            10.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                0                     0             0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                1                     2            50.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                3                     5            60.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       two_point_field_goals_made two_point_field_goals_attempted</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;int&gt;                           &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                        163                             304</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                         41                              98</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                        137                             279</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                          4                              10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                         33                              78</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                          2                              11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                          0                               6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                          0                               0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                          0                               1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                          2                               2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       two_point_field_goals_pct three_point_field_goals_made</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;num&gt;                        &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                      53.6                            1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                      41.8                            5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                      49.1                           18</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                      40.0                            0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                      42.3                           52</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                      18.2                            3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                       0.0                            1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                       0.0                            0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                       0.0                            1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                     100.0                            1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       three_point_field_goals_attempted three_point_field_goals_pct</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                   &lt;int&gt;                       &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                                 9                        11.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                                29                        17.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                                54                        33.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                                 0                         0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                               171                        30.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                                 9                        33.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                                 4                        25.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                                 0                         0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                                 1                       100.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                                 3                        33.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       free_throws_made free_throws_attempted free_throws_pct rebounds_offensive</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;int&gt;                 &lt;int&gt;           &lt;num&gt;              &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:               90                   128            70.3                 48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:               20                    27            74.1                  8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:               83                   119            69.7                 50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                5                    12            41.7                  4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:               63                    69            91.3                 19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                2                     4            50.0                  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                5                    10            50.0                  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                0                     0             0.0                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                1                     2            50.0                  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                3                     3           100.0                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       rebounds_defensive rebounds_total win_shares_offensive</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;int&gt;          &lt;int&gt;                &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                 78            126                  1.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                 43             51                 -0.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                103            153                  1.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                 28             32                 -0.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                 56             75                  0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                  4              5                 -0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                  5              6                 -0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                  0              0                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                  3              4                  0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                  4              4                  0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       win_shares_defensive win_shares_total win_shares_total_per40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;num&gt;            &lt;num&gt;                  &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                  1.2              2.7                  0.130</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                  1.0              0.3                  0.021</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                  1.2              2.3                  0.104</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                  0.1              0.0                  0.000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                  1.1              1.6                  0.072</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       athlete_id athlete_source_id       athlete_name athlete_position games</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;int&gt;            &lt;char&gt;             &lt;char&gt;           &lt;char&gt; &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:       6045           4896505   Leonardo Bettiol                F    32</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:       6046           5177704       Nasir DeGruy                G    32</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:       6047           5106274     Quion Williams                G    30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:       6048           4897572     Joseph Venzant                G     8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:       6049           4701572 Hunter Jack Madden                G    32</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:      15168           5264286     Emanuel Hylton              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:      15169           5264285  Jayden Rowe-Perry              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:      15170           5264300       Mateo Cataid              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:      15171           5264299        James Quinn              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:      15172           5264294       Felix Mcghee              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       starts minutes points turnovers fouls assists steals blocks</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;   &lt;int&gt;  &lt;int&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt;  &lt;int&gt;  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:     31     828    419        61   111      37     33     13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:      9     579    117        49    59      42     42      3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:     30     888    411        77    69      75     35     22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:      6     157     13         8    17       4      7      1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:     29     883    285        65    45      68     41      4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:      1      34     15         4     1       1      1      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:      1      29      8         4     4       0      2      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:      0       3      0         1     1       1      0      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:      0      23      4         3     2       3      0      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:      0      34     10         5     1       0      2      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       offensive_rating defensive_rating net_rating porpag usage</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;num&gt;            &lt;num&gt;      &lt;num&gt;  &lt;num&gt; &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:            107.3            103.0        4.3    2.1 0.260</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:             76.6            100.4      -23.8   -0.5 0.163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:            102.0            103.1       -1.1    1.7 0.262</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:             70.1            110.9      -40.8   -0.4 0.071</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:             98.1            104.6       -6.5    0.9 0.195</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:             59.1            127.3      -68.2   -5.4 0.336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:             46.8            121.2      -74.4   -5.5 0.281</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:               NA            130.9         NA     NA 0.148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:             75.2            129.7      -54.5   -0.5 0.113</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:             78.0            124.2      -46.2   -0.8 0.148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       assists_turnover_ratio offensive_rebound_pct free_throw_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;num&gt;                 &lt;num&gt;           &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   0.61                 0.381           0.409</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   0.86                 0.157           0.213</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   0.97                 0.327           0.357</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   0.50                 0.125           1.200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   1.05                 0.253           0.277</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                  0.0             -0.2                 -0.235</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                  0.0             -0.2                 -0.276</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                  0.0               NA                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                  0.0              0.0                  0.000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                  0.0              0.0                  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                   0.25                 0.200           0.200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                   0.00                 0.167           1.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                   1.00                    NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                   1.00                 0.250           1.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                   0.00                 0.000           0.600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       effective_field_goal_pct true_shooting_pct field_goals_made</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;num&gt;             &lt;num&gt;            &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                    0.526             0.006              164</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                    0.382             0.004               46</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                    0.492             0.005              155</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                    0.400             0.004                4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                    0.446             0.005               85</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                    0.325             0.003                5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                    0.150             0.003                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                       NA                NA                0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                    0.750             0.007                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                    0.700             0.008                3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       field_goals_attempted field_goals_pct two_point_field_goals_made</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       &lt;int&gt;           &lt;num&gt;                      &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   313           0.524                        163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   127           0.362                         41</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   333           0.465                        137</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                    10           0.400                          4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   249           0.341                         33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                    20           0.250                          2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                    10           0.100                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                     0           0.000                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                     2           0.500                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                     5           0.600                          2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       two_point_field_goals_attempted two_point_field_goals_pct</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                 &lt;int&gt;                     &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                             304                     0.536</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                              98                     0.418</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                             279                     0.491</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                              10                     0.400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                              78                     0.423</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                              11                     0.182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                               6                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                               0                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                               1                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                               2                     1.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       three_point_field_goals_made three_point_field_goals_attempted</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;int&gt;                             &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                            1                                 9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                            5                                29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                           18                                54</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                            0                                 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                           52                               171</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                            3                                 9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                            1                                 4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                            0                                 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                            1                                 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                            1                                 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       three_point_field_goals_pct free_throws_made free_throws_attempted</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                             &lt;num&gt;            &lt;int&gt;                 &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                       0.111               90                   128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                       0.172               20                    27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                       0.333               83                   119</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                       0.000                5                    12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                       0.304               63                    69</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                       0.333                2                     4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                       0.250                5                    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                       0.000                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                       1.000                1                     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                       0.333                3                     3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       free_throws_pct rebounds_offensive rebounds_defensive rebounds_total</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 &lt;num&gt;              &lt;int&gt;              &lt;int&gt;          &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:           0.703                 48                 78            126</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:           0.741                  8                 43             51</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:           0.697                 50                103            153</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:           0.417                  4                 28             32</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:           0.913                 19                 56             75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:           0.500                  1                  4              5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:           0.500                  1                  5              6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:           0.000                  0                  0              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:           0.500                  1                  3              4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:           1.000                  0                  4              4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       win_shares_offensive win_shares_defensive win_shares_total</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;num&gt;                &lt;num&gt;            &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                  1.5                  1.2              2.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                 -0.7                  1.0              0.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                  1.1                  1.2              2.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                 -0.1                  0.1              0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                  0.5                  1.1              1.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                 -0.2                  0.0             -0.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                 -0.2                  0.0             -0.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                   NA                  0.0               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                  0.0                  0.0              0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                  0.0                  0.0              0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       win_shares_total_per40</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                  0.130</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                  0.021</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                  0.104</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                  0.072</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9813:                 -0.235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9814:                 -0.276</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9815:                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9816:                  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9817:                  0.000</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">load_player_stats</span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       season season_label team_id                         team conference</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;       &lt;char&gt;   &lt;int&gt;                       &lt;char&gt;     &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:   2024     20232024       1            Abilene Christian        WAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:   2024     20232024       1            Abilene Christian        WAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:   2024     20232024       1            Abilene Christian        WAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:   2024     20232024       1            Abilene Christian        WAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:   2024     20232024       1            Abilene Christian        WAC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:   2024     20232024     972 Indiana University Northwest       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:   2024     20232024     972 Indiana University Northwest       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:   2024     20232024     972 Indiana University Northwest       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:   2024     20232024     972 Indiana University Northwest       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:   2024     20232024     972 Indiana University Northwest       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       athlete_id athlete_source_id               name position games starts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;int&gt;            &lt;char&gt;             &lt;char&gt;   &lt;char&gt; &lt;int&gt;  &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:        747           4896862          Ali Dibba        G    31     30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:       4056           5177703     Kavion McClain        G    34     30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:       6045           4896505   Leonardo Bettiol        F    31     22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:       6046           5177704       Nasir DeGruy        G    34      6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:       6049           4701572 Hunter Jack Madden        G    34     34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       season season_label team_id                    team_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;       &lt;char&gt;   &lt;int&gt;                       &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:   2024     20232024       1            Abilene Christian</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:   2024     20232024       1            Abilene Christian</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:   2024     20232024       1            Abilene Christian</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:   2024     20232024       1            Abilene Christian</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:   2024     20232024       1            Abilene Christian</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:   2024     20232024     972 Indiana University Northwest</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:   2024     20232024     972 Indiana University Northwest</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:   2024     20232024     972 Indiana University Northwest</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:   2024     20232024     972 Indiana University Northwest</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:   2024     20232024     972 Indiana University Northwest</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       conference_short_name athlete_id athlete_source_id       athlete_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;char&gt;      &lt;int&gt;            &lt;char&gt;             &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   WAC        747           4896862          Ali Dibba</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   WAC       4056           5177703     Kavion McClain</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   WAC       6045           4896505   Leonardo Bettiol</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   WAC       6046           5177704       Nasir DeGruy</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   WAC       6049           4701572 Hunter Jack Madden</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:      19824           5192074     Ladaion Barnes        F     1      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:      19825           5192077      Adam Eastland        G     1      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:      19826           5192073       Kionne Layne        G     1      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:      19827           5192070    Brian Hernandez        G     1      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:      19828           5192068      Nicky Flesher        G     1      0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       minutes points turnovers fouls assists steals blocks offensive_rating</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;int&gt;  &lt;int&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt;  &lt;int&gt;  &lt;int&gt;            &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:     985    482        72    65      36     43      7            102.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:     919    211        68    56     115     41      2             97.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:     667    303        41   111      29     12      6            111.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:     483    131        31    37      36     17      5             93.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:    1108    400        54    67      68     39      1            109.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:      21      3         0     4       2      0      0             95.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:       2      0         0     0       0      0      0             22.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:      12      2         0     1       1      1      1             50.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:      16      3         0     4       2      1      0             65.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:      19      9         0     1       0      0      0            137.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       defensive_rating net_rating porpag usage assists_turnover_ratio</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;num&gt;      &lt;num&gt;  &lt;num&gt; &lt;num&gt;                  &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:            110.1       -7.6    1.9  26.3                   0.50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:            112.3      -14.6    0.6  14.5                   1.69</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:            107.8        4.1    1.9  22.7                   0.71</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:            111.5      -18.3    0.2  17.4                   1.16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:            113.3       -3.7    2.1  18.8                   1.26</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:            122.6      -27.5    0.2   9.8                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:            134.4     -112.3   -0.9  41.3                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:            116.8      -66.2   -1.8  24.1                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:            122.8      -57.1   -1.2  20.7                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:            134.3        3.4    2.4  15.2                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       offensive_rebound_pct free_throw_rate effective_field_goal_pct</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       &lt;num&gt;           &lt;num&gt;                    &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                  22.0            43.1                     50.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                  10.6            25.9                     49.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                  39.7            48.3                     55.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                  22.0            31.6                     44.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                  21.6            41.7                     49.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                  20.0             0.0                     30.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                 100.0             0.0                      0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                  50.0             0.0                     14.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                  50.0             0.0                     18.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                    NA             0.0                     64.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       true_shooting_pct field_goals_made field_goals_attempted field_goals_pct</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;num&gt;            &lt;int&gt;                 &lt;int&gt;           &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:               0.6              175                   367            47.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:               0.5               78                   174            44.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:               0.6              118                   211            55.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:               0.5               49                   117            41.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:               0.6              118                   300            39.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:               0.3                1                     5            20.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:               0.0                0                     2             0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:               0.1                1                     7            14.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:               0.2                1                     8            12.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:               0.6                3                     7            42.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       two_point_field_goals_made two_point_field_goals_attempted</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;int&gt;                           &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                        158                             318</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                         62                             121</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                        118                             211</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                         44                              98</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                         55                             138</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                          0                               2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                          0                               1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                          1                               6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                          0                               2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                          0                               1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       two_point_field_goals_pct three_point_field_goals_made</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;num&gt;                        &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                      49.7                           17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                      51.2                           16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                      55.9                            0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                      44.9                            5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                      39.9                           63</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                       0.0                            1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                       0.0                            0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                      16.7                            0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                       0.0                            1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                       0.0                            3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       three_point_field_goals_attempted three_point_field_goals_pct</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                   &lt;int&gt;                       &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                                49                        34.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                                53                        30.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                                 0                         0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                                19                        26.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                               162                        38.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                                 3                        33.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                                 1                         0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                                 1                         0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                                 6                        16.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                                 6                        50.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       free_throws_made free_throws_attempted free_throws_pct rebounds_offensive</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;int&gt;                 &lt;int&gt;           &lt;num&gt;              &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:              115                   158            72.8                 31</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:               39                    45            86.7                  7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:               67                   102            65.7                 62</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:               28                    37            75.7                 13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:              101                   125            80.8                 22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                0                     0             0.0                  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                0                     0             0.0                  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                0                     0             0.0                  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                0                     0             0.0                  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                0                     0             0.0                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       rebounds_defensive rebounds_total win_shares_offensive</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;int&gt;          &lt;int&gt;                &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                110            141                  1.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                 59             66                  0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                 94            156                  1.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                 46             59                  0.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                 80            102                  1.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                  4              5                  0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                  0              1                  0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                  1              2                  0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                  1              2                  0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                  0              0                  0.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       win_shares_defensive win_shares_total win_shares_total_per40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;num&gt;            &lt;num&gt;                  &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                  0.7              2.1                  0.085</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                  0.5              0.9                  0.039</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                  0.6              2.1                  0.126</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                  0.3              0.4                  0.033</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                  0.5              2.4                  0.087</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                  &lt;NA&gt;      19824           5192074     Ladaion Barnes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                  &lt;NA&gt;      19825           5192077      Adam Eastland</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                  &lt;NA&gt;      19826           5192073       Kionne Layne</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                  &lt;NA&gt;      19827           5192070    Brian Hernandez</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                  &lt;NA&gt;      19828           5192068      Nicky Flesher</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       athlete_position games starts minutes points turnovers fouls assists</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 &lt;char&gt; &lt;int&gt;  &lt;int&gt;   &lt;int&gt;  &lt;int&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                G    31     30     985    482        72    65      36</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                G    34     30     919    211        68    56     115</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                F    31     22     667    303        41   111      29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                G    34      6     483    131        31    37      36</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                G    34     34    1108    400        54    67      68</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                F     1      0      21      3         0     4       2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                G     1      0       2      0         0     0       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                G     1      0      12      2         0     1       1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                G     1      0      16      3         0     4       2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                G     1      0      19      9         0     1       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       steals blocks offensive_rating defensive_rating net_rating porpag usage</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;  &lt;int&gt;            &lt;num&gt;            &lt;num&gt;      &lt;num&gt;  &lt;num&gt; &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:     43      7            102.5            110.1       -7.6    1.9 0.263</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:     41      2             97.7            112.3      -14.6    0.6 0.145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:     12      6            111.9            107.8        4.1    1.9 0.227</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:     17      5             93.2            111.5      -18.3    0.2 0.174</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:     39      1            109.6            113.3       -3.7    2.1 0.188</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:      0      0             95.1            122.6      -27.5    0.2 0.098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:      0      0             22.1            134.4     -112.3   -0.9 0.413</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:      1      1             50.6            116.8      -66.2   -1.8 0.241</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:      1      0             65.7            122.8      -57.1   -1.2 0.207</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:      0      0            137.7            134.3        3.4    2.4 0.152</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       assists_turnover_ratio offensive_rebound_pct free_throw_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;num&gt;                 &lt;num&gt;           &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   0.50                 0.220           0.431</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   1.69                 0.106           0.259</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   0.71                 0.397           0.483</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   1.16                 0.220           0.316</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   1.26                 0.216           0.417</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                  0.0              0.0                  0.000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                  0.0              0.0                  0.000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                  0.0              0.0                  0.000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                  0.0              0.0                  0.000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                  0.0              0.1                  0.211</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                     NA                 0.200           0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                     NA                 1.000           0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                     NA                 0.500           0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                     NA                 0.500           0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                     NA                    NA           0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       effective_field_goal_pct true_shooting_pct field_goals_made</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;num&gt;             &lt;num&gt;            &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                    0.500             0.006              175</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                    0.494             0.005               78</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                    0.559             0.006              118</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                    0.440             0.005               49</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                    0.498             0.006              118</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                    0.300             0.003                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                    0.000             0.000                0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                    0.143             0.001                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                    0.188             0.002                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                    0.643             0.006                3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       field_goals_attempted field_goals_pct two_point_field_goals_made</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       &lt;int&gt;           &lt;num&gt;                      &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                   367           0.477                        158</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                   174           0.448                         62</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                   211           0.559                        118</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                   117           0.419                         44</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                   300           0.393                         55</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                     5           0.200                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                     2           0.000                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                     7           0.143                          1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                     8           0.125                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                     7           0.429                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       two_point_field_goals_attempted two_point_field_goals_pct</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                 &lt;int&gt;                     &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                             318                     0.497</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                             121                     0.512</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                             211                     0.559</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                              98                     0.449</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                             138                     0.399</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                               2                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                               1                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                               6                     0.167</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                               2                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                               1                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       three_point_field_goals_made three_point_field_goals_attempted</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;int&gt;                             &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                           17                                49</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                           16                                53</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                            0                                 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                            5                                19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                           63                               162</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                            1                                 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                            0                                 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                            0                                 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                            1                                 6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                            3                                 6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       three_point_field_goals_pct free_throws_made free_throws_attempted</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                             &lt;num&gt;            &lt;int&gt;                 &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                       0.347              115                   158</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                       0.302               39                    45</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                       0.000               67                   102</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                       0.263               28                    37</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                       0.389              101                   125</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                       0.333                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                       0.000                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                       0.000                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                       0.167                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                       0.500                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       free_throws_pct rebounds_offensive rebounds_defensive rebounds_total</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 &lt;num&gt;              &lt;int&gt;              &lt;int&gt;          &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:           0.728                 31                110            141</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:           0.867                  7                 59             66</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:           0.657                 62                 94            156</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:           0.757                 13                 46             59</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:           0.808                 22                 80            102</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:           0.000                  1                  4              5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:           0.000                  1                  0              1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:           0.000                  1                  1              2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:           0.000                  1                  1              2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:           0.000                  0                  0              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       win_shares_offensive win_shares_defensive win_shares_total</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;num&gt;                &lt;num&gt;            &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                  1.4                  0.7              2.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                  0.4                  0.5              0.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                  1.5                  0.6              2.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                  0.1                  0.3              0.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                  1.9                  0.5              2.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                                                           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                  0.0                  0.0              0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                  0.0                  0.0              0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                  0.0                  0.0              0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                  0.0                  0.0              0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                  0.1                  0.0              0.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       win_shares_total_per40</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1:                  0.085</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    2:                  0.039</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3:                  0.126</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    4:                  0.033</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    5:                  0.087</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ---                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9872:                  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9873:                  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9874:                  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9875:                  0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9876:                  0.211</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">load_player_stats</span><span class="op">(</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         season season_label team_id                 team conference athlete_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;       &lt;char&gt;   &lt;int&gt;               &lt;char&gt;     &lt;char&gt;      &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:   2003     20022003     102              Gonzaga        WCC      89361</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:   2003     20022003     102              Gonzaga        WCC      90765</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:   2003     20022003     102              Gonzaga        WCC      90766</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:   2003     20022003     102              Gonzaga        WCC      91830</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:   2003     20022003     102              Gonzaga        WCC      92102</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         season season_label team_id            team_name conference_short_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;       &lt;char&gt;   &lt;int&gt;               &lt;char&gt;                &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:   2003     20022003     102              Gonzaga                   WCC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:   2003     20022003     102              Gonzaga                   WCC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:   2003     20022003     102              Gonzaga                   WCC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:   2003     20022003     102              Gonzaga                   WCC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:   2003     20022003     102              Gonzaga                   WCC</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15168</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15169</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15170</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15171</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:   2025     20242025     830 Washington Adventist       &lt;NA&gt;      15172</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_source_id              name position games starts minutes</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;char&gt;            &lt;char&gt;   &lt;char&gt; &lt;int&gt;  &lt;int&gt;   &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:              8021 Dustin Villepigue        F     1      0       1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:              6585      Ronny Turiaf        F     1      0      17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:              6580  Brian Michaelson        G     1      0       1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:              8020    Joshua Reisman        G     1      0       5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:              3546     Kyle Bankhead      G-F     1      0      30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:           5264286    Emanuel Hylton      ATH     1      1      34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:           5264285 Jayden Rowe-Perry      ATH     1      1      29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:           5264300      Mateo Cataid      ATH     1      0       3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:           5264299       James Quinn      ATH     1      0      23</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:           5264294      Felix Mcghee      ATH     1      0      34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         points turnovers fouls assists steals blocks offensive_rating</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt;  &lt;int&gt;  &lt;int&gt;            &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:      0         0     0       0      0      0               NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:      8         0     4       0      2      2             89.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:      0         0     0       0      0      0               NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:      2         0     0       0      1      0            114.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:      5         0     3       5      0      0            145.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:     15         4     1       1      1      0             59.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:      8         4     4       0      2      0             46.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:      0         1     1       1      0      0               NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:      4         3     2       3      0      0             75.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:     10         5     1       0      2      0             78.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         defensive_rating net_rating porpag usage assists_turnover_ratio</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;num&gt;      &lt;num&gt;  &lt;num&gt; &lt;num&gt;                  &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:               NA         NA     NA   0.0                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:               NA         NA    0.1  37.7                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:               NA         NA     NA   0.0                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:               NA         NA    0.5  21.4                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:               NA         NA    2.5   8.9                     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:            127.3      -68.2   -5.4  33.6                   0.25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:            121.2      -74.4   -5.5  28.1                   0.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:            130.9         NA     NA  14.8                   1.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:            129.7      -54.5   -0.5  11.3                   1.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:            124.2      -46.2   -0.8  14.8                   0.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         offensive_rebound_pct free_throw_rate effective_field_goal_pct</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;num&gt;           &lt;num&gt;                    &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   0.0              NA                       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                  60.0               0                     33.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                    NA              NA                       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                   0.0               0                     50.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                   0.0               0                     50.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:                  20.0              20                     32.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:                  16.7             100                     15.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                    NA              NA                       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:                  25.0             100                     75.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                   0.0              60                     70.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         true_shooting_pct field_goals_made field_goals_attempted</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                     &lt;num&gt;            &lt;int&gt;                 &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                NA                0                     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:               0.3                4                    12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                NA                0                     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:               0.5                1                     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:               0.5                2                     5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:               0.3                5                    20</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:               0.3                1                    10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                NA                0                     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:               0.7                1                     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:               0.8                3                     5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         field_goals_pct two_point_field_goals_made</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;num&gt;                      &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:             0.0                          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:            33.3                          4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:             0.0                          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:            50.0                          1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:            40.0                          1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:            25.0                          2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:            10.0                          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:             0.0                          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:            50.0                          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:            60.0                          2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:   2025     20242025     830 Washington Adventist                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         athlete_id athlete_source_id      athlete_name athlete_position games</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;int&gt;            &lt;char&gt;            &lt;char&gt;           &lt;char&gt; &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:      89361              8021 Dustin Villepigue                F     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:      90765              6585      Ronny Turiaf                F     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:      90766              6580  Brian Michaelson                G     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:      91830              8020    Joshua Reisman                G     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:      92102              3546     Kyle Bankhead              G-F     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:      15168           5264286    Emanuel Hylton              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:      15169           5264285 Jayden Rowe-Perry              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:      15170           5264300      Mateo Cataid              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:      15171           5264299       James Quinn              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:      15172           5264294      Felix Mcghee              ATH     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         starts minutes points turnovers fouls assists steals blocks</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          &lt;int&gt;   &lt;int&gt;  &lt;int&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt;  &lt;int&gt;  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:      0       1      0         0     0       0      0      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:      0      17      8         0     4       0      2      2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:      0       1      0         0     0       0      0      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:      0       5      2         0     0       0      1      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:      0      30      5         0     3       5      0      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:      1      34     15         4     1       1      1      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:      1      29      8         4     4       0      2      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:      0       3      0         1     1       1      0      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:      0      23      4         3     2       3      0      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:      0      34     10         5     1       0      2      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         offensive_rating defensive_rating net_rating porpag usage</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;num&gt;            &lt;num&gt;      &lt;num&gt;  &lt;num&gt; &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:               NA               NA         NA     NA 0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:             89.3               NA         NA    0.1 0.377</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:               NA               NA         NA     NA 0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:            114.5               NA         NA    0.5 0.214</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:            145.2               NA         NA    2.5 0.089</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:             59.1            127.3      -68.2   -5.4 0.336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:             46.8            121.2      -74.4   -5.5 0.281</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:               NA            130.9         NA     NA 0.148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:             75.2            129.7      -54.5   -0.5 0.113</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:             78.0            124.2      -46.2   -0.8 0.148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         assists_turnover_ratio offensive_rebound_pct free_throw_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;num&gt;                 &lt;num&gt;           &lt;num&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                     NA                 0.000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                     NA                 0.600             0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                     NA                    NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                     NA                 0.000             0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                     NA                 0.000             0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:                   0.25                 0.200             0.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:                   0.00                 0.167             1.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                   1.00                    NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:                   1.00                 0.250             1.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                   0.00                 0.000             0.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         effective_field_goal_pct true_shooting_pct field_goals_made</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;num&gt;             &lt;num&gt;            &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                       NA                NA                0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                    0.333             0.003                4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                       NA                NA                0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                    0.500             0.005                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                    0.500             0.005                2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                            </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:                    0.325             0.003                5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:                    0.150             0.003                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                       NA                NA                0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:                    0.750             0.007                1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                    0.700             0.008                3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         field_goals_attempted field_goals_pct two_point_field_goals_made</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;int&gt;           &lt;num&gt;                      &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                     0           0.000                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                    12           0.333                          4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                     0           0.000                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                     2           0.500                          1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                     5           0.400                          1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:                    20           0.250                          2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:                    10           0.100                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                     0           0.000                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:                     2           0.500                          0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                     5           0.600                          2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         two_point_field_goals_attempted two_point_field_goals_pct</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                   &lt;int&gt;                     &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                               0                       0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                              12                      33.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                               0                       0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                               2                      50.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                               2                      50.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                               0                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                              12                     0.333</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                               0                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                               2                     0.500</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                               2                     0.500</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:                              11                      18.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:                               6                       0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                               0                       0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:                               1                       0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                               2                     100.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:                              11                     0.182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:                               6                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                               0                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:                               1                     0.000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                               2                     1.000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         three_point_field_goals_made three_point_field_goals_attempted</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                &lt;int&gt;                             &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      1:                            0                                 0</span>
@@ -519,30 +545,30 @@ This data includes both traditional box score stats (such as points, OREB, AST) 
 <span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                            1                                 3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         three_point_field_goals_pct free_throws_made free_throws_attempted</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                               &lt;num&gt;            &lt;int&gt;                 &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                         0.0                0                     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                         0.0                0                     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                         0.0                0                     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                         0.0                0                     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                        33.3                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:                       0.000                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:                       0.000                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:                       0.000                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:                       0.000                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:                       0.333                0                     0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:                        33.3                2                     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:                        25.0                5                    10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                         0.0                0                     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:                       100.0                1                     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                        33.3                3                     3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:                       0.333                2                     4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:                       0.250                5                    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:                       0.000                0                     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:                       1.000                1                     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:                       0.333                3                     3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         free_throws_pct rebounds_offensive rebounds_defensive rebounds_total</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;num&gt;              &lt;int&gt;              &lt;int&gt;          &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      1:               0                  0                  1              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      2:               0                  3                  2              5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3:               0                  0                  0              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      4:               0                  0                  1              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5:               0                  0                  3              3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      1:             0.0                  0                  1              1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      2:             0.0                  3                  2              5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      3:             0.0                  0                  0              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      4:             0.0                  0                  1              1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      5:             0.0                  0                  3              3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     ---                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:              50                  1                  4              5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:              50                  1                  5              6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:               0                  0                  0              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:              50                  1                  3              4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:             100                  0                  4              4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157937:             0.5                  1                  4              5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157938:             0.5                  1                  5              6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157939:             0.0                  0                  0              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157940:             0.5                  1                  3              4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157941:             1.0                  0                  4              4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         win_shares_offensive win_shares_defensive win_shares_total</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                        &lt;num&gt;                &lt;num&gt;            &lt;num&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      1:                   NA                   NA               NA</span>

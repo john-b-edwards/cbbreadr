@@ -96,318 +96,409 @@ The win probability for the home team at the time of each play is provided as wi
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">load_plays</span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          play_id on_floor_id_1 on_floor_id_2 on_floor_id_3 on_floor_id_4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;int&gt;         &lt;int&gt;         &lt;int&gt;         &lt;int&gt;         &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:     322         15452          3352         10985         15451</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:     327         15452          3352         10985         15451</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:     328         15452          3352         10985         15451</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:     329         15452          3352         10985         15451</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:     331         15452          3352         10985         15451</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357: 1904703            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358: 1904707            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359: 1904709            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360: 1904715            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361: 1904716            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_id_5 on_floor_id_6 on_floor_id_7 on_floor_id_8 on_floor_id_9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;int&gt;         &lt;int&gt;         &lt;int&gt;         &lt;int&gt;         &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:         15453         10986           316         11008         10988</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:         15453         10986           316         11008         10988</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:         15453         10986           316         11008         10988</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:         15453         10986           316         11008         10988</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:         15453         10986           316         11008         10988</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:            NA            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:            NA            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:            NA            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:            NA            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:            NA            NA            NA            NA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_id_10 on_floor_id_11 on_floor_id_12 on_floor_id_13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;int&gt;          &lt;int&gt;          &lt;int&gt;          &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:          11007             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:          11007             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:          11007             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:          11007             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:          11007             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:             NA             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:             NA             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:             NA             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:             NA             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:             NA             NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_id_14 on_floor_name_1 on_floor_name_2 on_floor_name_3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;int&gt;          &lt;char&gt;          &lt;char&gt;          &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:             NA    Tyler Thomas   Jaquan Carlos  Spencer Malloy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:             NA    Tyler Thomas   Jaquan Carlos  Spencer Malloy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:             NA    Tyler Thomas   Jaquan Carlos  Spencer Malloy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:             NA    Tyler Thomas   Jaquan Carlos  Spencer Malloy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:             NA    Tyler Thomas   Jaquan Carlos  Spencer Malloy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:             NA            &lt;NA&gt;            &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:             NA            &lt;NA&gt;            &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:             NA            &lt;NA&gt;            &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:             NA            &lt;NA&gt;            &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:             NA            &lt;NA&gt;            &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_name_4  on_floor_name_5 on_floor_name_6   on_floor_name_7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;           &lt;char&gt;          &lt;char&gt;            &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:     Jacco Fritz Bryce Washington     Alec Tabada Darlinstone Dubar</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:     Jacco Fritz Bryce Washington     Alec Tabada Darlinstone Dubar</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:     Jacco Fritz Bryce Washington     Alec Tabada Darlinstone Dubar</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:     Jacco Fritz Bryce Washington     Alec Tabada Darlinstone Dubar</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:     Jacco Fritz Bryce Washington     Alec Tabada Darlinstone Dubar</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:            &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:            &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:            &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:            &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:            &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_name_8 on_floor_name_9 on_floor_name_10 on_floor_name_11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;          &lt;char&gt;           &lt;char&gt;           &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:      Terrin Roy   Justin Turner     Xavier Allen             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:      Terrin Roy   Justin Turner     Xavier Allen             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:      Terrin Roy   Justin Turner     Xavier Allen             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:      Terrin Roy   Justin Turner     Xavier Allen             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:      Terrin Roy   Justin Turner     Xavier Allen             &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          play_id on_floor_athlete_id_1 on_floor_athlete_id_2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;int&gt;                 &lt;int&gt;                 &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1: 1160702                    47                  2938</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2: 1160703                    47                  2938</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3: 1160704                    47                  2938</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4: 1160705                    47                  2938</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5: 1160706                    47                  2938</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077: 3165694                   210                   369</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078: 3165695                   210                   369</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079: 3165696                   210                   369</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080: 3165697                  8146                 15262</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081: 3165698                  8146                 15262</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_id_3 on_floor_athlete_id_4 on_floor_athlete_id_5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;int&gt;                 &lt;int&gt;                 &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                 15214                    48                 15207</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                 15214                    48                 15207</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                 15214                    48                 15207</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                 15214                    48                 15207</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                 15214                    48                 15207</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:            &lt;NA&gt;            &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:            &lt;NA&gt;            &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:            &lt;NA&gt;            &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:            &lt;NA&gt;            &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:            &lt;NA&gt;            &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_name_12 on_floor_name_13 on_floor_name_14 on_floor_team_1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;char&gt;           &lt;char&gt;           &lt;char&gt;          &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:             &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_team_2            on_floor_team_3 on_floor_team_4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;                     &lt;char&gt;          &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_team_5            on_floor_team_6 on_floor_team_7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   &lt;char&gt;                     &lt;char&gt;          &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:         Hofstra Saint Joseph's Long Island         Hofstra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:            &lt;NA&gt;                       &lt;NA&gt;            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                     on_floor_team_8            on_floor_team_9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;char&gt;                     &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1: Saint Joseph's Long Island Saint Joseph's Long Island</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2: Saint Joseph's Long Island Saint Joseph's Long Island</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3: Saint Joseph's Long Island Saint Joseph's Long Island</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4: Saint Joseph's Long Island Saint Joseph's Long Island</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5: Saint Joseph's Long Island Saint Joseph's Long Island</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:                       &lt;NA&gt;                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:                       &lt;NA&gt;                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                       &lt;NA&gt;                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                       &lt;NA&gt;                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                       &lt;NA&gt;                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    on_floor_team_10 on_floor_team_11 on_floor_team_12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;char&gt;           &lt;char&gt;           &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1: Saint Joseph's Long Island             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2: Saint Joseph's Long Island             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3: Saint Joseph's Long Island             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4: Saint Joseph's Long Island             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5: Saint Joseph's Long Island             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:                       &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:                       &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                       &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                       &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                       &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_team_13 on_floor_team_14 shot_info_shooter_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;char&gt;           &lt;char&gt;                &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:             &lt;NA&gt;             &lt;NA&gt;                15452</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:             &lt;NA&gt;             &lt;NA&gt;                 3352</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:             &lt;NA&gt;             &lt;NA&gt;                11008</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:             &lt;NA&gt;             &lt;NA&gt;                15453</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:             &lt;NA&gt;             &lt;NA&gt;                11007</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:             &lt;NA&gt;             &lt;NA&gt;                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:             &lt;NA&gt;             &lt;NA&gt;                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:             &lt;NA&gt;             &lt;NA&gt;                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:             &lt;NA&gt;             &lt;NA&gt;                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:             &lt;NA&gt;             &lt;NA&gt;                   NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          shot_info_shooter_name shot_info_made shot_info_range</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;char&gt;         &lt;lgcl&gt;          &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:           Tyler Thomas          FALSE   three_pointer</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:          Jaquan Carlos           TRUE   three_pointer</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:             Terrin Roy           TRUE             rim</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:       Bryce Washington          FALSE   three_pointer</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:           Xavier Allen          FALSE          jumper</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:                   &lt;NA&gt;             NA            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:                   &lt;NA&gt;             NA            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                   &lt;NA&gt;             NA            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                   &lt;NA&gt;             NA            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                   &lt;NA&gt;             NA            &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          shot_info_assisted shot_info_assisted_by_id shot_info_assisted_by_name</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;lgcl&gt;                    &lt;int&gt;                     &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:              FALSE                       NA                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:               TRUE                    15452               Tyler Thomas</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:               TRUE                    10985             Spencer Malloy</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:              FALSE                       NA                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:              FALSE                       NA                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:                 NA                       NA                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:                 NA                       NA                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                 NA                       NA                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                 NA                       NA                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                 NA                       NA                       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          shot_info_location_x shot_info_location_y participants_id_1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;num&gt;                &lt;int&gt;             &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                667.4                  130             15452</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                639.2                  260             15452</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                   NA                   NA             11008</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                902.4                   25             15453</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                   NA                   NA             11007</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:                   NA                   NA                NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:                   NA                   NA                NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                   NA                   NA                NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                   NA                   NA                NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                   NA                   NA                NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          participants_id_2 participants_name_1 participants_name_2 game_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;              &lt;char&gt;              &lt;char&gt;   &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                NA        Tyler Thomas                &lt;NA&gt;    5902</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:              3352        Tyler Thomas       Jaquan Carlos    5902</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:             10985          Terrin Roy      Spencer Malloy    5902</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                NA    Bryce Washington                &lt;NA&gt;    5902</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                NA        Xavier Allen                &lt;NA&gt;    5902</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                 15235                 15258                  7792</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                 15235                 15258                  7792</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                 15235                 15258                  7792</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                  7797                  7794                  7802</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                  7797                  7794                  7802</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_id_6 on_floor_athlete_id_7 on_floor_athlete_id_8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;int&gt;                 &lt;int&gt;                 &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                    51                    63                 15206</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                    51                    63                 15206</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                    51                    63                 15206</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                    51                    63                 15206</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                    51                    63                 15206</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:                NA                &lt;NA&gt;                &lt;NA&gt;   11785</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:                NA                &lt;NA&gt;                &lt;NA&gt;   11785</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                NA                &lt;NA&gt;                &lt;NA&gt;   11785</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                NA                &lt;NA&gt;                &lt;NA&gt;   11785</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                NA                &lt;NA&gt;                &lt;NA&gt;   11785</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          game_source_id          game_start_date season season_type game_type</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  &lt;char&gt;                   &lt;char&gt;  &lt;int&gt;      &lt;char&gt;    &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:      401610539 2023-11-06T11:30:00.000Z   2024     regular       STD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:      401610539 2023-11-06T11:30:00.000Z   2024     regular       STD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:      401610539 2023-11-06T11:30:00.000Z   2024     regular       STD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:      401610539 2023-11-06T11:30:00.000Z   2024     regular       STD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:      401610539 2023-11-06T11:30:00.000Z   2024     regular       STD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:      401625646 2024-03-10T00:54:00.000Z   2024     regular    TRNMNT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:      401625646 2024-03-10T00:54:00.000Z   2024     regular    TRNMNT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:      401625646 2024-03-10T00:54:00.000Z   2024     regular    TRNMNT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:      401625646 2024-03-10T00:54:00.000Z   2024     regular    TRNMNT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:      401625646 2024-03-10T00:54:00.000Z   2024     regular    TRNMNT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          tournament      id          source_id          play_type is_home_team</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;char&gt;   &lt;int&gt;             &lt;char&gt;             &lt;char&gt;       &lt;lgcl&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:       &lt;NA&gt; 1168313 401610539101804601           JumpShot         TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:       &lt;NA&gt; 1168318 401610539101808501           JumpShot         TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:       &lt;NA&gt; 1168319 401610539101814801          LayUpShot        FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:       &lt;NA&gt; 1168320 401610539101816401           JumpShot         TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:       &lt;NA&gt; 1168322 401610539101818701           JumpShot        FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:       &lt;NA&gt; 3054696 401625646102978801 Lost Ball Turnover         TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:       &lt;NA&gt; 3054700 401625646102989001  Offensive Rebound        FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:       &lt;NA&gt; 3054702 401625646102989601  Defensive Rebound         TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:       &lt;NA&gt; 3054708 401625646102999901         End Period           NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:       &lt;NA&gt; 3054709 401625646102999902           End Game           NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          team_id                       team conference team_seed opponent_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            &lt;int&gt;                     &lt;char&gt;     &lt;char&gt;     &lt;int&gt;       &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:     110                    Hofstra        CAA        NA         677</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:     110                    Hofstra        CAA        NA         677</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:     677 Saint Joseph's Long Island       &lt;NA&gt;        NA         110</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:     110                    Hofstra        CAA        NA         677</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:     677 Saint Joseph's Long Island       &lt;NA&gt;        NA         110</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                 15259                 15260                 15261</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                 15259                 15260                 15261</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                 15259                 15260                 15261</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                  1486                   373                  6789</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                  1486                   373                  6789</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_id_9 on_floor_athlete_id_10 on_floor_athlete_id_11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;int&gt;                  &lt;int&gt;                  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                 15205                   2940                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                 15205                   2940                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                 15205                   2940                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                 15205                   2940                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                 15205                   2940                     NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:     259              San Francisco        WCC        NA         230</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:     230                   Portland        WCC        NA         259</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:     259              San Francisco        WCC        NA         230</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:      NA                       &lt;NA&gt;       &lt;NA&gt;        NA          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:      NA                       &lt;NA&gt;       &lt;NA&gt;        NA          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                            opponent opponent_conference opponent_seed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;char&gt;              &lt;char&gt;         &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1: Saint Joseph's Long Island                &lt;NA&gt;            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2: Saint Joseph's Long Island                &lt;NA&gt;            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                    Hofstra                 CAA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4: Saint Joseph's Long Island                &lt;NA&gt;            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                    Hofstra                 CAA            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:                   Portland                 WCC            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:              San Francisco                 WCC            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                   Portland                 WCC            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                       &lt;NA&gt;                &lt;NA&gt;            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                       &lt;NA&gt;                &lt;NA&gt;            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                   368                  15234                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                   368                  15234                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                   368                  15234                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                 15236                    210                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                 15236                    210                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_id_12 on_floor_athlete_id_13 on_floor_athlete_id_14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;int&gt;                  &lt;int&gt;                  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                     NA                     NA                     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_name_1 on_floor_athlete_name_2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;                  &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:            KJ Adams Jr.           Po'Boigh King</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:            KJ Adams Jr.           Po'Boigh King</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:            KJ Adams Jr.           Po'Boigh King</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:            KJ Adams Jr.           Po'Boigh King</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:            KJ Adams Jr.           Po'Boigh King</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:            Mason Gillis          Fletcher Loyer</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:            Mason Gillis          Fletcher Loyer</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:            Mason Gillis          Fletcher Loyer</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:     Apostolos Roumoglou           Andrew Hurley</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:     Apostolos Roumoglou           Andrew Hurley</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_name_3 on_floor_athlete_name_4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;                  &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:      Kevin McCullar Jr.        Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:      Kevin McCullar Jr.        Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:      Kevin McCullar Jr.        Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:      Kevin McCullar Jr.        Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:      Kevin McCullar Jr.        Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:             Lance Jones         Donovan Clingan</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:             Lance Jones         Donovan Clingan</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:             Lance Jones         Donovan Clingan</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:          Jaylin Stewart               Solo Ball</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:          Jaylin Stewart               Solo Ball</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_name_5 on_floor_athlete_name_6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;                  &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:      Fred Cleveland Jr.       Dajuan Harris Jr.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:      Fred Cleveland Jr.       Dajuan Harris Jr.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:      Fred Cleveland Jr.       Dajuan Harris Jr.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:      Fred Cleveland Jr.       Dajuan Harris Jr.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:      Fred Cleveland Jr.       Dajuan Harris Jr.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:            Alex Karaban          Stephon Castle</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:            Alex Karaban          Stephon Castle</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:            Alex Karaban          Stephon Castle</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:             Jayden Ross            Chase Martin</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:             Jayden Ross            Chase Martin</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_name_7 on_floor_athlete_name_8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;                  &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:         Elmarko Jackson          Cobey Harraway</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:         Elmarko Jackson          Cobey Harraway</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:         Elmarko Jackson          Cobey Harraway</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:         Elmarko Jackson          Cobey Harraway</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:         Elmarko Jackson          Cobey Harraway</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:          Tristen Newton             Cam Spencer</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:          Tristen Newton             Cam Spencer</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:          Tristen Newton             Cam Spencer</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:             Caleb Furst            Ethan Morton</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:             Caleb Furst            Ethan Morton</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_name_9 on_floor_athlete_name_10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           &lt;char&gt;                   &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:       Emmanuel Izunabor           Keishon Porter</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:       Emmanuel Izunabor           Keishon Porter</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:       Emmanuel Izunabor           Keishon Porter</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:       Emmanuel Izunabor           Keishon Porter</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:       Emmanuel Izunabor           Keishon Porter</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:            Braden Smith                Zach Edey</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:            Braden Smith                Zach Edey</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:            Braden Smith                Zach Edey</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:          Carson Barrett             Mason Gillis</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:          Carson Barrett             Mason Gillis</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_name_11 on_floor_athlete_name_12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;char&gt;                   &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                     &lt;NA&gt;                     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_athlete_name_13 on_floor_athlete_name_14 on_floor_team_name_1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;char&gt;                   &lt;char&gt;               &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                     &lt;NA&gt;                     &lt;NA&gt;               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                     &lt;NA&gt;                     &lt;NA&gt;               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                     &lt;NA&gt;                     &lt;NA&gt;               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                     &lt;NA&gt;                     &lt;NA&gt;               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                     &lt;NA&gt;                     &lt;NA&gt;               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                     &lt;NA&gt;                     &lt;NA&gt;               Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                     &lt;NA&gt;                     &lt;NA&gt;               Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                     &lt;NA&gt;                     &lt;NA&gt;               Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                     &lt;NA&gt;                     &lt;NA&gt;                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                     &lt;NA&gt;                     &lt;NA&gt;                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            on_floor_team_name_2 on_floor_team_name_3 on_floor_team_name_4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;char&gt;               &lt;char&gt;               &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                 Purdue               Purdue                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                 Purdue               Purdue                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                 Purdue               Purdue                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                  UConn                UConn                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                  UConn                UConn                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            on_floor_team_name_5 on_floor_team_name_6 on_floor_team_name_7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;char&gt;               &lt;char&gt;               &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5: North Carolina Central               Kansas               Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                  UConn                UConn                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                  UConn                UConn                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                  UConn                UConn                UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                  UConn               Purdue               Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                  UConn               Purdue               Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            on_floor_team_name_8   on_floor_team_name_9  on_floor_team_name_10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;char&gt;                 &lt;char&gt;                 &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1: North Carolina Central North Carolina Central North Carolina Central</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2: North Carolina Central North Carolina Central North Carolina Central</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3: North Carolina Central North Carolina Central North Carolina Central</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4: North Carolina Central North Carolina Central North Carolina Central</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5: North Carolina Central North Carolina Central North Carolina Central</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                  UConn                 Purdue                 Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                  UConn                 Purdue                 Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                  UConn                 Purdue                 Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                 Purdue                 Purdue                 Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                 Purdue                 Purdue                 Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_team_name_11 on_floor_team_name_12 on_floor_team_name_13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;char&gt;                &lt;char&gt;                &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                  &lt;NA&gt;                  &lt;NA&gt;                  &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          on_floor_team_name_14 shooter_athlete_id shooter_athlete_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;char&gt;              &lt;int&gt;               &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                  &lt;NA&gt;              15214   Kevin McCullar Jr.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                  &lt;NA&gt;                 NA                 &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                  &lt;NA&gt;                 48     Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                  &lt;NA&gt;                 NA                 &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                  &lt;NA&gt;                 48     Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                  &lt;NA&gt;              15258      Donovan Clingan</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                  &lt;NA&gt;                368         Braden Smith</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                  &lt;NA&gt;                 NA                 &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                  &lt;NA&gt;                 NA                 &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                  &lt;NA&gt;                 NA                 &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          shot_made    shot_range shot_assisted assist_athlete_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             &lt;lgcl&gt;        &lt;char&gt;        &lt;lgcl&gt;             &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:     FALSE three_pointer         FALSE                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:        NA          &lt;NA&gt;            NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:     FALSE           rim         FALSE                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:        NA          &lt;NA&gt;            NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:      TRUE           rim         FALSE                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:      TRUE           rim          TRUE              7792</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:     FALSE three_pointer         FALSE                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:        NA          &lt;NA&gt;            NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:        NA          &lt;NA&gt;            NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:        NA          &lt;NA&gt;            NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          assist_athlete_name shot_x_coordinate shot_y_coordinate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       &lt;char&gt;             &lt;num&gt;             &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                &lt;NA&gt;             780.2               465</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                &lt;NA&gt;                NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                &lt;NA&gt;             883.6               250</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                &lt;NA&gt;                NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                &lt;NA&gt;             883.6               250</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:        Alex Karaban                NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                &lt;NA&gt;                NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                &lt;NA&gt;                NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                &lt;NA&gt;                NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                &lt;NA&gt;                NA                NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          primary_participant_athlete_id secondary_participant_athlete_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                   &lt;int&gt;                            &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                          15214                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                             48                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                             48                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                             48                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                             48                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                           7792                            15258</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                            368                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                             NA                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                             NA                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                             NA                               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          participants_id_3 participants_id_4 primary_participant_athlete_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;             &lt;int&gt;                           &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                NA                NA               Kevin McCullar Jr.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                NA                NA                 Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                NA                NA                 Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                NA                NA                 Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                NA                NA                 Hunter Dickinson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                NA                NA                     Alex Karaban</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                NA                NA                     Braden Smith</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                NA                NA                             &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                NA                NA                             &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                NA                NA                             &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          secondary_participant_athlete_name participants_name_3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                      &lt;char&gt;              &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                    Donovan Clingan                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                               &lt;NA&gt;                &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          participants_name_4 game_id game_source_id          game_start_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                       &lt;char&gt;   &lt;int&gt;         &lt;char&gt;                   &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                &lt;NA&gt;    5880      401575451 2023-11-06T20:00:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                &lt;NA&gt;    5880      401575451 2023-11-06T20:00:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                &lt;NA&gt;    5880      401575451 2023-11-06T20:00:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                &lt;NA&gt;    5880      401575451 2023-11-06T20:00:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                &lt;NA&gt;    5880      401575451 2023-11-06T20:00:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                &lt;NA&gt;   12128      401638645 2024-04-08T21:20:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                &lt;NA&gt;   12128      401638645 2024-04-08T21:20:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                &lt;NA&gt;   12128      401638645 2024-04-08T21:20:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                &lt;NA&gt;   12128      401638645 2024-04-08T21:20:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                &lt;NA&gt;   12128      401638645 2024-04-08T21:20:00.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          season season_type game_type tournament     play_source_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;int&gt;      &lt;char&gt;    &lt;char&gt;     &lt;char&gt;             &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:   2024     regular       STD       &lt;NA&gt; 401575451101805401</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:   2024     regular       STD       &lt;NA&gt; 401575451101806001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:   2024     regular       STD       &lt;NA&gt; 401575451101806002</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:   2024     regular       STD       &lt;NA&gt; 401575451101806201</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:   2024     regular       STD       &lt;NA&gt; 401575451101806202</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:   2024  postseason    TRNMNT       NCAA 401638645102995401</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:   2024  postseason    TRNMNT       NCAA 401638645102996201</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:   2024  postseason    TRNMNT       NCAA 401638645102996202</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:   2024  postseason    TRNMNT       NCAA 401638645102999301</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:   2024  postseason    TRNMNT       NCAA 401638645102999901</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   play_type is_home_team team_id team_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;char&gt;       &lt;lgcl&gt;   &lt;int&gt;    &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:           JumpShot         TRUE     131    Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:  Offensive Rebound         TRUE     131    Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:          LayUpShot         TRUE     131    Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:  Offensive Rebound         TRUE     131    Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:          LayUpShot         TRUE     131    Kansas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:          LayUpShot         TRUE     314     UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:           JumpShot        FALSE     236    Purdue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:  Defensive Rebound         TRUE     314     UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080: Lost Ball Turnover         TRUE     314     UConn</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:           End Game           NA      NA      &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          conference_short_name team_seed opponent_team_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         &lt;char&gt;     &lt;int&gt;            &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                Big 12        NA              199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                Big 12        NA              199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                Big 12        NA              199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                Big 12        NA              199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                Big 12        NA              199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:              Big East         1              236</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:               Big Ten         1              314</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:              Big East         1              236</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:              Big East         1              236</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                  &lt;NA&gt;        NA               NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   opponent_name opponent_conference_short_name opponent_seed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          &lt;char&gt;                         &lt;char&gt;         &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1: North Carolina Central                           MEAC            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2: North Carolina Central                           MEAC            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3: North Carolina Central                           MEAC            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4: North Carolina Central                           MEAC            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5: North Carolina Central                           MEAC            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                 Purdue                        Big Ten             1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                  UConn                       Big East             1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                 Purdue                        Big Ten             1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                 Purdue                        Big Ten             1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                   &lt;NA&gt;                           &lt;NA&gt;            NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          home_score away_score home_win_probability period  clock</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               &lt;int&gt;      &lt;int&gt;                &lt;num&gt;  &lt;int&gt; &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:          0          0                0.641      1  19:53</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:          3          0                0.729      1  19:14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:          3          2                0.669      1  18:51</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:          3          2                0.666      1  18:35</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:          3          2                0.666      1  18:12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:          0          0                0.641      1  19:45</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:          0          0                0.635      1  19:39</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:          0          0                0.635      1  19:39</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:          0          0                0.635      1  19:37</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:          2          0                0.694      1  19:37</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:         70         48                1.000      2   2:11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:         72         51                1.000      2   1:09</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:         72         51                1.000      2   1:03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:         72         51                1.000      2   0:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:         72         51                1.000      2   0:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:         75         60                1.000      2   0:45</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:         75         60                1.000      2   0:37</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:         75         60                1.000      2   0:37</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:         75         60                1.000      2   0:06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:         75         60                1.000      2   0:00</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          seconds_remaining scoring_play shooting_play score_value</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      &lt;int&gt;       &lt;lgcl&gt;        &lt;lgcl&gt;       &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:              1193        FALSE          TRUE           3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2:              1154         TRUE          TRUE           3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:              1131         TRUE          TRUE           2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:              1115        FALSE          TRUE           3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:              1092        FALSE          TRUE           2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:              1185        FALSE          TRUE           3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:              1179        FALSE         FALSE           0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:              1179        FALSE          TRUE           2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:              1177        FALSE         FALSE           0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:              1177         TRUE          TRUE           2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:               131        FALSE         FALSE           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:                69        FALSE         FALSE           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                63        FALSE         FALSE           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                 0        FALSE         FALSE           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                 0        FALSE         FALSE           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                         wallclock</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077:                45         TRUE          TRUE           2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:                37        FALSE          TRUE           3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                37        FALSE         FALSE           0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                 6        FALSE         FALSE           0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                 0        FALSE         FALSE           0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                        wall_clock</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                            &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1: 2023-11-06T11:33:22.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2: 2023-11-06T11:34:10.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3: 2023-11-06T11:34:33.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4: 2023-11-06T11:34:47.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5: 2023-11-06T11:35:13.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1: 2023-11-06T20:03:19.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2: 2023-11-06T20:03:19.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3: 2023-11-06T20:03:19.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4: 2023-11-06T20:03:19.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5: 2023-11-06T20:03:19.000Z</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      ---                         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357: 2024-03-10T03:32:56.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358: 2024-03-10T03:34:21.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359: 2024-03-10T03:34:40.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360: 2024-03-10T03:35:47.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361: 2024-03-10T03:35:47.000Z</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                 play_text</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                    &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       1:                          Tyler Thomas missed Three Point Jumper.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       2: Jaquan Carlos made Three Point Jumper. Assisted by Tyler Thomas.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       3:               Terrin Roy made Layup. Assisted by Spencer Malloy.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                      Bryce Washington missed Three Point Jumper.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                                      Xavier Allen missed Jumper.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016357:                                         San Francisco  Turnover.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016358:                                      Portland Offensive Rebound.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016359:                                 San Francisco Defensive Rebound.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016360:                                                  End of 2nd half</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2016361:                                                      End of Game</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077: 2024-04-08T23:28:07.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078: 2024-04-08T23:28:17.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079: 2024-04-08T23:28:17.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080: 2024-04-08T23:29:58.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081: 2024-04-08T23:29:58.000Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                      play_text</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                         &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       1:         Kevin McCullar Jr. missed Three Point Jumper.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       2:                   Hunter Dickinson Offensive Rebound.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       3:                        Hunter Dickinson missed Layup.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       4:                   Hunter Dickinson Offensive Rebound.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       5:                          Hunter Dickinson made Layup.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ---                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101077: Donovan Clingan made Layup. Assisted by Alex Karaban.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101078:               Braden Smith missed Three Point Jumper.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101079:                              UConn Defensive Rebound.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101080:                                      UConn  Turnover.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2101081:                                           End of Game</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>

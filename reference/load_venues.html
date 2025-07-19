@@ -73,32 +73,45 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">load_venues</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         id source_id                                               name</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      &lt;int&gt;    &lt;char&gt;                                             &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1:  1237      2292                                Cancha Del Atletico</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2:  1258      2566                           St. George's High School</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3:  1621      6289                              CARSA Performance Gym</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   4:  1500      5287                                        Youth Arena</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   5:  1501      5288                                    Carioca Arena 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 968:   409     10886                     Mohegan Sun Arena Wilkes-Barre</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 969:    94     10887                                  John Glaser Arena</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 970:    30     10949                      John Wooden Family Fieldhouse</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 971:   401     10970 Florida State College at Jacksonville South Campus</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 972:   410     10971                    Sturrus Sports &amp; Fitness Center</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                       city  state       country</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                     &lt;char&gt; &lt;char&gt;        &lt;char&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1:               Tucuman   &lt;NA&gt;     Argentina</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2:              Freeport   &lt;NA&gt;          &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3:              Victoria     BC        Canada</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   4:        Rio De Janeiro   &lt;NA&gt;        Brazil</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   5:        Rio De Janeiro   &lt;NA&gt;        Brazil</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 968: Wilkes Barre Township     PA United States</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 969:          Philadelphia     PA United States</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 970:                 Xenia     OH United States</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 971:          Jacksonville     FL United States</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 972:          Grand Rapids     MI United States</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      venue_id venue_source_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;int&gt;          &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:     1237            2292</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:     1258            2566</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:     1621            6289</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:     1500            5287</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:     1501            5288</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 968:      409           10886</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 969:       94           10887</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 970:       30           10949</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 971:      401           10970</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 972:      410           10971</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                              venue_name            venue_city</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                  &lt;char&gt;                &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:                                Cancha Del Atletico               Tucuman</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:                           St. George's High School              Freeport</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:                              CARSA Performance Gym              Victoria</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:                                        Youth Arena        Rio De Janeiro</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:                                    Carioca Arena 1        Rio De Janeiro</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 968:                     Mohegan Sun Arena Wilkes-Barre Wilkes Barre Township</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 969:                                  John Glaser Arena          Philadelphia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 970:                      John Wooden Family Fieldhouse                 Xenia</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 971: Florida State College at Jacksonville South Campus          Jacksonville</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 972:                    Sturrus Sports &amp; Fitness Center          Grand Rapids</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      venue_state venue_country</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           &lt;char&gt;        &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:        &lt;NA&gt;     Argentina</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:        &lt;NA&gt;          &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:          BC        Canada</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:        &lt;NA&gt;        Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:        &lt;NA&gt;        Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 968:          PA United States</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 969:          PA United States</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 970:          OH United States</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 971:          FL United States</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 972:          MI United States</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
