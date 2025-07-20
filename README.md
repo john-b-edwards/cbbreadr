@@ -45,4 +45,4 @@ load_conferences()
 
 This package is only possible thanks to the [CollegeBasketballData.com](https://collegebasketballdata.com/) API. The API is maintained by Bill Radjewski, who is kind enough to make this data available for free. 
 
-The API does have premium tiers but maintaining this package requires only the premium tier, so no money is needed for upkeep for the package. If you would like to support this package, rather than send any money my way, I encourage you to instead donate or subscribe to [Bill's Patreon](https://www.patreon.com/c/collegefootballdata/posts) so that he can continue developing and maintaining this wonderful project.
+The API does have premium tiers but maintaining this package requires only the free tier, so no money is needed for upkeep for the package. If you would like to support this package, rather than send any money my way, I encourage you to instead donate or subscribe to [Bill's Patreon](https://www.patreon.com/c/collegefootballdata/posts) so that he can continue developing and maintaining this wonderful project.
