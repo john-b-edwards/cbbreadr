@@ -24,9 +24,10 @@ load_lines(2024)
 load_lines(TRUE)
 }
 
-#' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_lines.html> for a web version of the data dictionary
 }
 \seealso{
+\url{https://john-b-edwards.github.io/cbbreadr/articles/dictionary_lines.html} for a web version of the data dictionary
+
 \code{\link{dictionary_lines}} for the data dictionary as bundled within the package
 
 Issues with this data should be filed here: \url{https://github.com/john-b-edwards/cbbd-data/issues}
