@@ -5,7 +5,7 @@
 \alias{dictionary_player_stats}
 \title{Data Dictionary: Player Stats}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 47 rows and 3 columns.
+An object of class \code{data.frame} with 47 rows and 3 columns.
 }
 \usage{
 dictionary_player_stats

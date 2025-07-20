@@ -5,7 +5,7 @@
 \alias{dictionary_recruiting}
 \title{Data Dictionary: Recruiting}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 22 rows and 3 columns.
+An object of class \code{data.frame} with 22 rows and 3 columns.
 }
 \usage{
 dictionary_recruiting

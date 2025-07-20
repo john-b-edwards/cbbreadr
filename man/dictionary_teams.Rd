@@ -5,7 +5,7 @@
 \alias{dictionary_teams}
 \title{Data Dictionary: Teams}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 16 rows and 3 columns.
+An object of class \code{data.frame} with 16 rows and 3 columns.
 }
 \usage{
 dictionary_teams

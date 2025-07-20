@@ -5,7 +5,7 @@
 \alias{dictionary_rankings}
 \title{Data Dictionary: Rankings}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 11 rows and 3 columns.
+An object of class \code{data.frame} with 11 rows and 3 columns.
 }
 \usage{
 dictionary_rankings

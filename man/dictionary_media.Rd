@@ -5,7 +5,7 @@
 \alias{dictionary_media}
 \title{Data Dictionary: Media}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 18 rows and 3 columns.
+An object of class \code{data.frame} with 18 rows and 3 columns.
 }
 \usage{
 dictionary_media
