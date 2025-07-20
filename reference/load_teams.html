@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">cbbreadr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,18 +73,120 @@
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p><a href="https://john-b-edwards.github.io/cbbreadr/articles/dictionary_teams.html">https://john-b-edwards.github.io/cbbreadr/articles/dictionary_teams.html</a> for a web version of the data dictionary</p>
-<p><code>dictionary_teams</code> for the data dictionary as bundled within the package</p>
+<p><code><a href="dictionary_teams.html">dictionary_teams</a></code> for the data dictionary as bundled within the package</p>
 <p>Issues with this data should be filed here: <a href="https://github.com/john-b-edwards/cbbd-data/issues" class="external-link">https://github.com/john-b-edwards/cbbd-data/issues</a></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
-<span class="r-in"><span><span class="fu">load_team</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in load_team():</span> could not find function "load_team"</span>
+<span class="r-in"><span><span class="fu">load_teams</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      team_id team_source_id          team_name   team_mascot team_abbreviation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;         &lt;char&gt;             &lt;char&gt;        &lt;char&gt;            &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:     264           2561              Siena        Saints               SIE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      87             57            Florida        Gators               FLA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:     124           2294               Iowa      Hawkeyes              IOWA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:     148            309          Louisiana Ragin' Cajuns                UL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:     236           2509             Purdue  Boilermakers               PUR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360:     147           2344           Longwood       Lancers              LONG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361:     346           2698       West Georgia        Wolves               WGA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362:     165           2385         Mercyhurst        Lakers              MERC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363:     270           2571 South Dakota State   Jackrabbits              SDST</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 364:     137           2325           La Salle     Explorers               LAS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   team_display_name team_short_name team_primary_color</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;char&gt;          &lt;char&gt;             &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:                   Siena Saints           Siena             037961</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:                 Florida Gators         Florida             0021a5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:                  Iowa Hawkeyes            Iowa             000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:        Louisiana Ragin' Cajuns       Louisiana             ce181e</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:            Purdue Boilermakers          Purdue             000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360:               Longwood Lancers        Longwood             003273</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361:            West Georgia Wolves    West Georgia             0033a1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362:              Mercyhurst Lakers      Mercyhurst             000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363: South Dakota State Jackrabbits     S Dakota St             0033a0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 364:             La Salle Explorers        La Salle             003356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      team_secondary_color current_venue_id                  venue_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;char&gt;            &lt;int&gt;                      &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:               eea60f               71                   MVP Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:               fa4616              240 Stephen C. O'Connell Center</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:               fcd116              144        Carver-Hawkeye Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:               ffffff              127                   Cajundome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:               cfb991               11                Mackey Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360:               9ea2a3              105     Joan Perry Brock Center</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361:               db1a21              375                The Coliseum</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362:                 &lt;NA&gt;              300  Mercyhurst Athletic Center</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363:               ffd100              287    First Bank &amp; Trust Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 364:               ffce00               94           John Glaser Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          venue_city venue_state conference_id conference_short_name season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;char&gt;      &lt;char&gt;         &lt;int&gt;                &lt;char&gt;  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:         Albany          NY            16                  MAAC   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:    Gainesville          FL            24                   SEC   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      Iowa City          IA            10               Big Ten   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      Lafayette          LA            29              Sun Belt   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5: West Lafayette          IN            10               Big Ten   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360:      Farmville          VA             9             Big South   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361:     Carrollton          GA             3                  ASUN   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362:           Erie          PA            21                   NEC   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363:      Brookings          SD            28                Summit   2025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 364:   Philadelphia          PA             1                  A-10   2025</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu">load_team</span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in load_team(2024):</span> could not find function "load_team"</span>
+<span class="r-in"><span><span class="fu">load_teams</span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      team_id team_source_id          team_name   team_mascot team_abbreviation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;int&gt;         &lt;char&gt;             &lt;char&gt;        &lt;char&gt;            &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:     264           2561              Siena        Saints               SIE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      87             57            Florida        Gators               FLA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:     124           2294               Iowa      Hawkeyes              IOWA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:     148            309          Louisiana Ragin' Cajuns                UL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:     236           2509             Purdue  Boilermakers               PUR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 359:      20            239             Baylor         Bears               BAY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360:     140           2330           Le Moyne      Dolphins               LEM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361:     147           2344           Longwood       Lancers              LONG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362:     270           2571 South Dakota State   Jackrabbits              SDST</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363:     137           2325           La Salle     Explorers               LAS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   team_display_name team_short_name team_primary_color</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                              &lt;char&gt;          &lt;char&gt;             &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:                   Siena Saints           Siena             037961</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:                 Florida Gators         Florida             0021a5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:                  Iowa Hawkeyes            Iowa             000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:        Louisiana Ragin' Cajuns       Louisiana             ce181e</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:            Purdue Boilermakers          Purdue             000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 359:                   Baylor Bears          Baylor             154734</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360:              Le Moyne Dolphins        Le Moyne               &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361:               Longwood Lancers        Longwood             003273</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362: South Dakota State Jackrabbits     S Dakota St             0033a0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363:             La Salle Explorers        La Salle             003356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      team_secondary_color current_venue_id                  venue_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    &lt;char&gt;            &lt;int&gt;                      &lt;char&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:               eea60f               71                   MVP Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:               fa4616              240 Stephen C. O'Connell Center</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:               fcd116              144        Carver-Hawkeye Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:               ffffff              127                   Cajundome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:               cfb991               11                Mackey Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 359:               ffb81c              332             Foster Pavilion</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360:                 &lt;NA&gt;              220             Ted Grant Court</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361:               9ea2a3              105     Joan Perry Brock Center</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362:               ffd100              287    First Bank &amp; Trust Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363:               ffce00               94           John Glaser Arena</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          venue_city venue_state conference_id conference_short_name season</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              &lt;char&gt;      &lt;char&gt;         &lt;int&gt;                &lt;char&gt;  &lt;int&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:         Albany          NY            16                  MAAC   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:    Gainesville          FL            24                   SEC   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      Iowa City          IA            10               Big Ten   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      Lafayette          LA            29              Sun Belt   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5: West Lafayette          IN            10               Big Ten   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 359:           Waco          TX             6                Big 12   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 360:       Syracuse          NY            21                   NEC   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 361:      Farmville          VA             9             Big South   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 362:      Brookings          SD            28                Summit   2024</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 363:   Philadelphia          PA             1                  A-10   2024</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">load_teams</span><span class="op">(</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       team_id team_source_id          team_name   team_mascot team_abbreviation</span>
