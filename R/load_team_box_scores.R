@@ -9,12 +9,11 @@
 #' @return a dataframe of team box scores.
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_team_box_scores()
-#'
-#' load_team_box_scores(2024)
-#'
-#' load_team_box_scores(TRUE)
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_team_box_scores.html> for a web version of the data dictionary

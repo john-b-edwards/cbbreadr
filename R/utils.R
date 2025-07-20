@@ -9,14 +9,13 @@ RELEASE_URL <- "https://github.com/john-b-edwards/cbbd-data/releases/download"
 #' @return the most recent CBB season as an integer
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' most_recent_season()
 #'
-#' # up to september, will be recorded as 2022
-#' most_recent_season("2022-09-01")
+#' most_recent_season("2022-09-01") # up to september, will be recorded as 2022
 #'
-#' # then will swap over to 2023 when we hit october
-#' most_recent_season("2022-10-01")
+#' most_recent_season("2022-10-01") # then will swap over to 2023 when we hit october
 #' }
 #'
 #' @export

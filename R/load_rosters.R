@@ -7,12 +7,11 @@
 #' @return a dataframe of rosters for college basketball teams in the specified season(s).
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_rosters()
-#'
-#' load_rosters(2024)
-#'
-#' load_rosters(TRUE)
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_rosters.html> for a web version of the data dictionary

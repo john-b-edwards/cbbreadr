@@ -7,12 +7,11 @@
 #' @return a dataframe of betting information for all games for the specified season(s).
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_lines()
-#'
-#' load_lines(2024)
-#'
-#' load_lines(TRUE)
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_lines.html> for a web version of the data dictionary

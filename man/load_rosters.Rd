@@ -16,12 +16,11 @@ a dataframe of rosters for college basketball teams in the specified season(s).
 Pull in rosters for college basketball teams for specified season(s)
 }
 \examples{
+\dontshow{nflreadr:::.for_cran()}
 \donttest{
+try({ # avoid cran errors
 load_rosters()
-
-load_rosters(2024)
-
-load_rosters(TRUE)
+})
 }
 
 }

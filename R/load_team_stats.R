@@ -7,12 +7,11 @@
 #' @return a dataframe of team statistics for college basketball teams.
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_team_stats()
-#'
-#' load_team_stats(2024)
-#'
-#' load_team_stats(TRUE)
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_team_stats.html> for a web version of the data dictionary
