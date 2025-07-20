@@ -5,7 +5,7 @@
 \alias{dictionary_conferences}
 \title{Data Dictionary: Conferences}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 5 rows and 3 columns.
+An object of class \code{data.frame} with 5 rows and 3 columns.
 }
 \usage{
 dictionary_conferences

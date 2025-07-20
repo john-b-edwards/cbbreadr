@@ -5,7 +5,7 @@
 \alias{dictionary_lines}
 \title{Data Dictionary: Lines}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 19 rows and 3 columns.
+An object of class \code{data.frame} with 19 rows and 3 columns.
 }
 \usage{
 dictionary_lines

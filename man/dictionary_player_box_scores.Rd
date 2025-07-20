@@ -5,7 +5,7 @@
 \alias{dictionary_player_box_scores}
 \title{Data Dictionary: Player Box Scores}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 60 rows and 3 columns.
+An object of class \code{data.frame} with 60 rows and 3 columns.
 }
 \usage{
 dictionary_player_box_scores

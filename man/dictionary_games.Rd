@@ -5,7 +5,7 @@
 \alias{dictionary_games}
 \title{Data Dictionary: Games}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 47 rows and 3 columns.
+An object of class \code{data.frame} with 47 rows and 3 columns.
 }
 \usage{
 dictionary_games

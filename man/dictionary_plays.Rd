@@ -5,7 +5,7 @@
 \alias{dictionary_plays}
 \title{Data Dictionary: Plays}
 \format{
-An object of class \code{data.table} (inherits from \code{data.frame}) with 86 rows and 3 columns.
+An object of class \code{data.frame} with 86 rows and 3 columns.
 }
 \usage{
 dictionary_plays
