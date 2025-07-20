@@ -35,7 +35,9 @@ check_seasons_legit <- function(
   first_season = 2003,
   last_season = most_recent_season()
 ) {
-  if (isTRUE(seasons)) seasons <- first_season:last_season
+  if (isTRUE(seasons)) {
+    seasons <- first_season:last_season
+  }
   stopifnot(
     is.numeric(seasons),
     seasons >= first_season,
