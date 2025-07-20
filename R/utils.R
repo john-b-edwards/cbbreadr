@@ -29,7 +29,13 @@ most_recent_season <- function(date = Sys.Date()) {
   }
 }
 
-# helper function to check that seasons are legit for a given loader and cast `TRUE` to all seasons
+#' helper function to ensure that seasons passed into load_* functions are available
+#'
+#' @description The data coverage for years of `load_*()` functions can be wildly variable. To handle checking available years of data, this internal function will throw an error if the values passed into `seasons` do not fall between the first and second arguments.
+#'
+#' @return \value{none}, or an error if any values in `seasons` are outside of `first_season:last_season`
+#' @noRd
+#' @keywords internal
 check_seasons_legit <- function(
   seasons,
   first_season = 2003,
