@@ -21,7 +21,7 @@ For many games with clean player substitution data, the identities of the player
 
 A primary player is identified for some plays as \verb{participants_*_1}. For example, in an unassisted shot, the ID of the player taking the shot is \code{participants_id_1}. If two players are involved in a play, the initiating player is listed as \code{participants_id_1} and the receiving player is listed as \code{participants_id_2}. If a player passes the ball to another player who makes a shot, the assisting player is listed as \code{participants_id_1} and the shooting player is listed as \code{participants_id_2}.
 
-Shot location data is provided where available. \todo build vignette showing how to use shot location data
+Shot location data is provided where available.
 
 The win probability for the home team at the time of each play is provided as \code{win_probability}. These are predictions provided by the collegebasketballdata.com API, not built into the package.
 }
