@@ -9,7 +9,7 @@ At present, only the AP Top 25 and Coaches Polls are available from this functio
 
     <a class="navbar-brand me-2" href="../index.html">cbbreadr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.5</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,9 @@ At present, only the AP Top 25 and Coaches Polls are available from this functio
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="op">{</span> <span class="co"># avoid cran errors</span></span></span>
 <span class="r-in"><span><span class="fu">load_rankings</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        season season_type  week                poll_date poll_type team_id</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;int&gt;      &lt;char&gt; &lt;int&gt;                   &lt;char&gt;    &lt;char&gt;   &lt;int&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     1:   2025     regular     1 2024-10-14T00:00:00.000Z AP Top 25     131</span>
