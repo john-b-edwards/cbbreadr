@@ -17,9 +17,9 @@ Pull in information on all teams that played in a given season.
 }
 \examples{
 \donttest{
-load_team()
+load_teams()
 
-load_team(2024)
+load_teams(2024)
 
 load_teams(TRUE)
 }
