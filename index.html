@@ -75,15 +75,18 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of cbbreadr like so:</p>
+<p>You can install the stable version of <a href="https://github.com/john-b-edwards/cbbreadr" class="external-link">cbbreadr</a> from CRAN with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"cbbreadr"</span><span class="op">)</span></span></code></pre></div>
+<p>You can install the development version of cbbreadr from github using <a href="https://devtools.r-lib.org/" class="external-link">devtools</a>:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"https://github.com/john-b-edwards/cbbreadr"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h2>
 <p>Most functions take in a <code>seasons</code> argument for seasons to query. Data is typically available between 2003 and the present season, but an error is thrown if data is not available for a specified season. Calling functions as-is will load data from the most recent (or current) college basketball season.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/john-b-edwards/cbbreadr" class="external-link">cbbreadr</a></span><span class="op">)</span></span>
 <span><span class="co"># with no argument, returns most recent season</span></span>
 <span><span class="fu"><a href="reference/load_games.html">load_games</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -92,11 +95,11 @@
 <span><span class="co"># specify a range of seasons</span></span>
 <span><span class="fu"><a href="reference/load_games.html">load_games</a></span><span class="op">(</span><span class="fl">2010</span><span class="op">:</span><span class="fl">2015</span><span class="op">)</span></span></code></pre></div>
 <p>To return all available seasons for a given resource, just pass <code>TRUE</code> as an argument to the function.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># return all available seasons</span></span>
 <span><span class="fu"><a href="reference/load_games.html">load_games</a></span><span class="op">(</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>Some functions load resources that do not to be specified by year, and thus do not take an argument.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># does not take any arguments</span></span>
 <span><span class="fu"><a href="reference/load_conferences.html">load_conferences</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -105,6 +108,96 @@
 </h2>
 <p>This package is only possible thanks to the <a href="https://collegebasketballdata.com/" class="external-link">CollegeBasketballData.com</a> API. The API is maintained by Bill Radjewski, who is kind enough to make this data available for free.</p>
 <p>The API does have premium tiers but maintaining this package requires only the free tier, so no money is needed for upkeep for the package. If you would like to support this package, rather than send any money my way, I encourage you to instead donate or subscribe to <a href="https://www.patreon.com/c/collegefootballdata/posts" class="external-link">Bill’s Patreon</a> so that he can continue developing and maintaining this wonderful project.</p>
+<p>I have been a developer with the nflverse organization for a few years now, and have learned much from my talented teammates (who themselves have contributed to <a href="https://github.com/john-b-edwards/cbbreadr" class="external-link">cbbreadr</a>’s development, either directly or indirectly). The structure and code of this project looks quite similar to our NFL pipelines for good reason, and this project would not have been possible without their expertise. My thanks goes out to the entire <code>nflverse</code> organization.</p>
+</div>
+<div class="section level2">
+<h2 id="automation-status">Automation Status<a class="anchor" aria-label="anchor" href="#automation-status"></a>
+</h2>
+<p><a href="https://github.com/john-b-edwards/cbbreadr" class="external-link">cbbreadr</a> relies on several automated pipelines from GitHub to keep data resources updated. For largely static data objects (such as <code><a href="reference/load_conferences.html">load_conferences()</a></code>), these pipelines will run once a year. For more frequently updated data objects (such as <code><a href="reference/load_plays.html">load_plays()</a></code>), these pipelines run daily during the college basketball season. To view when a data resource was most recently updated, see below.</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th align="center">Data</th>
+<th align="center">Status</th>
+<th align="center">Last Updated</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="center">Conferences</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_conferences.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_conferences.yaml/badge.svg" alt="update-conferences"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/conferences" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_conferences&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/conferences/timestamp.json" alt="conferences"></a></td>
+</tr>
+<tr class="even">
+<td align="center">Games</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_games.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_games.yaml/badge.svg" alt="update-games"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/games" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_games&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/games/timestamp.json" alt="games"></a></td>
+</tr>
+<tr class="odd">
+<td align="center">Lines</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_lines.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_lines.yaml/badge.svg" alt="update-lines"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/lines" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_lines&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/lines/timestamp.json" alt="lines"></a></td>
+</tr>
+<tr class="even">
+<td align="center">Media</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_media.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_media.yaml/badge.svg" alt="update-media"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/media" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_media&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/media/timestamp.json" alt="media"></a></td>
+</tr>
+<tr class="odd">
+<td align="center">Player Box Scores</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_player_box.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_player_box.yaml/badge.svg" alt="update-player-box"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/player_box_scores" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_player_box_scores&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/player_box_scores/timestamp.json" alt="player-box"></a></td>
+</tr>
+<tr class="even">
+<td align="center">Player Stats</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_player_stats.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_player_stats.yaml/badge.svg" alt="update-player-stats"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/player_stats" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_player_stats&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/player_stats/timestamp.json" alt="player-stats"></a></td>
+</tr>
+<tr class="odd">
+<td align="center">Plays</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_plays.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_plays.yaml/badge.svg" alt="update-plays"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/plays" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_plays&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/plays/timestamp.json" alt="plays"></a></td>
+</tr>
+<tr class="even">
+<td align="center">Rankings</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_rankings.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_rankings.yaml/badge.svg" alt="update-rankings"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/rankings" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_rankings&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/rankings/timestamp.json" alt="rankings"></a></td>
+</tr>
+<tr class="odd">
+<td align="center">Recruiting</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_recruiting.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_recruiting.yaml/badge.svg" alt="update-recruiting"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/recruiting" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_recruiting&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/recruiting/timestamp.json" alt="recruiting"></a></td>
+</tr>
+<tr class="even">
+<td align="center">Rosters</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_rosters.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_rosters.yaml/badge.svg" alt="update-rosters"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/rosters" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_rosters&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/rosters/timestamp.json" alt="rosters"></a></td>
+</tr>
+<tr class="odd">
+<td align="center">Team Box Scores</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_team_box.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_team_box.yaml/badge.svg" alt="update-team-box"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/team_box_scores" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_team_box_scores&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/team_box_scores/timestamp.json" alt="team-box"></a></td>
+</tr>
+<tr class="even">
+<td align="center">Team Stats</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_team_stats.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_team_stats.yaml/badge.svg" alt="update-team-stats"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/team_stats" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_team_stats&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/team_stats/timestamp.json" alt="team-stats"></a></td>
+</tr>
+<tr class="odd">
+<td align="center">Teams</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_teams.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_teams.yaml/badge.svg" alt="update-teams"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/teams" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_teams&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/teams/timestamp.json" alt="teams"></a></td>
+</tr>
+<tr class="even">
+<td align="center">Venues</td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_venues.yaml" class="external-link"><img src="https://github.com/john-b-edwards/cbbd-data/actions/workflows/update_venues.yaml/badge.svg" alt="update-venues"></a></td>
+<td align="center"><a href="https://github.com/john-b-edwards/cbbd-data/releases/tag/venues" class="external-link"><img src="https://img.shields.io/badge/dynamic/json?color=blue&amp;label=load_venues&amp;query=last_updated&amp;style=flat-square&amp;url=https://github.com/john-b-edwards/cbbd-data/releases/download/venues/timestamp.json" alt="venues"></a></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
