@@ -1,16 +1,14 @@
 library(usethis)
 library(data.table)
-library(dplyr)
-library(stringr)
 
 lapply(
   list.files("data-raw", pattern = ".csv", full.names = TRUE),
   \(x) {
-    file <- fread(x) |>
-      mutate_all(str_squish)
+    file <- fread(x)
+    file[, (colnames(file)) := lapply(.SD, trimws), .SDcols = colnames(file)]
     name <- gsub(".csv", "", gsub("data-raw/", "", x))
     assign(name, file)
-    data.table::setDF(file)
+    setDF(file)
     do.call("use_data", list(as.name(name), overwrite = TRUE))
   }
 )
