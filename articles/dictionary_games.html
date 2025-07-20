@@ -82,9 +82,9 @@
 <code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu">cbbreadr</span><span class="fu">::</span><span class="va"><a href="../reference/dictionary_games.html">dictionary_games</a></span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <colgroup>
-<col width="4%">
+<col width="5%">
 <col width="2%">
-<col width="93%">
+<col width="91%">
 </colgroup>
 <thead><tr class="header">
 <th align="left">field</th>
@@ -93,12 +93,12 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">id</td>
+<td align="left">game_id</td>
 <td align="left">integer</td>
 <td align="left">A unique identifier for each game.</td>
 </tr>
 <tr class="even">
-<td align="left">source_id</td>
+<td align="left">game_source_id</td>
 <td align="left">character</td>
 <td align="left">The unique identifier for each game from the data
 source CBBD scrapes from.</td>
@@ -192,7 +192,7 @@ attendance is not reported for a game–this is reported as attendance =
 <td align="left">A unique identifier for the home team.</td>
 </tr>
 <tr class="even">
-<td align="left">home_team</td>
+<td align="left">home_team_name</td>
 <td align="left">character</td>
 <td align="left">The name of the home team.</td>
 </tr>
@@ -203,7 +203,7 @@ attendance is not reported for a game–this is reported as attendance =
 team.</td>
 </tr>
 <tr class="even">
-<td align="left">home_conference</td>
+<td align="left">home_conference_short_name</td>
 <td align="left">character</td>
 <td align="left">The name of the home team’s conference.</td>
 </tr>
@@ -258,81 +258,93 @@ overtime period. If the game did not go to 3OT, this value is NULL.</td>
 overtime period. If the game did not go to 4OT, this value is NULL.</td>
 </tr>
 <tr class="odd">
+<td align="left">home_period_points_7</td>
+<td align="left">integer</td>
+<td align="left">The number of points the home team scored in the fith
+overtime period. If the game did not go to 5OT, this value is NULL.</td>
+</tr>
+<tr class="even">
 <td align="left">home_winner</td>
 <td align="left">logical</td>
 <td align="left">A boolean indicating whether the home team won or
 not.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">away_team_id</td>
 <td align="left">integer</td>
 <td align="left">A unique identifier for the away team.</td>
 </tr>
-<tr class="odd">
-<td align="left">away_team</td>
+<tr class="even">
+<td align="left">away_team_name</td>
 <td align="left">character</td>
 <td align="left">The name of the away team.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">away_conference_id</td>
 <td align="left">integer</td>
 <td align="left">A unique identifier for the conference of the away
 team.</td>
 </tr>
-<tr class="odd">
-<td align="left">away_conference</td>
+<tr class="even">
+<td align="left">away_conference_short_name</td>
 <td align="left">character</td>
 <td align="left">The name of the away team’s conference.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">away_seed</td>
 <td align="left">integer</td>
 <td align="left">If reported, the seed of the away team in the
 tournament that the game takes in.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">away_points</td>
 <td align="left">integer</td>
 <td align="left">The number of points the away team scored in the
 game.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">away_period_points_1</td>
 <td align="left">integer</td>
 <td align="left">The number of points the away team scored in the first
 period.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">away_period_points_2</td>
 <td align="left">integer</td>
 <td align="left">The number of points the away team scored in the second
 period.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">away_period_points_3</td>
 <td align="left">integer</td>
 <td align="left">The number of points the away team scored in the first
 overtime period. If the game did not go to overtime, this value is
 NULL.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">away_period_points_4</td>
 <td align="left">integer</td>
 <td align="left">The number of points the away team scored in the second
 overtime period. If the game did not go to 2 OT, this value is
 NULL.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">away_period_points_5</td>
 <td align="left">integer</td>
 <td align="left">The number of points the away team scored in the third
 overtime period. If the game did not go to 3OT, this value is NULL.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">away_period_points_6</td>
 <td align="left">integer</td>
 <td align="left">The number of points the away team scored in the fourth
 overtime period. If the game did not go to 4OT, this value is NULL.</td>
+</tr>
+<tr class="odd">
+<td align="left">away_period_points_7</td>
+<td align="left">integer</td>
+<td align="left">The number of points the away team scored in the fifth
+overtime period. If the game did not go to 5OT, this value is NULL.</td>
 </tr>
 <tr class="even">
 <td align="left">away_winner</td>
@@ -359,26 +371,14 @@ place.</td>
 <td align="left">The name of the venue.</td>
 </tr>
 <tr class="even">
-<td align="left">city</td>
+<td align="left">venue_city</td>
 <td align="left">character</td>
 <td align="left">The city where the venue is located.</td>
 </tr>
 <tr class="odd">
-<td align="left">state</td>
+<td align="left">venue_state</td>
 <td align="left">character</td>
 <td align="left">The state in which the venue is located.</td>
-</tr>
-<tr class="even">
-<td align="left">home_period_points_7</td>
-<td align="left">integer</td>
-<td align="left">The number of points the home team scored in the fifth
-overtime period. If the game did not go to 5OT, this value is NULL.</td>
-</tr>
-<tr class="odd">
-<td align="left">away_period_points_7</td>
-<td align="left">integer</td>
-<td align="left">The number of points the away team scored in the fifth
-overtime period. If the game did not go to 5OT, this value is NULL.</td>
 </tr>
 </tbody>
 </table></main>

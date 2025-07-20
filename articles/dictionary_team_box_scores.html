@@ -82,9 +82,9 @@
 <code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu">cbbreadr</span><span class="fu">::</span><span class="va"><a href="../reference/dictionary_team_box_scores.html">dictionary_team_box_scores</a></span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <colgroup>
-<col width="10%">
+<col width="9%">
 <col width="2%">
-<col width="87%">
+<col width="88%">
 </colgroup>
 <thead><tr class="header">
 <th align="left">field</th>
@@ -141,12 +141,12 @@ been scheduled.</td>
 <td align="left">A unique identifier for each team.</td>
 </tr>
 <tr class="odd">
-<td align="left">team</td>
+<td align="left">team_name</td>
 <td align="left">character</td>
 <td align="left">The name of the team.</td>
 </tr>
 <tr class="even">
-<td align="left">conference</td>
+<td align="left">team_conference_short_name</td>
 <td align="left">character</td>
 <td align="left">The conference the team plays in.</td>
 </tr>
@@ -157,17 +157,17 @@ been scheduled.</td>
 that the game takes in.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_id</td>
+<td align="left">opponent_team_id</td>
 <td align="left">integer</td>
 <td align="left">A unique identifier for the opponent team.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent</td>
+<td align="left">opponent_team_name</td>
 <td align="left">character</td>
 <td align="left">The name of the opponent team.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_conference</td>
+<td align="left">opponent_conference_short_name</td>
 <td align="left">character</td>
 <td align="left">The name of the conference of the opponent team.</td>
 </tr>
@@ -207,7 +207,7 @@ tournament that a game took place in
 (”“RD64”“,”“RD32”“,”“RD16”“,”“QTR”“,”“SEMI”“,”“FINAL”“).</td>
 </tr>
 <tr class="even">
-<td align="left">notes</td>
+<td align="left">game_notes</td>
 <td align="left">character</td>
 <td align="left">Miscellaneous notes about the game, such as the
 tournament the game is played under.</td>
@@ -220,33 +220,33 @@ attendance is not reported for a game–this is reported as attendance =
 0.</td>
 </tr>
 <tr class="even">
-<td align="left">pace</td>
+<td align="left">game_pace</td>
 <td align="left">numeric</td>
 <td align="left">The number of possessions in the game divided by the
 number of minutes in the game, multiplied by 40 minutes.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_possessions</td>
+<td align="left">possessions</td>
 <td align="left">integer</td>
 <td align="left">The number of possessions recorded by the team.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_assists</td>
+<td align="left">assists</td>
 <td align="left">integer</td>
 <td align="left">The number of assists recorded by the team.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_steals</td>
+<td align="left">steals</td>
 <td align="left">integer</td>
 <td align="left">The number of steals recorded by the team.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_blocks</td>
+<td align="left">blocks</td>
 <td align="left">integer</td>
 <td align="left">The number of blocks recorded by the team.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_true_shooting</td>
+<td align="left">true_shooting</td>
 <td align="left">numeric</td>
 <td align="left">An adjusted statistic that reflects a team’s skill at
 shooting three-pointers, two-pointers, and free throws. For more
@@ -254,7 +254,7 @@ details, see here: <a href="https://en.wikipedia.org/wiki/True_shooting_percenta
 </td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_rating</td>
+<td align="left">offensive_rating</td>
 <td align="left">numeric</td>
 <td align="left">A metric created by Dean Oliver to measure how many
 points per 100 possessions a team generates on offense. For more
@@ -262,188 +262,188 @@ details, see here: <a href="https://en.wikipedia.org/wiki/Offensive_rating" clas
 </td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_game_score</td>
+<td align="left">game_score</td>
 <td align="left">numeric</td>
 <td align="left">The Hollinger game score for the team. Developed by
 John Hollinger, you can see more details here: <a href="https://en.wikipedia.org/wiki/John_Hollinger#Hollinger_game_score" class="external-link uri">https://en.wikipedia.org/wiki/John_Hollinger#Hollinger_game_score</a>
 </td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_points_total</td>
+<td align="left">points</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team scored.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_points_by_period_1</td>
+<td align="left">points_1h</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team scored in the first
 period.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_points_by_period_2</td>
+<td align="left">points_2h</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team scored in the second
 period.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_points_by_period_3</td>
+<td align="left">points_1ot</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team scored in the first
 overtime period. If the game did not go to overtime, this value is
 NULL.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_points_by_period_4</td>
+<td align="left">points_2ot</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team scored in the second
 overtime period. If the game did not go to 2 OT, this value is
 NULL.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_points_by_period_5</td>
+<td align="left">points_3ot</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team scored in the third
 overtime period. If the game did not go to 3OT, this value is NULL.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_points_by_period_6</td>
+<td align="left">points_4ot</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team scored in the fourth
 overtime period. If the game did not go to 4OT, this value is NULL.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_points_largest_lead</td>
+<td align="left">largest_lead</td>
 <td align="left">integer</td>
 <td align="left">The largest lead the team had at any point in the
 game.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_points_fast_break</td>
+<td align="left">points_fast_break</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team recorded on fast
 breaks.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_points_in_paint</td>
+<td align="left">points_in_paint</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team recorded scoring in the
 paint.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_points_off_turnovers</td>
+<td align="left">points_off_turnovers</td>
 <td align="left">integer</td>
 <td align="left">The number of points the team recorded off turnovers by
 the opposing team.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_two_point_field_goals_made</td>
+<td align="left">two_point_field_goals_made</td>
 <td align="left">integer</td>
 <td align="left">The number of two-point shots a team made.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_two_point_field_goals_attempted</td>
+<td align="left">two_point_field_goals_attempted</td>
 <td align="left">integer</td>
 <td align="left">The number of two-point shots a team attempted.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_two_point_field_goals_pct</td>
+<td align="left">two_point_field_goals_pct</td>
 <td align="left">numeric</td>
 <td align="left">The number of two-point shots a team made divded by the
 number of two-point shots they attempted.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_three_point_field_goals_made</td>
+<td align="left">three_point_field_goals_made</td>
 <td align="left">integer</td>
 <td align="left">The number of three-point shots a team made.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_three_point_field_goals_attempted</td>
+<td align="left">three_point_field_goals_attempted</td>
 <td align="left">integer</td>
 <td align="left">The number of three-point shots a team attempted.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_three_point_field_goals_pct</td>
+<td align="left">three_point_field_goals_pct</td>
 <td align="left">numeric</td>
 <td align="left">The number of three-point shots a team made divided by
 the number of three-point shots they attempted.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_free_throws_made</td>
+<td align="left">free_throws_made</td>
 <td align="left">integer</td>
 <td align="left">The number of free throw shots a team made.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_free_throws_attempted</td>
+<td align="left">free_throws_attempted</td>
 <td align="left">integer</td>
 <td align="left">The number of free throw shots a team attempted.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_free_throws_pct</td>
+<td align="left">free_throws_pct</td>
 <td align="left">numeric</td>
 <td align="left">The number of free throw shots a team made divded by
 the number of free throw shots they attempted.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_field_goals_made</td>
+<td align="left">field_goals_made</td>
 <td align="left">integer</td>
 <td align="left">The number of shots from the floor a team made.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_field_goals_attempted</td>
+<td align="left">field_goals_attempted</td>
 <td align="left">integer</td>
 <td align="left">The number of shots from the floor a team
 attempted.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_field_goals_pct</td>
+<td align="left">field_goals_pct</td>
 <td align="left">numeric</td>
 <td align="left">The number of field goals made divided by the number of
 field goals attempted.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_turnovers_total</td>
+<td align="left">turnovers</td>
 <td align="left">integer</td>
 <td align="left">How many turnovers the team committed.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_turnovers_team_total</td>
+<td align="left">team_turnovers</td>
 <td align="left">integer</td>
 <td align="left">How many team turnovers the team committed. This
 includes turnovers like dead-ball turnovers.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_rebounds_offensive</td>
+<td align="left">rebounds_offensive</td>
 <td align="left">integer</td>
 <td align="left">The number of offensive rebounds a team recorded.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_rebounds_defensive</td>
+<td align="left">rebounds_defensive</td>
 <td align="left">integer</td>
 <td align="left">The number of defensive rebounds a team recorded.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_rebounds_total</td>
+<td align="left">rebounds_total</td>
 <td align="left">integer</td>
 <td align="left">The total number of rebounds a team recorded, offensive
 and defensive.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_fouls_total</td>
+<td align="left">fouls</td>
 <td align="left">integer</td>
 <td align="left">How many fouls the team committed.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_fouls_technical</td>
+<td align="left">technical_fouls</td>
 <td align="left">integer</td>
 <td align="left">How many technical fouls the team committed.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_fouls_flagrant</td>
+<td align="left">flagrant_fouls</td>
 <td align="left">integer</td>
 <td align="left">How many flagrant fouls the team committed.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_four_factors_effective_field_goal_pct</td>
+<td align="left">effective_field_goal_pct</td>
 <td align="left">numeric</td>
 <td align="left">An adjusted statistic that reflects the value of
 three-pointers relative to all other baskets by weighing three points
@@ -452,21 +452,21 @@ here: <a href="https://en.wikipedia.org/wiki/Effective_field_goal_percentage" cl
 </td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_four_factors_free_throw_rate</td>
+<td align="left">free_throw_rate</td>
 <td align="left">numeric</td>
 <td align="left">The number of free throws a team attempted divded by
 the number of field goals a team attempted. This metric is commonly used
 to evaluate a team’s ability to draw personal fouls.</td>
 </tr>
 <tr class="odd">
-<td align="left">team_stats_four_factors_turnover_ratio</td>
+<td align="left">assists_turnover_ratio</td>
 <td align="left">numeric</td>
 <td align="left">The number of assists a team records divided by the
 number of turnovers they commit. This metric is commonly used to
 evaluate the accuracy of a team’s passing.</td>
 </tr>
 <tr class="even">
-<td align="left">team_stats_four_factors_offensive_rebound_pct</td>
+<td align="left">offensive_rebound_pct</td>
 <td align="left">numeric</td>
 <td align="left">An estimate of the rate at which a team secured
 offensive reboulds, measured as OREB / the total number of balls that a
@@ -474,31 +474,31 @@ team could have rebounded. For more details, see here: <a href="https://en.wikip
 </td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_possessions</td>
+<td align="left">opponent_possessions</td>
 <td align="left">integer</td>
 <td align="left">The number of possessions recorded by the opposing
 team.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_assists</td>
+<td align="left">opponent_assists</td>
 <td align="left">integer</td>
 <td align="left">The number of assists recorded by the opposing
 team.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_steals</td>
+<td align="left">opponent_steals</td>
 <td align="left">integer</td>
 <td align="left">The number of steals recorded by the opposing
 team.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_blocks</td>
+<td align="left">opponent_blocks</td>
 <td align="left">integer</td>
 <td align="left">The number of blocks recorded by the opposing
 team.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_true_shooting</td>
+<td align="left">opponent_true_shooting</td>
 <td align="left">numeric</td>
 <td align="left">An adjusted statistic that reflects a opposing team’s
 skill at shooting three-pointers, two-pointers, and free throws. For
@@ -506,7 +506,7 @@ more details, see here: <a href="https://en.wikipedia.org/wiki/True_shooting_per
 </td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_rating</td>
+<td align="left">opponent_offensive_rating</td>
 <td align="left">numeric</td>
 <td align="left">A metric created by Dean Oliver to measure how many
 points per 100 possessions a opposing team generates on offense. For
@@ -514,201 +514,201 @@ more details, see here: <a href="https://en.wikipedia.org/wiki/Offensive_rating"
 </td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_game_score</td>
+<td align="left">opponent_game_score</td>
 <td align="left">numeric</td>
 <td align="left">The Hollinger game score for the opposing team.
 Developed by John Hollinger, you can see more details here: <a href="https://en.wikipedia.org/wiki/John_Hollinger#Hollinger_game_score" class="external-link uri">https://en.wikipedia.org/wiki/John_Hollinger#Hollinger_game_score</a>
 </td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_points_total</td>
+<td align="left">opponent_points</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team scored.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_points_by_period_1</td>
+<td align="left">opponent_points_1h</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team scored in the
 first period.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_points_by_period_2</td>
+<td align="left">opponent_points_2h</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team scored in the
 second period.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_points_by_period_3</td>
+<td align="left">opponent_points_1ot</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team scored in the
 first overtime period. If the game did not go to overtime, this value is
 NULL.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_points_by_period_4</td>
+<td align="left">opponent_points_2ot</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team scored in the
 second overtime period. If the game did not go to 2 OT, this value is
 NULL.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_points_by_period_5</td>
+<td align="left">opponent_points_3ot</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team scored in the
 third overtime period. If the game did not go to 3OT, this value is
 NULL.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_points_by_period_6</td>
+<td align="left">opponent_points_4ot</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team scored in the
 fourth overtime period. If the game did not go to 4OT, this value is
 NULL.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_points_largest_lead</td>
+<td align="left">opponent_largest_lead</td>
 <td align="left">integer</td>
 <td align="left">The largest lead the opposing team had at any point in
 the game.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_points_fast_break</td>
+<td align="left">opponent_points_fast_break</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team recorded on fast
 breaks.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_points_in_paint</td>
+<td align="left">opponent_points_in_paint</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team recorded scoring
 in the paint.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_points_off_turnovers</td>
+<td align="left">opponent_points_off_turnovers</td>
 <td align="left">integer</td>
 <td align="left">The number of points the opposing team recorded off
 turnovers by the opposing opposing team.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_two_point_field_goals_made</td>
+<td align="left">opponent_two_point_field_goals_made</td>
 <td align="left">integer</td>
 <td align="left">The number of two-point shots a opposing team
 made.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_two_point_field_goals_attempted</td>
+<td align="left">opponent_two_point_field_goals_attempted</td>
 <td align="left">integer</td>
 <td align="left">The number of two-point shots a opposing team
 attempted.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_two_point_field_goals_pct</td>
+<td align="left">opponent_two_point_field_goals_pct</td>
 <td align="left">numeric</td>
 <td align="left">The number of two-point shots a opposing team made
 divded by the number of two-point shots they attempted.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_three_point_field_goals_made</td>
+<td align="left">opponent_three_point_field_goals_made</td>
 <td align="left">integer</td>
 <td align="left">The number of three-point shots a opposing team
 made.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_three_point_field_goals_attempted</td>
+<td align="left">opponent_three_point_field_goals_attempted</td>
 <td align="left">integer</td>
 <td align="left">The number of three-point shots a opposing team
 attempted.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_three_point_field_goals_pct</td>
+<td align="left">opponent_three_point_field_goals_pct</td>
 <td align="left">numeric</td>
 <td align="left">The number of three-point shots a opposing team made
 divided by the number of three-point shots they attempted.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_free_throws_made</td>
+<td align="left">opponent_free_throws_made</td>
 <td align="left">integer</td>
 <td align="left">The number of free throw shots a opposing team
 made.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_free_throws_attempted</td>
+<td align="left">opponent_free_throws_attempted</td>
 <td align="left">integer</td>
 <td align="left">The number of free throw shots a opposing team
 attempted.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_free_throws_pct</td>
+<td align="left">opponent_free_throws_pct</td>
 <td align="left">numeric</td>
 <td align="left">The number of free throw shots a opposing team made
 divded by the number of free throw shots they attempted.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_field_goals_made</td>
+<td align="left">opponent_field_goals_made</td>
 <td align="left">integer</td>
 <td align="left">The number of shots from the floor a opposing team
 made.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_field_goals_attempted</td>
+<td align="left">opponent_field_goals_attempted</td>
 <td align="left">integer</td>
 <td align="left">The number of shots from the floor a opposing team
 attempted.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_field_goals_pct</td>
+<td align="left">opponent_field_goals_pct</td>
 <td align="left">numeric</td>
 <td align="left">The number of field goals made divided by the number of
 field goals attempted.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_turnovers_total</td>
+<td align="left">opponent_turnovers</td>
 <td align="left">integer</td>
 <td align="left">How many turnovers the opposing team committed.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_turnovers_team_total</td>
+<td align="left">opponent_team_turnovers</td>
 <td align="left">integer</td>
 <td align="left">How many opposing team turnovers the opposing team
 committed. This includes turnovers like dead-ball turnovers.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_rebounds_offensive</td>
+<td align="left">opponent_rebounds_offensive</td>
 <td align="left">integer</td>
 <td align="left">The number of offensive rebounds a opposing team
 recorded.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_rebounds_defensive</td>
+<td align="left">opponent_rebounds_defensive</td>
 <td align="left">integer</td>
 <td align="left">The number of defensive rebounds a opposing team
 recorded.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_rebounds_total</td>
+<td align="left">opponent_rebounds_total</td>
 <td align="left">integer</td>
 <td align="left">The total number of rebounds a opposing team recorded,
 offensive and defensive.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_fouls_total</td>
+<td align="left">opponent_fouls</td>
 <td align="left">integer</td>
 <td align="left">How many fouls the opposing team committed.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_fouls_technical</td>
+<td align="left">opponent_technical_fouls</td>
 <td align="left">integer</td>
 <td align="left">How many technical fouls the opposing team
 committed.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_fouls_flagrant</td>
+<td align="left">opponent_flagrant_fouls</td>
 <td align="left">integer</td>
 <td align="left">How many flagrant fouls the opposing team
 committed.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_four_factors_effective_field_goal_pct</td>
+<td align="left">opponent_effective_field_goal_pct</td>
 <td align="left">numeric</td>
 <td align="left">An adjusted statistic that reflects the value of
 three-pointers relative to all other baskets by weighing three points
@@ -717,7 +717,7 @@ details, see here: <a href="https://en.wikipedia.org/wiki/Effective_field_goal_p
 </td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_four_factors_free_throw_rate</td>
+<td align="left">opponent_free_throw_rate</td>
 <td align="left">numeric</td>
 <td align="left">The number of free throws a opposing team attempted
 divded by the number of field goals a opposing team attempted. This
@@ -725,20 +725,33 @@ metric is commonly used to evaluate a opposing team’s ability to draw
 personal fouls.</td>
 </tr>
 <tr class="odd">
-<td align="left">opponent_stats_four_factors_turnover_ratio</td>
+<td align="left">opponent_assists_turnover_ratio</td>
 <td align="left">numeric</td>
 <td align="left">The number of assists a opposing team records divided
 by the number of turnovers they commit. This metric is commonly used to
 evaluate the accuracy of a opposing team’s passing.</td>
 </tr>
 <tr class="even">
-<td align="left">opponent_stats_four_factors_offensive_rebound_pct</td>
+<td align="left">opponent_offensive_rebound_pct</td>
 <td align="left">numeric</td>
 <td align="left">An estimate of the rate at which a opposing team
 secured offensive reboulds, measured as OREB / the total number of balls
 that a opposing team could have rebounded. For more details, see here:
 <a href="https://en.wikipedia.org/wiki/Rebound_rate" class="external-link uri">https://en.wikipedia.org/wiki/Rebound_rate</a>
 </td>
+</tr>
+<tr class="odd">
+<td align="left">team_stats_points_by_period_7</td>
+<td align="left">integer</td>
+<td align="left">The number of points the team scored in the fifth
+overtime period. If the game did not go to 5OT, this value is NULL.</td>
+</tr>
+<tr class="even">
+<td align="left">opponent_stats_points_by_period_7</td>
+<td align="left">integer</td>
+<td align="left">The number of points the opposing team scored in the
+fifth overtime period. If the game did not go to 5OT, this value is
+NULL.</td>
 </tr>
 </tbody>
 </table></main>

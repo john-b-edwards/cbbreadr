@@ -82,9 +82,9 @@
 <code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu">cbbreadr</span><span class="fu">::</span><span class="va"><a href="../reference/dictionary_recruiting.html">dictionary_recruiting</a></span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <colgroup>
-<col width="14%">
-<col width="6%">
-<col width="78%">
+<col width="20%">
+<col width="5%">
+<col width="73%">
 </colgroup>
 <thead><tr class="header">
 <th align="left">field</th>
@@ -93,30 +93,30 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">id</td>
+<td align="left">recruit_id</td>
 <td align="left">integer</td>
 <td align="left">A unique identifier for each recruit. This is distinct
 from a player’s athlete_id.</td>
 </tr>
 <tr class="even">
-<td align="left">source_id</td>
+<td align="left">recruit_source_id</td>
 <td align="left">character</td>
 <td align="left">The unique identifier for each player from the data
 source CBBD scrapes from.</td>
 </tr>
 <tr class="odd">
-<td align="left">position</td>
+<td align="left">recruit_position</td>
 <td align="left">character</td>
 <td align="left">The player’s position.</td>
 </tr>
 <tr class="even">
-<td align="left">school_id</td>
+<td align="left">high_school_id</td>
 <td align="left">integer</td>
 <td align="left">A unique identifier for the high school the player
 plays/played for as a high schooler.</td>
 </tr>
 <tr class="odd">
-<td align="left">school</td>
+<td align="left">high_school_name</td>
 <td align="left">character</td>
 <td align="left">The name of the high school the player plays/played for
 as a high schooler.</td>
@@ -155,19 +155,19 @@ more information, see here: <a href="https://en.wikipedia.org/wiki/FIPS_county_c
 </td>
 </tr>
 <tr class="even">
-<td align="left">committed_to_id</td>
+<td align="left">committed_to_team_id</td>
 <td align="left">integer</td>
 <td align="left">The team_id of the college the player was/is committed
 to.</td>
 </tr>
 <tr class="odd">
-<td align="left">committed_to_name</td>
+<td align="left">committed_to_team_name</td>
 <td align="left">character</td>
 <td align="left">The name of the college the player was/is committed
 to.</td>
 </tr>
 <tr class="even">
-<td align="left">committed_to_conference</td>
+<td align="left">committed_to_conference_short_name</td>
 <td align="left">character</td>
 <td align="left">The conference of the college the player was/is
 committed to.</td>
@@ -178,23 +178,23 @@ committed to.</td>
 <td align="left">If available, the athlete_id for the player.</td>
 </tr>
 <tr class="even">
-<td align="left">year</td>
+<td align="left">recruit_year</td>
 <td align="left">integer</td>
 <td align="left">The year of the recruiting class that the player
 belongs to.</td>
 </tr>
 <tr class="odd">
-<td align="left">name</td>
+<td align="left">athlete_name</td>
 <td align="left">character</td>
 <td align="left">The player’s name.</td>
 </tr>
 <tr class="even">
-<td align="left">height_inches</td>
+<td align="left">recruit_height_inches</td>
 <td align="left">numeric</td>
 <td align="left">The player’s height in inches.</td>
 </tr>
 <tr class="odd">
-<td align="left">weight_pounds</td>
+<td align="left">recruit_weight_pounds</td>
 <td align="left">integer</td>
 <td align="left">The player’s weight in pounds.</td>
 </tr>
