@@ -15,7 +15,7 @@
 #' load_lines(TRUE)
 #' }
 #'
-#' #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_lines.html> for a web version of the data dictionary
+#' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_lines.html> for a web version of the data dictionary
 #' @seealso [`dictionary_lines`] for the data dictionary as bundled within the package
 #' @seealso Issues with this data should be filed here: <https://github.com/john-b-edwards/cbbd-data/issues>
 #'
