@@ -7,12 +7,11 @@
 #' @return a dataframe of broadcast information for all games for the specified season(s).
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_media()
-#'
-#' load_media(2024)
-#'
-#' load_media(TRUE)
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_media.html> for a web version of the data dictionary

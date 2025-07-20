@@ -18,12 +18,11 @@ Pull in statistics aggregated by player for specified season(s)
 This data includes both traditional box score stats (such as points, OREB, AST) as well as more advanced stats (such as USG\%, ORTG). For more information on each stat, see the data dictionary \code{dictionary_player_stats}.
 }
 \examples{
+\dontshow{nflreadr:::.for_cran()}
 \donttest{
+try({ # avoid cran errors
 load_player_stats()
-
-load_player_stats(2024)
-
-load_player_stats(TRUE)
+})
 }
 
 }

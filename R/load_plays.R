@@ -17,8 +17,11 @@
 #' @return a dataframe of play-by-play data from all D1 college basketball games.
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
-#' load_plays(2024)
+#' try({ # avoid cran errors
+#' load_plays()
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_plays.html> for a web version of the data dictionary

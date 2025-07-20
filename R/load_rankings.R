@@ -7,8 +7,11 @@
 #' @return a dataframe of information about college basketball rankings and polls
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_rankings()
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_rankings.html> for a web version of the data dictionary

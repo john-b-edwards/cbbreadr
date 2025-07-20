@@ -7,12 +7,11 @@
 #' @return a dataframe of all college basketball teams tracked by collegebasketballdata.com for a given season(s).
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_teams()
-#'
-#' load_teams(2024)
-#'
-#' load_teams(TRUE)
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_teams.html> for a web version of the data dictionary

@@ -20,12 +20,11 @@ Returns data for all NCAA D1 men's basketball games for the specified seasons. I
 This will return both games in the past and scheduled games. If a game is scheduled but its opponents have not yet been determined (i.e., the national championship game of the upcoming season), it will not appear in this dataset.
 }
 \examples{
+\dontshow{nflreadr:::.for_cran()}
 \donttest{
+try({ # avoid cran errors
 load_games()
-
-load_games(2024)
-
-load_games(TRUE)
+})
 }
 
 }

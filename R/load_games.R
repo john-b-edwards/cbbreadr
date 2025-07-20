@@ -11,12 +11,11 @@
 #' @return a dataframe of all games in the specified season(s).
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_games()
-#'
-#' load_games(2024)
-#'
-#' load_games(TRUE)
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_games.html> for a web version of the data dictionary

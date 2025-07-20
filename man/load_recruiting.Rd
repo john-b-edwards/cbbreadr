@@ -13,8 +13,11 @@ a dataframe of information about college basketball recruits
 Loads information about college basketball recruiting
 }
 \examples{
+\dontshow{nflreadr:::.for_cran()}
 \donttest{
+try({ # avoid cran errors
 load_recruiting()
+})
 }
 
 }

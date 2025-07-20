@@ -9,12 +9,11 @@
 #' @return a dataframe of player statistics for college basketball players
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_player_stats()
-#'
-#' load_player_stats(2024)
-#'
-#' load_player_stats(TRUE)
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_player_stats.html> for a web version of the data dictionary

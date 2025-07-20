@@ -5,8 +5,11 @@
 #' @return a dataframe of information about college basketball recruits
 #'
 #' @examples
+#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
+#' try({ # avoid cran errors
 #' load_recruiting()
+#' })
 #' }
 #'
 #' @seealso <https://john-b-edwards.github.io/cbbreadr/articles/dictionary_recruiting.html> for a web version of the data dictionary
