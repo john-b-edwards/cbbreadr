@@ -2,12 +2,12 @@ field,data_type,description
 season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
 season_label,character,"A string identifying the two years that one college basketball season spans, e.g. ""20242025""."
 team_id,integer,A unique identifier for the team the player plays for.
-team,character,The name of the team the player plays for.
-conference,character,The name of the conference of the player's team.
+team_name,character,The name of the team the player plays for.
+conference_short_name,character,The name of the conference of the player's team.
 athlete_id,integer,A unique identifier for each player.
 athlete_source_id,character,The unique identifier for each player from the data source CBBD scrapes from.
-name,character,The name of the player.
-position,character,The player's position.
+athlete_name,character,The name of the player.
+athlete_position,character,The player's position.
 games,integer,The number of games a player appeared in.
 starts,integer,The numer of games a player started.
 minutes,integer,The total number of minutes a player played.
@@ -21,7 +21,7 @@ offensive_rating,numeric,"A metric created by Dean Oliver to measure how many po
 defensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player suppresses from their opponent on defense. For more details, see here: https://en.wikipedia.org/wiki/Defensive_rating"
 net_rating,numeric,"Offensive rating minus defensive rating, reflecting an estimates of how many points per 100 possession a player contributes on offense and defense."
 porpag,numeric,"A measure of the points a player provides over a ""replacement level"" player on a per game basis. For more details, see here: https://spartansweblog.wordpress.com/2009/01/19/put-this-acronym-in-your-pipe-and-smoke-it/"
-usage,numeric,"An estimate of the percentage of plays that involved a player while the player was on the floor. For more details, see here: https://www.nbastuffer.com/analytics101/usage-rate/"
+usage,numeric,"An estimate of the percentage of plays that involved a player while the player was on the floor. For more details, see here: https://nbastuffer.com/analytics101/usage-rate/"
 assists_turnover_ratio,numeric,The number of assists a player records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a player's passing.
 offensive_rebound_pct,numeric,"An estimate of the rate at which a player secured offensive reboulds, measured as OREB / the total number of balls that a player could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
 free_throw_rate,numeric,The number of free throws a player attempted divded by the number of field goals a player attempted. This metric is commonly used to evaluate a player's ability to draw personal fouls.

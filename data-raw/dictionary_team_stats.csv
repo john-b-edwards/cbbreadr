@@ -2,78 +2,78 @@ field,data_type,description
 season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
 season_label,character,"A string identifying the two years that one college basketball season spans, e.g. ""20242025""."
 team_id,integer,A unique identifier for each team.
-team,character,The name of the team.
-conference,character,The conference the team plays in.
+team_name,character,The name of the team.
+conference_short_name,character,The conference the team plays in.
 games,integer,The number of games a team played.
 wins,integer,The number of wins the team recorded.
 losses,integer,The number of losses the team recorded.
-total_minutes,integer,The number of minutes a team played.
+minutes,integer,The number of minutes a team played.
 pace,numeric,"The number of possessions in games the team played in divided by the number of minutes played by the team, multiplied by 40 minutes."
-team_stats_assists,integer,The number of assists recorded by the team.
-team_stats_blocks,integer,The number of blocks recorded by the team.
-team_stats_steals,integer,The number of steals recorded by the team.
-team_stats_possessions,integer,The number of possessions recorded by the team.
-team_stats_true_shooting,numeric,"An adjusted statistic that reflects a team's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
-team_stats_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a team generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
-team_stats_field_goals_made,integer,The number of shots from the floor a team made.
-team_stats_field_goals_attempted,integer,The number of shots from the floor a team attempted.
-team_stats_field_goals_pct,numeric,The number of field goals made divided by the number of field goals attempted.
-team_stats_two_point_field_goals_made,integer,The number of two-point shots a team made.
-team_stats_two_point_field_goals_attempted,integer,The number of two-point shots a team attempted.
-team_stats_two_point_field_goals_pct,numeric,The number of two-point shots a team made divded by the number of two-point shots they attempted.
-team_stats_three_point_field_goals_made,integer,The number of three-point shots a team made.
-team_stats_three_point_field_goals_attempted,integer,The number of three-point shots a team attempted.
-team_stats_three_point_field_goals_pct,numeric,The number of three-point shots a team made divided by the number of three-point shots they attempted.
-team_stats_free_throws_made,integer,The number of free throw shots a team made.
-team_stats_free_throws_attempted,integer,The number of free throw shots a team attempted.
-team_stats_free_throws_pct,numeric,The number of free throw shots a team made divded by the number of free throw shots they attempted.
-team_stats_rebounds_offensive,integer,The number of offensive rebounds a team recorded.
-team_stats_rebounds_defensive,integer,The number of defensive rebounds a team recorded.
-team_stats_rebounds_total,integer,"The total number of rebounds a team recorded, offensive and defensive."
-team_stats_turnovers_total,integer,How many turnovers the team committed.
-team_stats_turnovers_team_total,integer,How many team turnovers the team committed. This includes turnovers like dead-ball turnovers.
-team_stats_fouls_total,integer,How many fouls the team committed.
-team_stats_fouls_technical,integer,How many technical fouls the team committed.
-team_stats_fouls_flagrant,integer,How many flagrant fouls the team committed.
-team_stats_points_total,integer,The number of points the  team scored.
-team_stats_points_in_paint,integer,The number of points the team recorded scoring in the paint.
-team_stats_points_off_turnovers,integer,The number of points the team recorded off turnovers by the opposing team.
-team_stats_points_fast_break,integer,The number of points the team recorded on fast breaks.
-team_stats_four_factors_effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value of three-pointers relative to all other baskets by weighing three points more, representing a team's shooting efficiency. For more details, see here: https://en.wikipedia.org/wiki/Effective_field_goal_percentage"
-team_stats_four_factors_turnover_ratio,numeric,The number of free throws a team attempted divded by the number of field goals a team attempted. This metric is commonly used to evaluate a team's ability to draw personal fouls.
-team_stats_four_factors_offensive_rebound_pct,numeric,The number of assists a team records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a team's passing.
-team_stats_four_factors_free_throw_rate,numeric,"An estimate of the rate at which a team secured offensive reboulds, measured as OREB / the total number of balls that a team could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
-opponent_stats_assists,integer,The number of assists recorded by the team's opponent.
-opponent_stats_blocks,integer,The number of blocks recorded by the team's opponent.
-opponent_stats_steals,integer,The number of steals recorded by the team's opponent.
-opponent_stats_possessions,integer,The number of possessions recorded by the team's opponent.
-opponent_stats_true_shooting,numeric,"An adjusted statistic that reflects a team's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
-opponent_stats_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a team generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
-opponent_stats_field_goals_made,integer,The number of shots from the floor a team made.
-opponent_stats_field_goals_attempted,integer,The number of shots from the floor a team attempted.
-opponent_stats_field_goals_pct,numeric,The number of field goals made divided by the number of field goals attempted.
-opponent_stats_two_point_field_goals_made,integer,The number of two-point shots a team made.
-opponent_stats_two_point_field_goals_attempted,integer,The number of two-point shots a team attempted.
-opponent_stats_two_point_field_goals_pct,numeric,The number of two-point shots a team made divded by the number of two-point shots they attempted.
-opponent_stats_three_point_field_goals_made,integer,The number of three-point shots a team made.
-opponent_stats_three_point_field_goals_attempted,integer,The number of three-point shots a team attempted.
-opponent_stats_three_point_field_goals_pct,numeric,The number of three-point shots a team made divided by the number of three-point shots they attempted.
-opponent_stats_free_throws_made,integer,The number of free throw shots a team made.
-opponent_stats_free_throws_attempted,integer,The number of free throw shots a team attempted.
-opponent_stats_free_throws_pct,numeric,The number of free throw shots a team made divded by the number of free throw shots they attempted.
-opponent_stats_rebounds_offensive,integer,The number of offensive rebounds a team recorded.
-opponent_stats_rebounds_defensive,integer,The number of defensive rebounds a team recorded.
-opponent_stats_rebounds_total,integer,"The total number of rebounds a team recorded, offensive and defensive."
-opponent_stats_turnovers_total,integer,How many turnovers the team's opponent committed.
-opponent_stats_turnovers_team_total,integer,How many team turnovers the team's opponent committed. This includes turnovers like dead-ball turnovers.
-opponent_stats_fouls_total,integer,How many fouls the team's opponent committed.
-opponent_stats_fouls_technical,integer,How many technical fouls the team's opponent committed.
-opponent_stats_fouls_flagrant,integer,How many flagrant fouls the team's opponent committed.
-opponent_stats_points_total,integer,The number of points the  team scored.
-opponent_stats_points_in_paint,integer,The number of points the team's opponent recorded scoring in the paint.
-opponent_stats_points_off_turnovers,integer,The number of points the team's opponent recorded off turnovers by the opposing team.
-opponent_stats_points_fast_break,integer,The number of points the team's opponent recorded on fast breaks.
-opponent_stats_four_factors_effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value of three-pointers relative to all other baskets by weighing three points more, representing a team's shooting efficiency. For more details, see here: https://en.wikipedia.org/wiki/Effective_field_goal_percentage"
-opponent_stats_four_factors_turnover_ratio,numeric,The number of free throws a team attempted divded by the number of field goals a team attempted. This metric is commonly used to evaluate a team's ability to draw personal fouls.
-opponent_stats_four_factors_offensive_rebound_pct,numeric,The number of assists a team records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a team's passing.
-opponent_stats_four_factors_free_throw_rate,numeric,"An estimate of the rate at which a team secured offensive reboulds, measured as OREB / the total number of balls that a team could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
+assists,integer,The number of assists recorded by the team.
+blocks,integer,The number of blocks recorded by the team.
+steals,integer,The number of steals recorded by the team.
+possessions,integer,The number of possessions recorded by the team.
+true_shooting,numeric,"An adjusted statistic that reflects a team's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
+offensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a team generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
+field_goals_made,integer,The number of shots from the floor a team made.
+field_goals_attempted,integer,The number of shots from the floor a team attempted.
+field_goals_pct,numeric,The number of field goals made divided by the number of field goals attempted.
+two_point_field_goals_made,integer,The number of two-point shots a team made.
+two_point_field_goals_attempted,integer,The number of two-point shots a team attempted.
+two_point_field_goals_pct,numeric,The number of two-point shots a team made divded by the number of two-point shots they attempted.
+three_point_field_goals_made,integer,The number of three-point shots a team made.
+three_point_field_goals_attempted,integer,The number of three-point shots a team attempted.
+three_point_field_goals_pct,numeric,The number of three-point shots a team made divided by the number of three-point shots they attempted.
+free_throws_made,integer,The number of free throw shots a team made.
+free_throws_attempted,integer,The number of free throw shots a team attempted.
+free_throws_pct,numeric,The number of free throw shots a team made divded by the number of free throw shots they attempted.
+rebounds_offensive,integer,The number of offensive rebounds a team recorded.
+rebounds_defensive,integer,The number of defensive rebounds a team recorded.
+rebounds_total,integer,"The total number of rebounds a team recorded, offensive and defensive."
+turnovers,integer,How many turnovers the team committed.
+team_turnovers,integer,How many team turnovers the team committed. This includes turnovers like dead-ball turnovers.
+fouls,integer,How many fouls the team committed.
+technical_fouls,integer,How many technical fouls the team committed.
+flagrant_fouls,integer,How many flagrant fouls the team committed.
+points,integer,The number of points the  team scored.
+points_in_paint,integer,The number of points the team recorded scoring in the paint.
+points_off_turnovers,integer,The number of points the team recorded off turnovers by the opposing team.
+points_fast_break,integer,The number of points the team recorded on fast breaks.
+effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value of three-pointers relative to all other baskets by weighing three points more, representing a team's shooting efficiency. For more details, see here: https://en.wikipedia.org/wiki/Effective_field_goal_percentage"
+assists_turnover_ratio,numeric,The number of free throws a team attempted divded by the number of field goals a team attempted. This metric is commonly used to evaluate a team's ability to draw personal fouls.
+offensive_rebound_pct,numeric,The number of assists a team records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a team's passing.
+free_throw_rate,numeric,"An estimate of the rate at which a team secured offensive reboulds, measured as OREB / the total number of balls that a team could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"
+opponent_assists,integer,The number of assists recorded by the team's opponent.
+opponent_blocks,integer,The number of blocks recorded by the team's opponent.
+opponent_steals,integer,The number of steals recorded by the team's opponent.
+opponent_possessions,integer,The number of possessions recorded by the team's opponent.
+opponent_true_shooting,numeric,"An adjusted statistic that reflects a team's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
+opponent_offensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a team generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
+opponent_field_goals_made,integer,The number of shots from the floor a team made.
+opponent_field_goals_attempted,integer,The number of shots from the floor a team attempted.
+opponent_field_goals_pct,numeric,The number of field goals made divided by the number of field goals attempted.
+opponent_two_point_field_goals_made,integer,The number of two-point shots a team made.
+opponent_two_point_field_goals_attempted,integer,The number of two-point shots a team attempted.
+opponent_two_point_field_goals_pct,numeric,The number of two-point shots a team made divded by the number of two-point shots they attempted.
+opponent_three_point_field_goals_made,integer,The number of three-point shots a team made.
+opponent_three_point_field_goals_attempted,integer,The number of three-point shots a team attempted.
+opponent_three_point_field_goals_pct,numeric,The number of three-point shots a team made divided by the number of three-point shots they attempted.
+opponent_free_throws_made,integer,The number of free throw shots a team made.
+opponent_free_throws_attempted,integer,The number of free throw shots a team attempted.
+opponent_free_throws_pct,numeric,The number of free throw shots a team made divded by the number of free throw shots they attempted.
+opponent_rebounds_offensive,integer,The number of offensive rebounds a team recorded.
+opponent_rebounds_defensive,integer,The number of defensive rebounds a team recorded.
+opponent_rebounds_total,integer,"The total number of rebounds a team recorded, offensive and defensive."
+opponent_turnovers,integer,How many turnovers the team's opponent committed.
+opponent_team_turnovers,integer,How many team turnovers the team's opponent committed. This includes turnovers like dead-ball turnovers.
+opponent_fouls,integer,How many fouls the team's opponent committed.
+opponent_technical_fouls,integer,How many technical fouls the team's opponent committed.
+opponent_flagrant_fouls,integer,How many flagrant fouls the team's opponent committed.
+opponent_points,integer,The number of points the  team scored.
+opponent_points_in_paint,integer,The number of points the team's opponent recorded scoring in the paint.
+opponent_points_off_turnovers,integer,The number of points the team's opponent recorded off turnovers by the opposing team.
+opponent_points_fast_break,integer,The number of points the team's opponent recorded on fast breaks.
+opponent_effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value of three-pointers relative to all other baskets by weighing three points more, representing a team's shooting efficiency. For more details, see here: https://en.wikipedia.org/wiki/Effective_field_goal_percentage"
+opponent_assists_turnover_ratio,numeric,The number of free throws a team attempted divded by the number of field goals a team attempted. This metric is commonly used to evaluate a team's ability to draw personal fouls.
+opponent_offensive_rebound_pct,numeric,The number of assists a team records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a team's passing.
+opponent_free_throw_rate,numeric,"An estimate of the rate at which a team secured offensive reboulds, measured as OREB / the total number of balls that a team could have rebounded. For more details, see here: https://en.wikipedia.org/wiki/Rebound_rate"

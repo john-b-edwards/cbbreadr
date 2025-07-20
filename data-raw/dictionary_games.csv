@@ -1,6 +1,6 @@
 field,data_type,description
-id,integer,A unique identifier for each game.
-source_id,character,The unique identifier for each game from the data source CBBD scrapes from.
+game_id,integer,A unique identifier for each game.
+game_source_id,character,The unique identifier for each game from the data source CBBD scrapes from.
 season_label,character,"A string identifying the two years that one college basketball season spans, e.g. ""20242025""."
 season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
 season_type,character,"A string identifying whether the tracked game is a ""regular"" season game or a ""postseason"" game."
@@ -14,9 +14,9 @@ status,character,"A string indicating whether a game is ""scheduled"" or has gon
 game_notes,character,"Miscellaneous notes about the game, such as the tournament the game is played under."
 attendance,integer,"The attendance of the game. In some circumstances, attendance is not reported for a game--this is reported as attendance = 0."
 home_team_id,integer,A unique identifier for the home team.
-home_team,character,The name of the home team.
+home_team_name,character,The name of the home team.
 home_conference_id,integer,A unique identifier for the conference of the home team.
-home_conference,character,The name of the home team's conference.
+home_conference_short_name,character,The name of the home team's conference.
 home_seed,integer,"If reported, the seed of the home team in the tournament that the game takes in."
 home_points,integer,The number of points the home team scored in the game.
 home_period_points_1,integer,The number of points the home team scored in the first period.
@@ -25,11 +25,12 @@ home_period_points_3,integer,"The number of points the home team scored in the f
 home_period_points_4,integer,"The number of points the home team scored in the second overtime period. If the game did not go to 2 OT, this value is NULL."
 home_period_points_5,integer,"The number of points the home team scored in the third overtime period. If the game did not go to 3OT, this value is NULL."
 home_period_points_6,integer,"The number of points the home team scored in the fourth overtime period. If the game did not go to 4OT, this value is NULL."
+home_period_points_7,integer,"The number of points the home team scored in the fith overtime period. If the game did not go to 5OT, this value is NULL."
 home_winner,logical,A boolean indicating whether the home team won or not.
 away_team_id,integer,A unique identifier for the away team.
-away_team,character,The name of the away team.
+away_team_name,character,The name of the away team.
 away_conference_id,integer,A unique identifier for the conference of the away team.
-away_conference,character,The name of the away team's conference.
+away_conference_short_name,character,The name of the away team's conference.
 away_seed,integer,"If reported, the seed of the away team in the tournament that the game takes in."
 away_points,integer,The number of points the away team scored in the game.
 away_period_points_1,integer,The number of points the away team scored in the first period.
@@ -38,11 +39,10 @@ away_period_points_3,integer,"The number of points the away team scored in the f
 away_period_points_4,integer,"The number of points the away team scored in the second overtime period. If the game did not go to 2 OT, this value is NULL."
 away_period_points_5,integer,"The number of points the away team scored in the third overtime period. If the game did not go to 3OT, this value is NULL."
 away_period_points_6,integer,"The number of points the away team scored in the fourth overtime period. If the game did not go to 4OT, this value is NULL."
+away_period_points_7,integer,"The number of points the away team scored in the fifth overtime period. If the game did not go to 5OT, this value is NULL."
 away_winner,logical,A boolean indicating whether the away team won or not.
 excitement,numeric,"From the CFBD glossary: ""Measures the game's entertainment value by tracking swings in win probability. Larger swings result in a higher score."""
 venue_id,integer,A unique identifier for the venue where the game took place.
 venue,character,The name of the venue.
-city,character,The city where the venue is located.
-state,character,The state in which the venue is located.
-home_period_points_7,integer,"The number of points the home team scored in the fifth overtime period. If the game did not go to 5OT, this value is NULL."
-away_period_points_7,integer,"The number of points the away team scored in the fifth overtime period. If the game did not go to 5OT, this value is NULL."
+venue_city,character,The city where the venue is located.
+venue_state,character,The state in which the venue is located.

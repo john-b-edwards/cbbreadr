@@ -4,7 +4,7 @@ Version: 0.4.0
 Authors@R: 
     person("John", "Edwards", , "edwards1860@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-8533-7504"))
-Description: Quickly pull in pre-cached data from 'collegebasketballdata.com'.
+Description: Quickly pull in cached data from 'collegebasketballdata.com'.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
