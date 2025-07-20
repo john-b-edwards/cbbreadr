@@ -10,21 +10,21 @@ conference_game,logical,A boolean indicating that the game took place between op
 neutral_site,logical,A boolean indicating that the game took place in a neutral site.
 is_home,logical,A boolean indicating that the player is playing at their home court.
 game_type,character,"A string indicating whether the game took place as a normal, regular season game (""STD""), or whether the game took place as a part of a tournament (""TRNMNT""). Tournament games include both regular season and postseason tournaments. For earlier years, this column will sometimes represent the round of the March Madness tournament that a game took place in (""RD64"", ""RD32"", ""RD16"", ""QTR"", ""SEMI"", ""FINAL"")."
-notes,character,"Miscellaneous notes about the game, such as the tournament the game is played under."
+game_notes,character,"Miscellaneous notes about the game, such as the tournament the game is played under."
 team_id,integer,A unique identifier for the team the player plays for.
-team,character,The name of the team the player plays for.
-conference,character,The name of the conference of the player's team.
+team_name,character,The name of the team the player plays for.
+team_conference_short_name,character,The name of the conference of the player's team.
 team_seed,integer,"If reported, the seed of the player's team in the tournament that the game takes in."
 opponent_id,integer,A unique identifier for the player's opponent team.
-opponent,character,The name of the player's opponent team.
-opponent_conference,character,The name of the conference of the player's opponent team.
+opponent_name,character,The name of the player's opponent team.
+opponent_conference_short_name,character,The name of the conference of the player's opponent team.
 opponent_seed,integer,"If reported, the seed of the player's opponent team in the tournament that the game takes in."
 game_minutes,integer,"The number of minutes played in the game. For a game with no overtime, this should be 40 minutes."
 game_pace,numeric,The number of possessions in the game divided by 40 minutes.
 athlete_id,integer,A unique identifier for each player.
 athlete_source_id,character,The unique identifier for each player from the data source CBBD scrapes from.
-name,character,The name of the player.
-position,character,The player's position.
+athlete_name,character,The name of the player.
+athlete_position,character,The player's position.
 starter,logical,A boolean indicating whether the player started the game or not.
 ejected,logical,A boolean indicating whether the player was ejected from the game or not.
 minutes,integer,How many minutes the player played.
@@ -38,7 +38,7 @@ game_score,numeric,"The Hollinger game score for the player, a measure of how im
 offensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player generates on offense. For more details, see here: https://en.wikipedia.org/wiki/Offensive_rating"
 defensive_rating,numeric,"A metric created by Dean Oliver to measure how many points per 100 possessions a player suppresses from their opponent on defense. For more details, see here: https://en.wikipedia.org/wiki/Defensive_rating"
 net_rating,numeric,"Offensive rating minus defensive rating, reflecting an estimates of how many points per 100 possession a player contributes on offense and defense."
-usage,numeric,"An estimate of the percentage of plays that involved a player while the player was on the floor. For more details, see here: https://www.nbastuffer.com/analytics101/usage-rate/"
+usage,numeric,"An estimate of the percentage of plays that involved a player while the player was on the floor. For more details, see here: https://nbastuffer.com/analytics101/usage-rate"
 effective_field_goal_pct,numeric,"An adjusted statistic that reflects the value of three-pointers relative to all other baskets by weighing three points more, representing a player's shooting efficiency. For more details, see here: https://en.wikipedia.org/wiki/Effective_field_goal_percentage"
 true_shooting_pct,numeric,"An adjusted statistic that reflects a player's skill at shooting three-pointers, two-pointers, and free throws. For more details, see here: https://en.wikipedia.org/wiki/True_shooting_percentage"
 assists_turnover_ratio,numeric,The number of assists a player records divided by the number of turnovers they commit. This metric is commonly used to evaluate the accuracy of a player's passing.

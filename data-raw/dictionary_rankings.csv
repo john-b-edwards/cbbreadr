@@ -5,8 +5,8 @@ week,integer,The week of the season that the poll or rating was issued.
 poll_date,character,"The date on which the poll or rating was released, given in ISO 8601 format in the GMT time zone."
 poll_type,character,The type of poll or rating.
 team_id,integer,A unique identifier for the team included in the poll or rating.
-team,character,The name of the team included in the poll or rating.
-conference,character,The conference of the team included in the poll or rating.
+team_name,character,The name of the team included in the poll or rating.
+conference_short_name,character,The conference of the team included in the poll or rating.
 ranking,integer,The ranking of the team in the poll or rating.
 points,integer,"If applicable, the number of points the team received in the poll or rating."
 first_place_votes,integer,"If applicable, the number of first plate votes the team received in the poll."

@@ -1,17 +1,17 @@
 field,data_type,description
-id,integer,A unique identifier for each team.
-source_id,character,The unique identifier for each team from the data source CBBD scrapes from.
-school,character,The name of the team.
-mascot,character,The mascot of the team.
-abbreviation,character,The abbreviation of the team.
-display_name,character,The display name of the team.
-short_display_name,character,A shortened display name for the team.
-primary_color,character,The primary color of the team.
-secondary_color,character,The secondary color of the team.
+team_id,integer,A unique identifier for each team.
+team_source_id,character,The unique identifier for each team from the data source CBBD scrapes from.
+team_name,character,The name of the team.
+team_mascot,character,The mascot of the team.
+team_abbreviation,character,The abbreviation of the team.
+team_display_name,character,The display name of the team.
+team_short_name,character,A shortened display name for the team.
+team_primary_color,character,The primary color of the team.
+team_secondary_color,character,The secondary color of the team.
 current_venue_id,integer,A unique identifier for the court the team currently plays in.
-current_venue,character,The name of the court the team currently plays in.
-current_city,character,The city that the team plays in.
-current_state,character,The state that the team plays in.
+venue_name,character,The name of the court the team currently plays in.
+venue_city,character,The city that the team plays in.
+venue_state,character,The state that the team plays in.
 conference_id,integer,A unique identifier for each conference.
-conference,character,The full name of the conference.
+conference_short_name,character,The full name of the conference.
 season,integer,"The season for which this teams data is relevant (teams may change conferences or venues, for instance)."

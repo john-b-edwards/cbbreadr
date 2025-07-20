@@ -2,23 +2,23 @@ field,data_type,description
 team_id,integer,A unique identifier for the team the player plays for.
 team_source_id,character,The unique identifier for each team from the data source CBBD scrapes from.
 team,character,The name of the team the player plays for.
-conference,character,The name of the conference of the player's team.
+conference_short_name,character,The name of the conference of the player's team.
 season,integer,"An integer corresponding to a season of college basketball. CBBD's convention is to use the year in which the championship takes place, so if a game took place in the fall of 2024, the season would be recorded as ""2025""."
-players_id,integer,A unique identifier for each player.
-players_source_id,character,The unique identifier for each player from the data source CBBD scrapes from.
-players_name,character,The name of the player.
-players_first_name,character,The first name of the player.
-players_last_name,character,The last name of the player.
-players_jersey,character,The jersey number of the player.
-players_position,character,The player's position.
-players_height,integer,The player's height in inches.
-players_weight,integer,The player's weight in pounds.
-players_hometown_1_city,character,The player's hometown city.
-players_hometown_1_state,character,The player's hometown state.
-players_hometown_1_country,character,"The player's hometown country, if not located within the United States."
-players_hometown_1_latitude,numeric,The latitude of the player's hometown city.
-players_hometown_1_longitude,numeric,The longitude of the player's hometown city.
-players_hometown_1_county_fips,character,"The FIPS County Code for the player's hometown. For more information, see here: https://en.wikipedia.org/wiki/FIPS_county_code"
-players_date_of_birth,character,The player's date of birth.
-players_start_season,integer,The first season the player began playing NCAA basketball.
-players_end_season,integer,The most recent season a player appeared in an NCAA basketball game.
+athlete_id,integer,A unique identifier for each player.
+athlete_source_id,character,The unique identifier for each player from the data source CBBD scrapes from.
+athlete_name,character,The name of the player.
+athlete_first_name,character,The first name of the player.
+athlete_last_name,character,The last name of the player.
+athlete_jersey_number,character,The jersey number of the player.
+athlete_position,character,The player's position.
+athlete_height_inches,integer,The player's height in inches.
+athlete_weight_pounds,integer,The player's weight in pounds.
+athlete_hometown_city,character,The player's hometown city.
+athlete_hometown_state,character,The player's hometown state.
+athlete_hometown_country,character,"The player's hometown country, if not located within the United States."
+athlete_hometown_latitude,numeric,The latitude of the player's hometown city.
+athlete_hometown_longitude,numeric,The longitude of the player's hometown city.
+athlete_hometown_county_fips,character,"The FIPS County Code for the player's hometown. For more information, see here: https://en.wikipedia.org/wiki/FIPS_county_code"
+athlete_date_of_birth,character,The player's date of birth.
+athlete_start_season,integer,The first season the player began playing NCAA basketball.
+athlete_end_season,integer,The most recent season a player appeared in an NCAA basketball game.

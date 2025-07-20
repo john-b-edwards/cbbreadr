@@ -1,5 +1,5 @@
 # data dictionary checking
-# shamelessly stolen from
+# shamelessly stolen from nflreadr
 devtools::load_all()
 library(dplyr)
 library(skimr)

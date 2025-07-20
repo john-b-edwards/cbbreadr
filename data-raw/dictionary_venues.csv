@@ -1,7 +1,7 @@
 field,data_type,description
-id,integer,A unique identifier for each team.
-source_id,character,The unique identifier for each venue from the data source CBBD scrapes from.
-name,character,The name of the venue.
-city,character,The city of the venue.
-state,character,The state of the venue.
-country,character,The country of the venue.
+venue_id,integer,A unique identifier for each team.
+venue_source_id,character,The unique identifier for each venue from the data source CBBD scrapes from.
+venue_name,character,The name of the venue.
+venue_city,character,The city of the venue.
+venue_state,character,The state of the venue.
+venue_country,character,The country of the venue.
