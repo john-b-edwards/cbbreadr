@@ -84,3 +84,4 @@ shooting_play,logical,A boolean indicating whether or not the play was a shootin
 score_value,integer,The number of points scored on the play.
 wall_clock,character,"The timestamp for when the play ocurred, given in ISO 8601 format in the GMT time zone."
 play_text,character,Text indicating what happened on the play.
+clean_sub_data,logical,"A boolean indicating if clean substitution data is available for the game in which the play occurred. If data is unclean, either more or fewer than 10 players were recorded on the court at a given time during the game."
