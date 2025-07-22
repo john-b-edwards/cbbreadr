@@ -1,3 +1,7 @@
+# cbbreadr 1.0.1
+
+* Minor documentation fixes for CRAN.
+
 # cbbreadr 1.0.0
 
 * Initial CRAN submission.
