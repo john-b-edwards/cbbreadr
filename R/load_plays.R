@@ -17,7 +17,6 @@
 #' @return a dataframe of play-by-play data from all D1 college basketball games.
 #'
 #' @examples
-#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' try({ # avoid cran errors
 #' load_plays()

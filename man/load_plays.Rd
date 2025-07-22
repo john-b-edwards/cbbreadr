@@ -26,7 +26,6 @@ Shot location data is provided where available.
 The win probability for the home team at the time of each play is provided as \code{win_probability}. These are predictions provided by the collegebasketballdata.com API, not built into the package.
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 try({ # avoid cran errors
 load_plays()

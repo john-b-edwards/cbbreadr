@@ -18,7 +18,6 @@ Pull in statistics aggregated by team and game for specified season(s)
 This data includes both traditional box score stats (such as points, OREB, AST) as well as more advanced stats (such as ORTG, OREB\%). For more information on each stat, see the data dictionary \code{dictionary_player_box_scores}.
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 try({ # avoid cran errors
 load_team_box_scores()

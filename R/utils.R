@@ -9,7 +9,6 @@ RELEASE_URL <- "https://github.com/john-b-edwards/cbbd-data/releases/download"
 #' @return the most recent CBB season as an integer
 #'
 #' @examples
-#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' most_recent_season()
 #'

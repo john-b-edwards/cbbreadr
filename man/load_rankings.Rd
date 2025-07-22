@@ -15,7 +15,6 @@ Loads information about college basketball rankings, polls, etc.
 At present, only the AP Top 25 and Coaches Polls are available from this function. Ranking, first place votes, and over points are available for each week of the season dating back to 1949.
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 try({ # avoid cran errors
 load_rankings()

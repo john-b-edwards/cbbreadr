@@ -11,7 +11,6 @@
 #' @return a dataframe of all games in the specified season(s).
 #'
 #' @examples
-#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' try({ # avoid cran errors
 #' load_games()

@@ -7,7 +7,6 @@
 #' @return a dataframe of all college basketball teams tracked by collegebasketballdata.com for a given season(s).
 #'
 #' @examples
-#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' try({ # avoid cran errors
 #' load_teams()

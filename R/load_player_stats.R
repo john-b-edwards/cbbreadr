@@ -9,7 +9,6 @@
 #' @return a dataframe of player statistics for college basketball players
 #'
 #' @examples
-#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' try({ # avoid cran errors
 #' load_player_stats()

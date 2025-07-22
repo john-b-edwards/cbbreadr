@@ -16,7 +16,6 @@ a dataframe of broadcast information for all games for the specified season(s).
 Pull in broadcast information for all games in a given season
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 try({ # avoid cran errors
 load_media()

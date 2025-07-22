@@ -13,7 +13,6 @@ a dataframe of information about college basketball conferences.
 Loads information about college basketball conferences
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 try({ # avoid cran errors
 load_conferences()
