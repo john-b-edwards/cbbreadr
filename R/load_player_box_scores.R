@@ -9,7 +9,6 @@
 #' @return a dataframe of player box scores.
 #'
 #' @examples
-#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' try({ # avoid cran errors
 #' load_player_box_scores()

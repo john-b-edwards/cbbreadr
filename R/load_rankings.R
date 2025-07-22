@@ -7,7 +7,6 @@
 #' @return a dataframe of information about college basketball rankings and polls
 #'
 #' @examples
-#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' try({ # avoid cran errors
 #' load_rankings()

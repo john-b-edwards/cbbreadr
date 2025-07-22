@@ -5,7 +5,6 @@
 #' @return a dataframe of information about college basketball venues.
 #'
 #' @examples
-#' \dontshow{nflreadr:::.for_cran()}
 #' \donttest{
 #' try({ # avoid cran errors
 #' load_venues()
