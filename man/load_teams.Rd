@@ -16,7 +16,6 @@ a dataframe of all college basketball teams tracked by collegebasketballdata.com
 Pull in information on all teams that played in a given season.
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 try({ # avoid cran errors
 load_teams()

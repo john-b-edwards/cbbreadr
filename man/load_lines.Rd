@@ -16,7 +16,6 @@ a dataframe of betting information for all games for the specified season(s).
 Pull in vegas odds (overs, unders, spreads, moneylines, etc.) for college basketball games.
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 try({ # avoid cran errors
 load_lines()

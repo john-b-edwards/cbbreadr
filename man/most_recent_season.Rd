@@ -16,7 +16,6 @@ the most recent CBB season as an integer
 For a given date (defaults to the system date), returns the most recent or "current" college basketball season.
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 most_recent_season()
 

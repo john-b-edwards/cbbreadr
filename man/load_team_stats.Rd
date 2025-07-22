@@ -16,7 +16,6 @@ a dataframe of team statistics for college basketball teams.
 Pull in statistics aggregated by team for for specified season(s)
 }
 \examples{
-\dontshow{nflreadr:::.for_cran()}
 \donttest{
 try({ # avoid cran errors
 load_team_stats()
