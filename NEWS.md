@@ -1,3 +1,7 @@
+# cbbreadr 1.0.2
+
+* Typo fix.
+
 # cbbreadr 1.0.1
 
 * Minor documentation fixes for CRAN.
