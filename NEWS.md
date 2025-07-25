@@ -1,6 +1,7 @@
 # cbbreadr 1.0.2
 
 * Typo fix.
+* Officially on CRAN! https://johnbedwards.io/blog/cbbreadr_launch/
 
 # cbbreadr 1.0.1
 
