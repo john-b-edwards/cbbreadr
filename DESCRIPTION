@@ -1,6 +1,6 @@
 Package: cbbreadr
 Title: Quickly Access College Basketball Data
-Version: 1.0.2
+Version: 1.0.2.9000
 Authors@R: 
     person("John", "Edwards", , "edwards1860@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-8533-7504"))
