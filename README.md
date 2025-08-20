@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-Low level loader for reading in college basketball data in bulk.
+Low level loader for reading in college basketball data in bulk. Taken down at the request of collegebasketballdata.com's owner. Something new and better to follow...
 
 ## Installation
 
